@@ -1,3 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713882286
+::res://::1713922046
 icon.svg::CompressedTexture2D::3509880680454888880::1713882281::1713882287::1::::<><>::
+README.md::TextFile::-1::1713882403::0::1::::<><>::
+::res://Assets/::1713910952
+player.tscn::PackedScene::6564406049941055589::1713910952::0::1::::<><>::uid://bqahhsv1dbe0w::::res://icon.svg
+::res://Assets/Level Kitchen/::1713887429
+::res://Assets/Player/::1713887449
+::res://Assets/Scenes/::1713910952
+Main Level.tscn::PackedScene::637878280831802803::1713910952::0::1::::<><>::uid://c0r32qycjimbd::::res://Assets/player.tscn
+::res://Scripts/::1713887875
+Player.gd::GDScript::-1::1713887875::0::1::::<>Node2D<>::
