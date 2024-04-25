@@ -1,3 +1,6 @@
-res://Assets/player.tscn
-res://Scripts/Player.gd
 res://Assets/Scenes/Main Level.tscn
+res://Assets/player.tscn
+res://Assets/health_component.tscn
+res://Assets/hitbox_component.tscn
+res://Assets/Scenes/SawTrap.tscn
+res://Scripts/HitboxComponent.gd

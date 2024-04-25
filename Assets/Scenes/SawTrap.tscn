@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://e8gg00crfxov"]
+
+[ext_resource type="Script" path="res://Scripts/HitboxComponent.gd" id="1_ob1go"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ubj7c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_se3jr"]
+radius = 0.537484
+
+[node name="MeshInstance2D" type="MeshInstance2D"]
+scale = Vector2(15, 15)
+mesh = SubResource("SphereMesh_ubj7c")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_ob1go")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_se3jr")
