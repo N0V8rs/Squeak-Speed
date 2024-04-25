@@ -1,15 +1,22 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714009377
+::res://::1714059765
 icon.svg::CompressedTexture2D::3509880680454888880::1713882281::1713882287::1::::<><>::
 README.md::TextFile::-1::1713882403::0::1::::<><>::
-::res://Assets/::1714009354
-health_component.tscn::PackedScene::3199117360692832555::1714007309::0::1::::<><>::res://Scripts/HealthComponent.gd
-player.tscn::PackedScene::6564406049941055589::1714009354::0::1::::<><>::res://Scripts/Player.gd<>uid://bqahhsv1dbe0w::::res://icon.svg<>uid://bltw833pspllr::::res://Assets/health_component.tscn
+::res://Assets/::1714061240
+health_component.tscn::PackedScene::3199117360692832555::1714061240::0::1::::<><>::res://Scripts/HealthComponent.gd
+hitbox_component.tscn::PackedScene::7103638727827451425::1714061240::0::1::::<><>::
+player.tscn::PackedScene::6564406049941055589::1714061240::0::1::::<><>::res://Scripts/Player.gd<>uid://bighp7x3soq6t::::res://Temp/Idle (32x32).png<>uid://bltw833pspllr::::res://Assets/health_component.tscn<>uid://bcf4s3c4l0hsp::::res://Temp/Jump (32x32).png<>uid://crj2473xvmlmr::::res://Temp/Run (32x32).png
 ::res://Assets/Level Kitchen/::1713887429
 ::res://Assets/Player/::1713887449
-::res://Assets/Scenes/::1714007154
-Main Level.tscn::PackedScene::637878280831802803::1714007154::0::1::::<><>::uid://c0r32qycjimbd::::res://Assets/player.tscn
-::res://Scripts/::1714007283
+::res://Assets/Scenes/::1714061240
+Main Level.tscn::PackedScene::637878280831802803::1714061240::0::1::::<><>::uid://c0r32qycjimbd::::res://Assets/player.tscn<>uid://e8gg00crfxov::::res://Assets/Scenes/SawTrap.tscn
+SawTrap.tscn::PackedScene::349256208973806469::1714061240::0::1::::<><>::res://Scripts/HitboxComponent.gd
+::res://Scripts/::1714061219
 HealthComponent.gd::GDScript::-1::1714007283::0::1::::HealthComponent<>Node2D<>::
-HitboxComponent.gd::GDScript::-1::1714007154::0::1::::<>Area2D<>::
-Player.gd::GDScript::-1::1713925404::0::1::::<>CharacterBody2D<>::
+HitboxComponent.gd::GDScript::-1::1714010646::0::1::::<>Area2D<>::
+Player.gd::GDScript::-1::1714061219::0::1::::<>CharacterBody2D<>::
+::res://Temp/::1714061300
+Idle (32x32).png::CompressedTexture2D::2960771222754179393::1714059601::1714060063::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::2538914671896711463::1714059601::1714059806::1::::<><>::
+Off.png::CompressedTexture2D::8438664219582670693::1714059604::1714061304::1::::<><>::
+Run (32x32).png::CompressedTexture2D::5986323980922517989::1714059601::1714059806::1::::<><>::
