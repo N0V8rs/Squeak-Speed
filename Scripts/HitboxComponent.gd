@@ -1,8 +1,9 @@
 extends Area2D
 
-@export var damage_amount = 1
+signal trap_triggered
 
-func _on_Area2D_body_entered(body):
-	if body is HealthComponent:
-		body.damage(damage_amount)
-		print(damage_amount)
+@export var damage = 1
+
+func _on_Trap_body_entered(body):
+	if (body.name == "Player"):
+		emit_signal("trap_triggered", body)

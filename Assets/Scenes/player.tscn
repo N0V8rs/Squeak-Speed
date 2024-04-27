@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_m3t20"]
 [ext_resource type="Texture2D" uid="uid://bighp7x3soq6t" path="res://Temp/Idle (32x32).png" id="2_uv4hc"]
-[ext_resource type="PackedScene" uid="uid://bltw833pspllr" path="res://Assets/health_component.tscn" id="3_jglqn"]
 [ext_resource type="Texture2D" uid="uid://bcf4s3c4l0hsp" path="res://Temp/Jump (32x32).png" id="3_ti4n0"]
 [ext_resource type="Texture2D" uid="uid://crj2473xvmlmr" path="res://Temp/Run (32x32).png" id="4_ptmim"]
+[ext_resource type="Script" path="res://Scripts/HealthComponent.gd" id="5_uisia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_41xod"]
 atlas = ExtResource("2_uv4hc")
@@ -207,7 +207,7 @@ frame_progress = 0.459499
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jfevb")
+script = ExtResource("5_uisia")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="HealthComponent" parent="." instance=ExtResource("3_jglqn")]
+position_smoothing_speed = 7.0

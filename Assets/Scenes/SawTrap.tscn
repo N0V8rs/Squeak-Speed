@@ -1,24 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://e8gg00crfxov"]
+[gd_scene load_steps=4 format=3 uid="uid://e8gg00crfxov"]
 
 [ext_resource type="Texture2D" uid="uid://dsh0tjhg5nnv6" path="res://Temp/Off.png" id="1_40hc0"]
-[ext_resource type="Script" path="res://Scripts/HitboxComponent.gd" id="1_ob1go"]
+[ext_resource type="Script" path="res://Scripts/HitboxComponent.gd" id="1_ch52d"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_ubj7c"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7jyc8"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_se3jr"]
-radius = 0.537484
-
-[node name="MeshInstance2D" type="MeshInstance2D"]
-scale = Vector2(15, 15)
-mesh = SubResource("SphereMesh_ubj7c")
+[node name="SawTrap" type="Area2D"]
+texture_filter = 1
+scale = Vector2(5, 5)
+script = ExtResource("1_ch52d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_40hc0")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("1_ob1go")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_7jyc8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_se3jr")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
