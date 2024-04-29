@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714246060
+::res://::1714397972
 icon.svg::CompressedTexture2D::3509880680454888880::1713882281::1713882287::1::::<><>::
 README.md::TextFile::-1::1713882403::0::1::::<><>::
-::res://Assets/::1714063833
+::res://Assets/::1714397891
+RatEnemy_Sprite1.png::CompressedTexture2D::9199116538146670937::1714397891::1714397973::1::::<><>::
+Speedy_Sprite.png::CompressedTexture2D::6174747617686900138::1714397642::1714397743::1::::<><>::
 ::res://Assets/Level Kitchen/::1713887429
 ::res://Assets/Player/::1713887449
 ::res://Assets/Scenes/::1714144086

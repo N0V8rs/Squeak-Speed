@@ -26,7 +26,6 @@ func _physics_process(delta):
 	var horizontal_direction = Input.get_axis("movement_left", "movement_right")
 	velocity.x = speed * horizontal_direction
 	move_and_slide()
-	print(velocity)
 	
 	# Sprite animations for left and right movement, fliping the Player
 	var isLeft = velocity.x < 0

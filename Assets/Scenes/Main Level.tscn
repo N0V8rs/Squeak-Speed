@@ -28,5 +28,3 @@ shape = SubResource("RectangleShape2D_rn276")
 
 [node name="SawTrap" parent="." instance=ExtResource("2_0wuhm")]
 position = Vector2(384, 70)
-
-[connection signal="trap_triggered" from="SawTrap" to="Player" method="_on_saw_trap_trap_triggered"]

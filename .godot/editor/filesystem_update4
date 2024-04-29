@@ -1,5 +1,5 @@
-res://Scripts/Player.gd
 res://Assets/Scenes/Main Level.tscn
+res://Scripts/Player.gd
 res://Assets/Scenes/player.tscn
 res://Assets/Scenes/health_component.tscn
 res://Assets/Scenes/hitbox_component.tscn

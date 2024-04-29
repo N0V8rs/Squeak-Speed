@@ -195,7 +195,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfevb"]
 size = Vector2(128, 128)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
 slide_on_ceiling = false
 script = ExtResource("1_m3t20")
 
@@ -203,7 +204,7 @@ script = ExtResource("1_m3t20")
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_a6eg6")
-frame_progress = 0.459499
+frame_progress = 0.600391
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jfevb")

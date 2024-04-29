@@ -1,9 +1,11 @@
 extends Area2D
 
-signal trap_triggered
-
 @export var damage = 1
+@onready var timer = $Timer
 
-func _on_Trap_body_entered(body):
-	if (body.name == "Player"):
-		emit_signal("trap_triggered", body)
+func _on_body_entered(body):
+	print("Count +1")
+	timer.start()
+
+func _on_timer_timeout():
+	get_tree().reload_current_scene()
