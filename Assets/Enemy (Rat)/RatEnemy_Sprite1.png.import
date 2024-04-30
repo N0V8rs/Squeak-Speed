@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4cedt2xd3266"
-path="res://.godot/imported/RatEnemy_Sprite1.png-7d9e4c0a6e6a00fea0cb00f083604452.ctex"
+path="res://.godot/imported/RatEnemy_Sprite1.png-36f58ef76e52d85b924eb18fc7c2d99f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RatEnemy_Sprite1.png"
-dest_files=["res://.godot/imported/RatEnemy_Sprite1.png-7d9e4c0a6e6a00fea0cb00f083604452.ctex"]
+source_file="res://Assets/Enemy (Rat)/RatEnemy_Sprite1.png"
+dest_files=["res://.godot/imported/RatEnemy_Sprite1.png-36f58ef76e52d85b924eb18fc7c2d99f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct8dgq63nhcn7"
-path="res://.godot/imported/Speedy_Sprite.png-ce2cf4bd8ff0f5c64d15ae47a62a8b5e.ctex"
+path="res://.godot/imported/Speedy_Sprite.png-bb58ec3e5d8ff64e84c746da582150a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Speedy_Sprite.png"
-dest_files=["res://.godot/imported/Speedy_Sprite.png-ce2cf4bd8ff0f5c64d15ae47a62a8b5e.ctex"]
+source_file="res://Assets/Player/Speedy_Sprite.png"
+dest_files=["res://.godot/imported/Speedy_Sprite.png-bb58ec3e5d8ff64e84c746da582150a6.ctex"]
 
 [params]
 

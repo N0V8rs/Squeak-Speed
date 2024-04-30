@@ -27,4 +27,4 @@ position = Vector2(52.5, 342)
 shape = SubResource("RectangleShape2D_rn276")
 
 [node name="SawTrap" parent="." instance=ExtResource("2_0wuhm")]
-position = Vector2(384, 70)
+position = Vector2(384, -54)

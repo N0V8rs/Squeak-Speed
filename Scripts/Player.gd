@@ -12,7 +12,7 @@ func _physics_process(delta):
 	if (velocity.x > 1 || velocity.x < -1):
 		sprite_2d.animation = "running"
 	else:
-		sprite_2d.animation = "default"
+		sprite_2d.animation = "Idle"
 	
 	# Makes the Player jump
 	if !is_on_floor():
