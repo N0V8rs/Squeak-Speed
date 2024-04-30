@@ -1,5 +1,9 @@
-res://Assets/Scenes/player.tscn
-res://Scripts/Player.gd
 res://Assets/Scenes/Main Level.tscn
+res://Scripts/Player.gd
+res://Scripts/Enemy.gd
+res://Assets/Scenes/player.tscn
 res://Assets/Scenes/SawTrap.tscn
-res://Assets/Scenes/health_component.tscn
+res://Assets/Scenes/enemy.tscn
+res://Assets/Scenes/Kill_collision.tscn
+res://Scripts/Kill_collision.gd
+res://testing_hitboxes.tscn

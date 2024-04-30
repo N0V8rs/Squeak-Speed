@@ -1,26 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://e8gg00crfxov"]
 
 [ext_resource type="Texture2D" uid="uid://dsh0tjhg5nnv6" path="res://Temp/Off.png" id="1_40hc0"]
-[ext_resource type="Script" path="res://Scripts/HitboxComponent.gd" id="1_ch52d"]
+[ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_d2t6y"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7jyc8"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8khgr"]
+radius = 15.0333
 
-[node name="SawTrap" type="Area2D"]
+[node name="Sprite2D" type="Sprite2D"]
 texture_filter = 1
 scale = Vector2(5, 5)
-collision_mask = 2
-script = ExtResource("1_ch52d")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_40hc0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1.5, 1.5)
-shape = SubResource("CircleShape2D_7jyc8")
+[node name="KillCollision" parent="." instance=ExtResource("2_d2t6y")]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
-one_shot = true
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillCollision"]
+shape = SubResource("CircleShape2D_8khgr")

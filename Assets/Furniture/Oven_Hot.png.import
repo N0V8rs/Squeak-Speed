@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ucbtn12k735"
-path="res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"
+uid="uid://xlkr8vkye2g2"
+path="res://.godot/imported/Oven_Hot.png-8f7851f0be77f3e55fcbf37cea9a58ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png"
-dest_files=["res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"]
+source_file="res://Assets/Furniture/Oven_Hot.png"
+dest_files=["res://.godot/imported/Oven_Hot.png-8f7851f0be77f3e55fcbf37cea9a58ec.ctex"]
 
 [params]
 

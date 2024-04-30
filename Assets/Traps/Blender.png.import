@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ucbtn12k735"
-path="res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"
+uid="uid://cp6j8yhf21cb0"
+path="res://.godot/imported/Blender.png-cd6ca7db130cfe96157eb2bc7108228b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png"
-dest_files=["res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"]
+source_file="res://Assets/Traps/Blender.png"
+dest_files=["res://.godot/imported/Blender.png-cd6ca7db130cfe96157eb2bc7108228b.ctex"]
 
 [params]
 

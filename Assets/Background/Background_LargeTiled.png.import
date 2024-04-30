@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ucbtn12k735"
-path="res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"
+uid="uid://4k88uuws8404"
+path="res://.godot/imported/Background_LargeTiled.png-d42a410131fafcc9b80200765adfe6e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png"
-dest_files=["res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"]
+source_file="res://Assets/Background/Background_LargeTiled.png"
+dest_files=["res://.godot/imported/Background_LargeTiled.png-d42a410131fafcc9b80200765adfe6e5.ctex"]
 
 [params]
 

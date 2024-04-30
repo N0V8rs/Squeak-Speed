@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ucbtn12k735"
-path="res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"
+uid="uid://bmww3h5xwvjyt"
+path="res://.godot/imported/HotSauce.png-82ae93198ca3a42677b33f10e282b74b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png"
-dest_files=["res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"]
+source_file="res://Assets/Traps/HotSauce.png"
+dest_files=["res://.godot/imported/HotSauce.png-82ae93198ca3a42677b33f10e282b74b.ctex"]
 
 [params]
 

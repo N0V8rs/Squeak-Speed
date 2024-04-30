@@ -195,7 +195,8 @@ animations = [{
 size = Vector2(91, 97)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 3
+collision_mask = 3
 slide_on_ceiling = false
 script = ExtResource("1_m3t20")
 

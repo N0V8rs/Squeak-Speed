@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ucbtn12k735"
-path="res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"
+uid="uid://dgpsc6vwdc7k0"
+path="res://.godot/imported/Sink.png-772d763b7a3616c255502e35aadbbc2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png"
-dest_files=["res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"]
+source_file="res://Assets/Furniture/Sink.png"
+dest_files=["res://.godot/imported/Sink.png-772d763b7a3616c255502e35aadbbc2b.ctex"]
 
 [params]
 

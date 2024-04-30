@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ucbtn12k735"
-path="res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"
+uid="uid://oe1w6uyh7iyo"
+path="res://.godot/imported/PizzaCutter.png-c6493697bda4f3234b9bd43dc3a22325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png"
-dest_files=["res://.godot/imported/tileset_TerrainTileSet.png-eb5f45eb7c95f036d0bae371c3d90a67.ctex"]
+source_file="res://Assets/Traps/PizzaCutter.png"
+dest_files=["res://.godot/imported/PizzaCutter.png-c6493697bda4f3234b9bd43dc3a22325.ctex"]
 
 [params]
 

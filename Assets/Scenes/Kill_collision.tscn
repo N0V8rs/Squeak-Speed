@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://r6roukmgyihm"]
+
+[ext_resource type="Script" path="res://Scripts/Kill_collision.gd" id="1_cvf26"]
+
+[node name="KillCollision" type="Area2D"]
+collision_mask = 2
+input_pickable = false
+script = ExtResource("1_cvf26")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="ready" from="Timer" to="." method="_on_timer_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

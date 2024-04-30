@@ -30,16 +30,3 @@ func _physics_process(delta):
 	# Sprite animations for left and right movement, fliping the Player
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
-	
-func damage(amount):
-	current_health -= amount
-	if current_health <= 0:
-		die()
-
-func die():
-	#AnimatedSprite2D
-	get_parent().queue_free()
-
-
-func _on_saw_trap_trap_triggered():
-	die()
