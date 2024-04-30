@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://jc8058gpts0r"]
+[gd_scene load_steps=5 format=3 uid="uid://jc8058gpts0r"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="PackedScene" uid="uid://e8gg00crfxov" path="res://Assets/Scenes/SawTrap.tscn" id="2_0wuhm"]
-[ext_resource type="PackedScene" uid="uid://b3axow3gjngk8" path="res://testing_hitboxes.tscn" id="3_0viwh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_d0t2l"]
 
@@ -30,6 +29,3 @@ shape = SubResource("RectangleShape2D_rn276")
 
 [node name="SawTrap" parent="." instance=ExtResource("2_0wuhm")]
 position = Vector2(384, -54)
-
-[node name="Testing Hitboxes" parent="." instance=ExtResource("3_0viwh")]
-position = Vector2(150, 163)

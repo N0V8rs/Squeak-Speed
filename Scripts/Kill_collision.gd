@@ -7,4 +7,5 @@ func _on_timer_timeout():
 
 func _on_body_entered(body):
 	print("Testing")
+	body.get_node("CollisionShape2D").queue_free()
 	kill_timer.start()

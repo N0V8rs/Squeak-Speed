@@ -205,8 +205,7 @@ texture_filter = 1
 position = Vector2(-2, 7)
 scale = Vector2(3.875, 3.5625)
 sprite_frames = SubResource("SpriteFrames_vpd2b")
-animation = &"Idle"
-frame_progress = 0.376311
+animation = &"jumping"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 15.5)
