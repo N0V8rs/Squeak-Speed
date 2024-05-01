@@ -29,7 +29,10 @@ func _physics_process(delta):
 	sprite_2d.flip_h = isLeft
 	
 	# Aniamtions for the Player Movement
-	if horizontal_direction == 0:
-		sprite_2d.play("Idle")
-	else :
-		sprite_2d.play("running")
+	if is_on_floor():
+		if horizontal_direction == 0:
+			sprite_2d.play("Idle") # Idle string for the Idle animations
+		else :
+			sprite_2d.play("running") # Running string for the running animations
+	else:
+		sprite_2d.play("jumping") # Jumping string for jumping animations

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://jc8058gpts0r"]
+[gd_scene load_steps=7 format=3 uid="uid://jc8058gpts0r"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
+[ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
 [ext_resource type="PackedScene" uid="uid://e8gg00crfxov" path="res://Assets/Scenes/SawTrap.tscn" id="2_0wuhm"]
+[ext_resource type="PackedScene" uid="uid://baqjdrrxgmsq" path="res://Assets/Scenes/checkpoint.tscn" id="4_p6emy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_d0t2l"]
 
@@ -9,6 +11,7 @@
 size = Vector2(1075, 224)
 
 [node name="Kitchen Level" type="Node2D"]
+script = ExtResource("1_ljqjj")
 
 [node name="Player" parent="." instance=ExtResource("1_03wik")]
 position = Vector2(-78, -148)
@@ -29,3 +32,6 @@ shape = SubResource("RectangleShape2D_rn276")
 
 [node name="SawTrap" parent="." instance=ExtResource("2_0wuhm")]
 position = Vector2(384, -54)
+
+[node name="Checkpoint" parent="." instance=ExtResource("4_p6emy")]
+position = Vector2(290, 195)

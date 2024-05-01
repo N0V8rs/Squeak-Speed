@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0gr4vo28oqyn"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_po3tg"]
-[ext_resource type="Texture2D" uid="uid://bqahhsv1dbe0w" path="res://icon.svg" id="2_gl7h0"]
+[ext_resource type="Texture2D" uid="uid://d4cedt2xd3266" path="res://Assets/Enemy (Rat)/RatEnemy_Sprite1.png" id="2_bqlwq"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="3_0c1sh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w2ar5"]
@@ -11,7 +11,7 @@ radius = 63.5708
 script = ExtResource("1_po3tg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_gl7h0")
+texture = ExtResource("2_bqlwq")
 
 [node name="KillCollision" parent="." instance=ExtResource("3_0c1sh")]
 
