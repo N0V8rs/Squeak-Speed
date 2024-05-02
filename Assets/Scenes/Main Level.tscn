@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://jc8058gpts0r"]
+[gd_scene load_steps=7 format=3 uid="uid://jc8058gpts0r"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
 [ext_resource type="PackedScene" uid="uid://e8gg00crfxov" path="res://Assets/Scenes/SawTrap.tscn" id="2_0wuhm"]
 [ext_resource type="PackedScene" uid="uid://baqjdrrxgmsq" path="res://Assets/Scenes/checkpoint.tscn" id="4_p6emy"]
 [ext_resource type="TileSet" uid="uid://1e2ijovefdlk" path="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres" id="5_elccx"]
+[ext_resource type="Texture2D" uid="uid://dh8lvgkbc6gpy" path="res://Assets/Background/Background_SingleTile.png" id="6_raeba"]
 
 [node name="Kitchen Level" type="Node2D"]
 script = ExtResource("1_ljqjj")
@@ -25,3 +26,17 @@ position = Vector2(290, 195)
 tile_set = ExtResource("5_elccx")
 format = 2
 layer_0/tile_data = PackedInt32Array(131069, 0, 0, 131070, 65536, 0, 131071, 65536, 0, 65536, 65536, 0, 65537, 196608, 0, 131073, 196608, 1, 131072, 131072, 1, 196607, 131072, 1, 196606, 131072, 1, 196605, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1016.0
+offset_top = -696.0
+offset_right = 1176.0
+offset_bottom = 552.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_raeba")
+stretch_mode = 1

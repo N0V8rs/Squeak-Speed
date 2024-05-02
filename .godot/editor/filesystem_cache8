@@ -1,48 +1,52 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714615113
-icon.svg::CompressedTexture2D::3509880680454888880::1713882281::1713882287::1::::<><>::
-README.md::TextFile::-1::1713882403::0::1::::<><>::
-::res://Assets/::1714490008
-::res://Assets/Background/::1714490042
-Background_LargeTiled.png::CompressedTexture2D::2058183917391747787::1714490008::1714490042::1::::<><>::
-Background_SingleTile.png::CompressedTexture2D::7719414141659415398::1714490008::1714490042::1::::<><>::
-::res://Assets/Enemy (Rat)/::1714424800
-RatEnemy_Sprite1.png::CompressedTexture2D::9199116538146670937::1714397891::1714424800::1::::<><>::
-::res://Assets/Furniture/::1714490042
-Oven_Hot.png::CompressedTexture2D::1637690853591512691::1714490008::1714490042::1::::<><>::
-Oven_Off.png::CompressedTexture2D::7338618047677181889::1714490008::1714490042::1::::<><>::
-Oven_Warm.png::CompressedTexture2D::8054636271612221705::1714490008::1714490042::1::::<><>::
-Sink.png::CompressedTexture2D::7612458918344451757::1714490008::1714490042::1::::<><>::
-::res://Assets/Level Kitchen/::1713887429
-::res://Assets/Player/::1714424800
-Speedy_Sprite.png::CompressedTexture2D::6174747617686900138::1714397642::1714424800::1::::<><>::
-::res://Assets/Scenes/::1714597003
-checkpoint.tscn::PackedScene::71176572302553636::1714596903::0::1::::<><>::uid://bqahhsv1dbe0w::::res://icon.svg<>res://Scripts/CheckpointBox.gd
-enemy.tscn::PackedScene::8927454511343783261::1714596903::0::1::::<><>::res://Scripts/Enemy.gd<>uid://d4cedt2xd3266::::res://Assets/Enemy (Rat)/RatEnemy_Sprite1.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn
-Kill_collision.tscn::PackedScene::1258264308683344954::1714596903::0::1::::<><>::res://Scripts/Kill_collision.gd
-Main Level.tscn::PackedScene::637878280831802803::1714597003::0::1::::<><>::uid://c0r32qycjimbd::::res://Assets/Scenes/player.tscn<>res://Scripts/Main Level.gd<>uid://e8gg00crfxov::::res://Assets/Scenes/SawTrap.tscn<>uid://baqjdrrxgmsq::::res://Assets/Scenes/checkpoint.tscn
-player.tscn::PackedScene::6564406049941055589::1714596903::0::1::::<><>::res://Scripts/Player.gd<>uid://bighp7x3soq6t::::res://Temp/Idle (32x32).png<>uid://bcf4s3c4l0hsp::::res://Temp/Jump (32x32).png<>uid://crj2473xvmlmr::::res://Temp/Run (32x32).png
-SawTrap.tscn::PackedScene::349256208973806469::1714596903::0::1::::<><>::uid://dsh0tjhg5nnv6::::res://Temp/Off.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn
-::res://Assets/TerrainTileSet/::1714490008
-::res://Assets/TerrainTileSet/TerrainTileSet/::1714490042
-tileset_TerrainTileSet.png::CompressedTexture2D::9025583779772721750::1714490008::1714490042::1::::<><>::
-tileset_TerrainTileSet.tres::TileSet::-1::1714490008::0::1::::<><>::res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png
-::res://Assets/Traps/::1714490042
-Blender.png::CompressedTexture2D::5890276388104617507::1714490008::1714490042::1::::<><>::
-HoneyPot.png::CompressedTexture2D::5235327841006560817::1714490008::1714490042::1::::<><>::
-HotSauce.png::CompressedTexture2D::3275489309091838287::1714490008::1714490042::1::::<><>::
-Knife_Cleaver.png::CompressedTexture2D::2151715047581343108::1714490008::1714490042::1::::<><>::
-Knife_Serrated.png::CompressedTexture2D::9137510792612061785::1714490008::1714490042::1::::<><>::
-PizzaCutter.png::CompressedTexture2D::992520911447543374::1714490008::1714490042::1::::<><>::
-::res://Scripts/::1714596879
-Checkpoint.gd::GDScript::-1::1714578875::0::1::::<>Node<>::
-CheckpointBox.gd::GDScript::-1::1714596879::0::1::::<>Area2D<>::
-Enemy.gd::GDScript::-1::1714496209::0::1::::<>Node2D<>::
-Kill_collision.gd::GDScript::-1::1714501036::0::1::::<>Area2D<>::
-Main Level.gd::GDScript::-1::1714584963::0::1::::<>Node2D<>::
-Player.gd::GDScript::-1::1714596879::0::1::::<>CharacterBody2D<>::
-::res://Temp/::1714061304
-Idle (32x32).png::CompressedTexture2D::2960771222754179393::1714059601::1714060063::1::::<><>::
-Jump (32x32).png::CompressedTexture2D::2538914671896711463::1714059601::1714059806::1::::<><>::
-Off.png::CompressedTexture2D::8438664219582670693::1714059604::1714061304::1::::<><>::
-Run (32x32).png::CompressedTexture2D::5986323980922517989::1714059601::1714059806::1::::<><>::
+::res://::1714658628
+icon.svg::CompressedTexture2D::3509880680454888880::1713882640::1713882640::1::::<><>::
+README.md::TextFile::-1::1713882640::0::1::::<><>::
+::res://Assets/::1714488640
+::res://Assets/Background/::1714657629
+Background_LargeTiled.png::CompressedTexture2D::2058183917391747787::1714488707::1714657629::1::::<><>::
+Background_SingleTile.png::CompressedTexture2D::7719414141659415398::1714488656::1714657629::1::::<><>::
+::res://Assets/Enemy (Rat)/::1714487830
+RatEnemy_Sprite1.png::CompressedTexture2D::9199116538146670937::1714487830::1714487830::1::::<><>::
+::res://Assets/Furniture/::1714657934
+Checkpoint.png::CompressedTexture2D::4782059538868660519::1714657786::1714657934::1::::<><>::
+Oven_Hot.png::CompressedTexture2D::1637690853591512691::1714488192::1714657629::1::::<><>::
+Oven_Off.png::CompressedTexture2D::7338618047677181889::1714488248::1714657629::1::::<><>::
+Oven_Warm.png::CompressedTexture2D::8054636271612221705::1714488226::1714657629::1::::<><>::
+Sink.png::CompressedTexture2D::7612458918344451757::1714488122::1714657629::1::::<><>::
+Strainer_Spring_V1..png::CompressedTexture2D::5157670811267604479::1714657560::1714657934::1::::<><>::
+Strainer_Spring_V2.png::CompressedTexture2D::5558269052729710435::1714657701::1714657934::1::::<><>::
+::res://Assets/Player/::1714657934
+Speedy_Sprite-Idle.png::CompressedTexture2D::5432428970615023317::1714656322::1714657934::1::::<><>::
+Speedy_Sprite-Walk.png::CompressedTexture2D::8159283401577221317::1714656322::1714657934::1::::<><>::
+Speedy_Sprite.png::CompressedTexture2D::6174747617686900138::1714487830::1714487830::1::::<><>::
+::res://Assets/Scenes/::1714658542
+checkpoint.tscn::PackedScene::71176572302553636::1714658506::0::1::::<><>::uid://caep27fox6ltn::::res://Assets/Furniture/Checkpoint.png<>res://Scripts/CheckpointBox.gd
+enemy.tscn::PackedScene::8927454511343783261::1714658506::0::1::::<><>::res://Scripts/Enemy.gd<>uid://d4cedt2xd3266::::res://Assets/Enemy (Rat)/RatEnemy_Sprite1.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn
+Kill_collision.tscn::PackedScene::1258264308683344954::1714658506::0::1::::<><>::res://Scripts/Kill_collision.gd
+Main Level.tscn::PackedScene::637878280831802803::1714658542::0::1::::<><>::uid://c0r32qycjimbd::::res://Assets/Scenes/player.tscn<>res://Scripts/Main Level.gd<>uid://e8gg00crfxov::::res://Assets/Scenes/SawTrap.tscn<>uid://baqjdrrxgmsq::::res://Assets/Scenes/checkpoint.tscn<>uid://1e2ijovefdlk::::res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres
+player.tscn::PackedScene::6564406049941055589::1714658506::0::1::::<><>::res://Scripts/Player.gd<>uid://cjnrkubs3ps7v::::res://Assets/Player/Speedy_Sprite-Idle.png<>uid://bcf4s3c4l0hsp::::res://Temp/Jump (32x32).png<>uid://doiog8upq7lm8::::res://Assets/Player/Speedy_Sprite-Walk.png
+SawTrap.tscn::PackedScene::349256208973806469::1714658506::0::1::::<><>::uid://dsh0tjhg5nnv6::::res://Temp/Off.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn
+::res://Assets/TerrainTileSet/::1714487912
+::res://Assets/TerrainTileSet/TerrainTileSet/::1714657946
+tileset_TerrainTileSet.png::CompressedTexture2D::9025583779772721750::1714487912::1714657629::1::::<><>::
+tileset_TerrainTileSet.tres::TileSet::1834821586058117524::1714657946::0::1::::<><>::uid://d1ucbtn12k735::::res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png
+::res://Assets/Traps/::1714657629
+Blender.png::CompressedTexture2D::5890276388104617507::1714488472::1714657629::1::::<><>::
+HoneyPot.png::CompressedTexture2D::5235327841006560817::1714488422::1714657629::1::::<><>::
+HotSauce.png::CompressedTexture2D::3275489309091838287::1714488383::1714657629::1::::<><>::
+Knife_Cleaver.png::CompressedTexture2D::2151715047581343108::1714488534::1714657629::1::::<><>::
+Knife_Serrated.png::CompressedTexture2D::9137510792612061785::1714488599::1714657629::1::::<><>::
+PizzaCutter.png::CompressedTexture2D::992520911447543374::1714488450::1714657629::1::::<><>::
+::res://Scripts/::1714657946
+Checkpoint.gd::GDScript::-1::1714657629::0::1::::<>Node<>::
+CheckpointBox.gd::GDScript::-1::1714657629::0::1::::<>Area2D<>::
+Enemy.gd::GDScript::-1::1714657629::0::1::::<>Node2D<>::
+Kill_collision.gd::GDScript::-1::1714657629::0::1::::<>Area2D<>::
+Main Level.gd::GDScript::-1::1714657629::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1714657946::0::1::::<>CharacterBody2D<>::
+::res://Temp/::1714242272
+Idle (32x32).png::CompressedTexture2D::2960771222754179393::1714139313::1714139313::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::2538914671896711463::1714139313::1714139313::1::::<><>::
+Off.png::CompressedTexture2D::8438664219582670693::1714139313::1714139313::1::::<><>::
+Run (32x32).png::CompressedTexture2D::5986323980922517989::1714139313::1714139313::1::::<><>::

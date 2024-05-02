@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://baqjdrrxgmsq"]
 
-[ext_resource type="Texture2D" uid="uid://bqahhsv1dbe0w" path="res://icon.svg" id="1_jbc7v"]
+[ext_resource type="Texture2D" uid="uid://caep27fox6ltn" path="res://Assets/Furniture/Checkpoint.png" id="1_d4qwa"]
 [ext_resource type="Script" path="res://Scripts/CheckpointBox.gd" id="2_lb5af"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orcek"]
@@ -9,8 +9,10 @@ size = Vector2(64, 114)
 [node name="Checkpoint" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_jbc7v")
+texture_filter = 1
+position = Vector2(-1, -28)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_d4qwa")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("2_lb5af")
