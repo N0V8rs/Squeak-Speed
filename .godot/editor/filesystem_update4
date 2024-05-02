@@ -6,3 +6,5 @@ res://Assets/Scenes/SawTrap.tscn
 res://Assets/Scenes/enemy.tscn
 res://Assets/Scenes/Kill_collision.tscn
 res://Assets/Scenes/checkpoint.tscn
+res://Scripts/Kill_collision.gd
+res://Scripts/CheckpointBox.gd

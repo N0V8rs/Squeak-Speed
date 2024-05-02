@@ -17,8 +17,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
-		if (velocity.y < -1):
-			sprite_2d.animation = "jumping"
+		# Change when the Player has a jumping aminations
+		#if (velocity.y < -1):
+			#sprite_2d.animation = "jumping"
 	
 	var horizontal_direction = Input.get_axis("movement_left", "movement_right")
 	velocity.x = speed * horizontal_direction
@@ -34,5 +35,5 @@ func _physics_process(delta):
 			sprite_2d.play("Idle") # Idle string for the Idle animations
 		else :
 			sprite_2d.play("running") # Running string for the running animations
-	else:
-		sprite_2d.play("jumping") # Jumping string for jumping animations
+	#else:
+		#sprite_2d.play("jumping") # Jumping string for jumping animations
