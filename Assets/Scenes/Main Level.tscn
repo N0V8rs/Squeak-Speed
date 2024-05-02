@@ -1,14 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://jc8058gpts0r"]
+[gd_scene load_steps=6 format=3 uid="uid://jc8058gpts0r"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
 [ext_resource type="PackedScene" uid="uid://e8gg00crfxov" path="res://Assets/Scenes/SawTrap.tscn" id="2_0wuhm"]
 [ext_resource type="PackedScene" uid="uid://baqjdrrxgmsq" path="res://Assets/Scenes/checkpoint.tscn" id="4_p6emy"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_d0t2l"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rn276"]
-size = Vector2(1075, 224)
+[ext_resource type="TileSet" uid="uid://1e2ijovefdlk" path="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres" id="5_elccx"]
 
 [node name="Kitchen Level" type="Node2D"]
 script = ExtResource("1_ljqjj")
@@ -19,19 +15,13 @@ speed = 1000
 gravity = 10
 jump_force = 500
 
-[node name="Platform" type="StaticBody2D" parent="."]
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
-position = Vector2(49, 349)
-scale = Vector2(1067, 235.5)
-mesh = SubResource("BoxMesh_d0t2l")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(52.5, 342)
-shape = SubResource("RectangleShape2D_rn276")
-
 [node name="SawTrap" parent="." instance=ExtResource("2_0wuhm")]
 position = Vector2(384, -54)
 
 [node name="Checkpoint" parent="." instance=ExtResource("4_p6emy")]
 position = Vector2(290, 195)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("5_elccx")
+format = 2
+layer_0/tile_data = PackedInt32Array(131069, 0, 0, 131070, 65536, 0, 131071, 65536, 0, 65536, 65536, 0, 65537, 196608, 0, 131073, 196608, 1, 131072, 131072, 1, 196607, 131072, 1, 196606, 131072, 1, 196605, 0, 1)
