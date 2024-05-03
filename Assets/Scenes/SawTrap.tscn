@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_d2t6y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8khgr"]
-radius = 15.0333
+radius = 17.0012
 
 [node name="Sprite2D" type="Sprite2D"]
 texture_filter = 1

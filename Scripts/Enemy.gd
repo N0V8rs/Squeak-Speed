@@ -5,16 +5,18 @@ var direction = 1
 
 @onready var ray_cast_left = $RayCastLeft
 @onready var ray_cast_right = $RayCastRight
+@onready var ray_cast_down = $RayCastDown
 
-# Change to a aniamted sprite after the assets on in the folder
-# Delete this
-@onready var sprite_2d = $Sprite2D
+@onready var animated_sprite = $AnimatedSprite2D
 
 func _process(delta):
-	if ray_cast_right.is_colliding():
+	if ray_cast_right.is_colliding() or not ray_cast_down.is_colliding():
 		direction = -1
-		sprite_2d.flip_h = true
-	if ray_cast_left.is_colliding():
+		animated_sprite.flip_h = false
+	if ray_cast_left.is_colliding() or not ray_cast_down.is_colliding():
 		direction = 1
-		sprite_2d.flip_h = false
+		animated_sprite.flip_h = true
 	position.x += direction * ENEMY_SPEED * delta
+
+	if position.x > 1:
+		animated_sprite.play("Walking")

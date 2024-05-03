@@ -1,8 +1,64 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0gr4vo28oqyn"]
+[gd_scene load_steps=13 format=3 uid="uid://d0gr4vo28oqyn"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_po3tg"]
-[ext_resource type="Texture2D" uid="uid://d4cedt2xd3266" path="res://Assets/Enemy (Rat)/RatEnemy_Sprite1.png" id="2_bqlwq"]
+[ext_resource type="Texture2D" uid="uid://doiw5hcxefibt" path="res://Assets/Enemy (Rat)/RatEnemy-Walk.png" id="2_a7fjf"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="3_0c1sh"]
+[ext_resource type="Texture2D" uid="uid://io0mt1ye3dmu" path="res://Assets/Enemy (Rat)/RatEnemy-Idle.png" id="3_ylo8h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_so8rb"]
+atlas = ExtResource("2_a7fjf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnug4"]
+atlas = ExtResource("2_a7fjf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knjqo"]
+atlas = ExtResource("2_a7fjf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aerap"]
+atlas = ExtResource("2_a7fjf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm43h"]
+atlas = ExtResource("3_ylo8h")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooiyj"]
+atlas = ExtResource("3_ylo8h")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cep54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_so8rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnug4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knjqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aerap")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm43h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooiyj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w2ar5"]
 radius = 34.0331
@@ -11,9 +67,11 @@ radius = 34.0331
 scale = Vector2(2, 2)
 script = ExtResource("1_po3tg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_bqlwq")
+sprite_frames = SubResource("SpriteFrames_cep54")
+animation = &"Walking"
+frame_progress = 0.447547
 
 [node name="KillCollision" parent="." instance=ExtResource("3_0c1sh")]
 
@@ -22,7 +80,13 @@ position = Vector2(-0.5, -1)
 shape = SubResource("CircleShape2D_w2ar5")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-35, 0)
+target_position = Vector2(-31.5, 0)
+collide_with_areas = true
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-target_position = Vector2(33, 0)
+target_position = Vector2(29.5, 0)
+collide_with_areas = true
+
+[node name="RayCastDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 32.5)
+collide_with_areas = true

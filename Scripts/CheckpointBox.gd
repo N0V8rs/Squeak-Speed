@@ -1,6 +1,6 @@
 extends Area2D
 
-# Called when the node enters the scene tree for the first time.
+# Checkpoint animation if there is one goes in this func
 func _ready():
 	pass # Replace with function body.
 
