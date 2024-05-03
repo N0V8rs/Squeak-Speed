@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://qmu1xbe763ch"]
+
+[ext_resource type="Texture2D" uid="uid://dcs4746ky1mu0" path="res://Assets/Furniture/Oven_Off.png" id="1_kk812"]
+[ext_resource type="Script" path="res://Scripts/oven.gd" id="1_u0g25"]
+[ext_resource type="Texture2D" uid="uid://dm0yxhc1dle22" path="res://Assets/Furniture/Oven_Warm.png" id="2_jolq3"]
+[ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="3_u32fw"]
+[ext_resource type="Texture2D" uid="uid://xlkr8vkye2g2" path="res://Assets/Furniture/Oven_Hot.png" id="4_q18dp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bdc5"]
+size = Vector2(256, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l881f"]
+size = Vector2(88, 38.5)
+
+[node name="Oven" type="Node2D"]
+position = Vector2(312, 176)
+script = ExtResource("1_u0g25")
+
+[node name="OvenOffSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_kk812")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="OvenOffSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OvenOffSprite/StaticBody2D"]
+position = Vector2(0, -23)
+shape = SubResource("RectangleShape2D_5bdc5")
+
+[node name="OvenWarnSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_jolq3")
+
+[node name="KillCollision" parent="OvenWarnSprite" instance=ExtResource("3_u32fw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OvenWarnSprite/KillCollision"]
+position = Vector2(56, -64)
+shape = SubResource("RectangleShape2D_l881f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="OvenWarnSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OvenWarnSprite/StaticBody2D"]
+position = Vector2(0, -23)
+shape = SubResource("RectangleShape2D_5bdc5")
+
+[node name="OvenHotSprite" type="Sprite2D" parent="."]
+texture = ExtResource("4_q18dp")
+
+[node name="KillCollision" parent="OvenHotSprite" instance=ExtResource("3_u32fw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OvenHotSprite/KillCollision"]
+position = Vector2(56, -75.25)
+shape = SubResource("RectangleShape2D_l881f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="OvenHotSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OvenHotSprite/StaticBody2D"]
+position = Vector2(0, -23)
+shape = SubResource("RectangleShape2D_5bdc5")
+
+[node name="OvenTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="OvenTimer" to="." method="_on_oven_timer_timeout"]
