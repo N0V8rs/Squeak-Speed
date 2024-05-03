@@ -69,6 +69,7 @@ script = ExtResource("1_po3tg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_cep54")
 animation = &"Walking"
 frame_progress = 0.447547

@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://c0r32qycjimbd"]
+[gd_scene load_steps=19 format=3 uid="uid://c0r32qycjimbd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_m3t20"]
 [ext_resource type="Texture2D" uid="uid://cjnrkubs3ps7v" path="res://Assets/Player/Speedy_Sprite-Idle.png" id="2_prxfu"]
-[ext_resource type="Texture2D" uid="uid://bcf4s3c4l0hsp" path="res://Temp/Jump (32x32).png" id="3_ti4n0"]
+[ext_resource type="Texture2D" uid="uid://bcf4s3c4l0hsp" path="res://Temp/Jump (32x32).png" id="3_3bwc3"]
 [ext_resource type="Texture2D" uid="uid://doiog8upq7lm8" path="res://Assets/Player/Speedy_Sprite-Walk.png" id="4_c3g5l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64cd8"]
@@ -20,10 +20,6 @@ region = Rect2(128, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykryh"]
 atlas = ExtResource("2_prxfu")
 region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ctymy"]
-atlas = ExtResource("3_ti4n0")
-region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_an4hh"]
 atlas = ExtResource("4_c3g5l")
@@ -78,7 +74,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ctymy")
+"texture": ExtResource("3_3bwc3")
 }],
 "loop": true,
 "name": &"jumping",
