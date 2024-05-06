@@ -61,7 +61,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w2ar5"]
-radius = 34.0331
+radius = 46.133
 
 [node name="Enemy" type="Node2D"]
 scale = Vector2(2, 2)
@@ -81,13 +81,14 @@ position = Vector2(-0.5, -1)
 shape = SubResource("CircleShape2D_w2ar5")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-31.5, 0)
+target_position = Vector2(-46, 0)
 collide_with_areas = true
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-target_position = Vector2(29.5, 0)
+scale = Vector2(1.51535, 3.48906)
+target_position = Vector2(29.6961, 0)
 collide_with_areas = true
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
-target_position = Vector2(0, 32.5)
+target_position = Vector2(0, 47.5)
 collide_with_areas = true

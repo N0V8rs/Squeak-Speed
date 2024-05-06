@@ -17,7 +17,6 @@ position = Vector2(312, 176)
 script = ExtResource("1_u0g25")
 
 [node name="OvenOffSprite" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("1_kk812")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="OvenOffSprite"]
@@ -43,6 +42,7 @@ position = Vector2(0, -23)
 shape = SubResource("RectangleShape2D_5bdc5")
 
 [node name="OvenHotSprite" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("4_q18dp")
 
 [node name="KillCollision" parent="OvenHotSprite" instance=ExtResource("3_u32fw")]

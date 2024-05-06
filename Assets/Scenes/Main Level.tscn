@@ -41,7 +41,7 @@ stretch_mode = 1
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("7_vvj5y")]
 z_index = 1
-position = Vector2(624, 256)
+position = Vector2(680, 248)
 ENEMY_SPEED = 400
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource("7_vvj5y")]
