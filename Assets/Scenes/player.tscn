@@ -1,9 +1,30 @@
-[gd_scene load_steps=19 format=3 uid="uid://c0r32qycjimbd"]
+[gd_scene load_steps=29 format=3 uid="uid://c0r32qycjimbd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_m3t20"]
+[ext_resource type="Texture2D" uid="uid://b1xxenwnxwfsq" path="res://Assets/Player/Speedy_Sprite-Hit.png" id="2_o384d"]
 [ext_resource type="Texture2D" uid="uid://cjnrkubs3ps7v" path="res://Assets/Player/Speedy_Sprite-Idle.png" id="2_prxfu"]
-[ext_resource type="Texture2D" uid="uid://bcf4s3c4l0hsp" path="res://Temp/Jump (32x32).png" id="3_3bwc3"]
+[ext_resource type="Texture2D" uid="uid://tkktdot4pqt7" path="res://Assets/Player/Speedy_Sprite-Jump.png" id="4_c2gpw"]
 [ext_resource type="Texture2D" uid="uid://doiog8upq7lm8" path="res://Assets/Player/Speedy_Sprite-Walk.png" id="4_c3g5l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r214d"]
+atlas = ExtResource("2_o384d")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q13pg"]
+atlas = ExtResource("2_o384d")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kosca"]
+atlas = ExtResource("2_o384d")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qluon"]
+atlas = ExtResource("2_o384d")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62va8"]
+atlas = ExtResource("2_o384d")
+region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64cd8"]
 atlas = ExtResource("2_prxfu")
@@ -19,6 +40,22 @@ region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykryh"]
 atlas = ExtResource("2_prxfu")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01sj0"]
+atlas = ExtResource("4_c2gpw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y75na"]
+atlas = ExtResource("4_c2gpw")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmsr4"]
+atlas = ExtResource("4_c2gpw")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plp64"]
+atlas = ExtResource("4_c2gpw")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_an4hh"]
@@ -57,6 +94,26 @@ region = Rect2(448, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_r214d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q13pg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kosca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qluon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62va8")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_64cd8")
 }, {
 "duration": 1.0,
@@ -74,7 +131,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_3bwc3")
+"texture": SubResource("AtlasTexture_01sj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y75na")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmsr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plp64")
 }],
 "loop": true,
 "name": &"jumping",
@@ -111,7 +177,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfevb"]
-size = Vector2(91, 97)
+size = Vector2(37, 41)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
@@ -124,15 +190,16 @@ jump_force = 100
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-2, 7)
-scale = Vector2(3, 2.758)
 sprite_frames = SubResource("SpriteFrames_vpd2b")
-animation = &"Idle"
+animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 15.5)
+position = Vector2(-2.5, 6.5)
 shape = SubResource("RectangleShape2D_jfevb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, -103)
+zoom = Vector2(1.5, 1.5)
 limit_left = -1016
 limit_right = 1152
 limit_smoothed = true

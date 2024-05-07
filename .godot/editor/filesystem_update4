@@ -1,9 +1,9 @@
-res://Assets/Scenes/Main Level.tscn
+res://Assets/Scenes/player.tscn
 res://Scripts/Player.gd
 res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres
-res://Assets/Scenes/player.tscn
-res://Assets/Scenes/SawTrap.tscn
 res://Assets/Scenes/enemy.tscn
-res://Assets/Scenes/Kill_collision.tscn
 res://Assets/Scenes/checkpoint.tscn
+res://Assets/Scenes/SawTrap.tscn
+res://Assets/Scenes/Main Level.tscn
+res://Assets/Scenes/Kill_collision.tscn
 res://Assets/Scenes/oven.tscn
