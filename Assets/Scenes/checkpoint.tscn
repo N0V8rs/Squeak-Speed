@@ -8,6 +8,9 @@ size = Vector2(34, 54)
 
 [node name="Checkpoint" type="Node2D"]
 
+[node name="Clock Timer" type="Timer" parent="."]
+wait_time = 10.0
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-1, -28)
@@ -20,4 +23,5 @@ script = ExtResource("2_lb5af")
 position = Vector2(-1, -28)
 shape = SubResource("RectangleShape2D_orcek")
 
+[connection signal="timeout" from="Clock Timer" to="Area2D" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
