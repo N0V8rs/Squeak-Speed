@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Checkpoint="*res://Scripts/Checkpoint.gd"
-GlobalVar="*res://global_var.gd"
 
 [display]
 
