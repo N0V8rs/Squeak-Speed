@@ -198,9 +198,7 @@ position = Vector2(-2.5, 6.5)
 shape = SubResource("RectangleShape2D_jfevb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, -103)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(2, 2)
 limit_left = -1016
 limit_right = 1152
-limit_smoothed = true
 position_smoothing_speed = 6.0

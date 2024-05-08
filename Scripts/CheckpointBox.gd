@@ -19,8 +19,8 @@ func _on_body_entered(body):
 	if body.name == "Player":
 		clock_timer.stop()
 		clock_timer.start(timer_time)
-	Checkpoint.player_last_position = global_position
-	print("Checkpoint Reached")
+		Checkpoint.player_last_position = global_position
+		print("Checkpoint Reached")
 
 func _on_clock_timer_timeout():
 	get_tree().reload_current_scene()
