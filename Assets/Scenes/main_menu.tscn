@@ -39,18 +39,12 @@ theme_override_font_sizes/font_size = 30
 text = "Options
 "
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Quit" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Play
-"
-
-[node name="Button4" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Play
+text = "Quit
 "
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

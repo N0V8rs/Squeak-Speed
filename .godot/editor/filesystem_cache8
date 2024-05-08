@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715201749
+::res://::1715203244
 global_var.gd::GDScript::-1::1715201741::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3509880680454888880::1713882281::1713882287::1::::<><>::
 README.md::TextFile::-1::1713882403::0::1::::<><>::
@@ -29,18 +29,18 @@ Speedy_Sprite-Idle.png::CompressedTexture2D::5432428970615023317::1714658338::17
 Speedy_Sprite-Jump.png::CompressedTexture2D::1354873086775018510::1714692901::1714694238::1::::<><>::
 Speedy_Sprite-Walk.png::CompressedTexture2D::8159283401577221317::1714658338::1714676050::1::::<><>::
 Speedy_Sprite.png::CompressedTexture2D::6174747617686900138::1714397642::1714424800::1::::<><>::
-::res://Assets/Scenes/::1715201749
-checkpoint.tscn::PackedScene::71176572302553636::1715201749::0::1::::<><>::uid://caep27fox6ltn::::res://Assets/Furniture/Checkpoint.png<>res://Scripts/CheckpointBox.gd
-enemy.tscn::PackedScene::8927454511343783261::1715201749::0::1::::<><>::res://Scripts/Enemy.gd<>uid://doiw5hcxefibt::::res://Assets/Enemy (Rat)/RatEnemy-Walk.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn<>uid://io0mt1ye3dmu::::res://Assets/Enemy (Rat)/RatEnemy-Idle.png
-Kill_collision.tscn::PackedScene::1258264308683344954::1715201749::0::1::::<><>::res://Scripts/Kill_collision.gd
-Main Level.tscn::PackedScene::637878280831802803::1715201749::0::1::::<><>::uid://c0r32qycjimbd::::res://Assets/Scenes/player.tscn<>res://Scripts/Main Level.gd<>uid://e8gg00crfxov::::res://Assets/Scenes/SawTrap.tscn<>uid://baqjdrrxgmsq::::res://Assets/Scenes/checkpoint.tscn<>uid://1e2ijovefdlk::::res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres<>uid://dh8lvgkbc6gpy::::res://Assets/Background/Background_SingleTile.png<>uid://d0gr4vo28oqyn::::res://Assets/Scenes/enemy.tscn<>uid://c3lbky46byi6n::::res://Assets/Scenes/scene_changing.tscn
-oven.tscn::PackedScene::1149056011561705075::1715201749::0::1::::<><>::res://Scripts/oven.gd<>uid://ttaikodg18bf::::res://Assets/Furniture/OvenV2_Off.png<>uid://pr86bnnenkbt::::res://Assets/Furniture/OvenV2_Warm.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn<>uid://du8i1taedpc8w::::res://Assets/Furniture/OvenV2_Hot.png
-player.tscn::PackedScene::6564406049941055589::1715201749::0::1::::<><>::res://Scripts/Player.gd<>uid://b1xxenwnxwfsq::::res://Assets/Player/Speedy_Sprite-Hit.png<>uid://cjnrkubs3ps7v::::res://Assets/Player/Speedy_Sprite-Idle.png<>uid://tkktdot4pqt7::::res://Assets/Player/Speedy_Sprite-Jump.png<>uid://doiog8upq7lm8::::res://Assets/Player/Speedy_Sprite-Walk.png
-main_menu.tscn::PackedScene::7751290201731727398::1715201749::0::1::::<><>::
-main_menu.gd::GDScript::-1::1715202936::0::1::::<>MarginContainer<>::
-SawTrap.tscn::PackedScene::349256208973806469::1715201749::0::1::::<><>::uid://dsh0tjhg5nnv6::::res://Temp/Off.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn
-scene_changing.tscn::PackedScene::6760917026248101435::1715201749::0::1::::<><>::uid://bqahhsv1dbe0w::::res://icon.svg<>res://Scripts/SceneChanging.gd
-win_state.tscn::PackedScene::8160807838138811453::1715201749::0::1::::<><>::
+::res://Assets/Scenes/::1715203164
+checkpoint.tscn::PackedScene::71176572302553636::1715203148::0::1::::<><>::uid://caep27fox6ltn::::res://Assets/Furniture/Checkpoint.png<>res://Scripts/CheckpointBox.gd
+enemy.tscn::PackedScene::8927454511343783261::1715203147::0::1::::<><>::res://Scripts/Enemy.gd<>uid://doiw5hcxefibt::::res://Assets/Enemy (Rat)/RatEnemy-Walk.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn<>uid://io0mt1ye3dmu::::res://Assets/Enemy (Rat)/RatEnemy-Idle.png
+Kill_collision.tscn::PackedScene::1258264308683344954::1715203147::0::1::::<><>::res://Scripts/Kill_collision.gd
+Main Level.tscn::PackedScene::637878280831802803::1715203147::0::1::::<><>::uid://c0r32qycjimbd::::res://Assets/Scenes/player.tscn<>res://Scripts/Main Level.gd<>uid://e8gg00crfxov::::res://Assets/Scenes/SawTrap.tscn<>uid://baqjdrrxgmsq::::res://Assets/Scenes/checkpoint.tscn<>uid://1e2ijovefdlk::::res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres<>uid://dh8lvgkbc6gpy::::res://Assets/Background/Background_SingleTile.png<>uid://d0gr4vo28oqyn::::res://Assets/Scenes/enemy.tscn<>uid://c3lbky46byi6n::::res://Assets/Scenes/scene_changing.tscn
+main_menu.tscn::PackedScene::7751290201731727398::1715203148::0::1::::<><>::res://Scripts/main_menu.gd
+oven.tscn::PackedScene::1149056011561705075::1715203148::0::1::::<><>::res://Scripts/oven.gd<>uid://ttaikodg18bf::::res://Assets/Furniture/OvenV2_Off.png<>uid://pr86bnnenkbt::::res://Assets/Furniture/OvenV2_Warm.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn<>uid://du8i1taedpc8w::::res://Assets/Furniture/OvenV2_Hot.png
+player.tscn::PackedScene::6564406049941055589::1715203147::0::1::::<><>::res://Scripts/Player.gd<>uid://b1xxenwnxwfsq::::res://Assets/Player/Speedy_Sprite-Hit.png<>uid://cjnrkubs3ps7v::::res://Assets/Player/Speedy_Sprite-Idle.png<>uid://tkktdot4pqt7::::res://Assets/Player/Speedy_Sprite-Jump.png<>uid://doiog8upq7lm8::::res://Assets/Player/Speedy_Sprite-Walk.png
+win_state.gd::GDScript::-1::1715204940::0::1::::<>MarginContainer<>::
+SawTrap.tscn::PackedScene::349256208973806469::1715203147::0::1::::<><>::uid://dsh0tjhg5nnv6::::res://Temp/Off.png<>uid://r6roukmgyihm::::res://Assets/Scenes/Kill_collision.tscn
+scene_changing.tscn::PackedScene::6760917026248101435::1715203148::0::1::::<><>::uid://bqahhsv1dbe0w::::res://icon.svg<>res://Scripts/SceneChanging.gd
+win_state.tscn::PackedScene::8160807838138811453::1715204929::0::1::::<><>::
 ::res://Assets/TerrainTileSet/::1715125280
 ::res://Assets/TerrainTileSet/32xTileSet/::1715125280
 32xTileSetRightSide.png::CompressedTexture2D::7236895471803865939::1715125280::1715125280::1::::<><>::
@@ -49,7 +49,7 @@ tileset_32xTileSet.png::CompressedTexture2D::2730537246065185589::1715125280::17
 tileset_32xTileSet.tres::TileSet::-1::1715125280::0::1::::<><>::res://Assets/TerrainTileSet/32xTileSet/tileset_32xTileSet.png
 ::res://Assets/TerrainTileSet/TerrainTileSet/::1715201122
 tileset_TerrainTileSet.png::CompressedTexture2D::9025583779772721750::1714490008::1714490042::1::::<><>::
-tileset_TerrainTileSet.tres::TileSet::1834821586058117524::1715201122::0::1::::<><>::uid://d1ucbtn12k735::::res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png<>uid://be5xsxh16uxrh::::res://Assets/TerrainTileSet/32xTileSet/tileset_32xTileSet.png<>uid://cii7mc7fkptxu::::res://Assets/TerrainTileSet/32xTileSet/32xTileSetv4.png<>uid://dbduu1os38fm6::::res://Assets/TerrainTileSet/32xTileSet/32xTileSetRightSide.png
+tileset_TerrainTileSet.tres::TileSet::1834821586058117524::1715204930::0::1::::<><>::uid://d1ucbtn12k735::::res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.png<>uid://be5xsxh16uxrh::::res://Assets/TerrainTileSet/32xTileSet/tileset_32xTileSet.png<>uid://cii7mc7fkptxu::::res://Assets/TerrainTileSet/32xTileSet/32xTileSetv4.png<>uid://dbduu1os38fm6::::res://Assets/TerrainTileSet/32xTileSet/32xTileSetRightSide.png
 ::res://Assets/Traps/::1714490042
 Blender.png::CompressedTexture2D::5890276388104617507::1714490008::1714490042::1::::<><>::
 HoneyPot.png::CompressedTexture2D::5235327841006560817::1714490008::1714490042::1::::<><>::
@@ -57,12 +57,13 @@ HotSauce.png::CompressedTexture2D::3275489309091838287::1714490008::1714490042::
 Knife_Cleaver.png::CompressedTexture2D::2151715047581343108::1714490008::1714490042::1::::<><>::
 Knife_Serrated.png::CompressedTexture2D::9137510792612061785::1714490008::1714490042::1::::<><>::
 PizzaCutter.png::CompressedTexture2D::992520911447543374::1714490008::1714490042::1::::<><>::
-::res://Scripts/::1715201122
+::res://Scripts/::1715203147
 Checkpoint.gd::GDScript::-1::1714578875::0::1::::<>Node<>::
 CheckpointBox.gd::GDScript::-1::1715134037::0::1::::<>Area2D<>::
 Enemy.gd::GDScript::-1::1714697704::0::1::::<>Node2D<>::
 Kill_collision.gd::GDScript::-1::1714664495::0::1::::<>Area2D<>::
 Main Level.gd::GDScript::-1::1715182854::0::1::::<>Node2D<>::
+main_menu.gd::GDScript::-1::1715203147::0::1::::<>MarginContainer<>::
 oven.gd::GDScript::-1::1714703570::0::1::::<>Node2D<>::
 Player.gd::GDScript::-1::1715201122::0::1::::<>CharacterBody2D<>::
 SceneChanging.gd::GDScript::-1::1715191899::0::1::::<>Area2D<>::

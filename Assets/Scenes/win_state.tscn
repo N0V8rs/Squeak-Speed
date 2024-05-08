@@ -1,45 +1,89 @@
-[gd_scene format=3 uid="uid://dojfkvtyeff1n"]
+[gd_scene load_steps=3 format=3 uid="uid://dojfkvtyeff1n"]
 
-[node name="Win State" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/win_state.gd" id="1_cqjt6"]
 
-[node name="Main Menu" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 126.0
-offset_right = 1151.0
-offset_bottom = 771.0
+[sub_resource type="FontFile" id="FontFile_ya8j7"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/2/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/1/0/ascent = 0.0
+cache/0/1/0/descent = 0.0
+cache/0/1/0/underline_position = 0.0
+cache/0/1/0/underline_thickness = 0.0
+cache/0/1/0/scale = 1.0
+cache/0/1/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
 
-[node name="MarginContainer" type="MarginContainer" parent="Main Menu"]
-layout_mode = 1
+[node name="Win State" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cqjt6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/MarginContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="Main Menu/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(300, 75)
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 0
 
-[node name="Button2" type="Button" parent="Main Menu/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(300, 75)
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = SubResource("FontFile_ya8j7")
+theme_override_font_sizes/font_size = 25
+text = "Quit"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "[center] [font_size=50][rainbow]You Win"
+fit_content = true
 
-[node name="Button3" type="Button" parent="Main Menu/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Button4" type="Button" parent="Main Menu/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
