@@ -8,8 +8,11 @@
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -7.0
+offset_bottom = -92.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_top = 200
 script = ExtResource("1_cqjt6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -17,13 +20,12 @@ custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 0
+theme_override_constants/separation = -2047
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
-size_flags_vertical = 6
 theme = ExtResource("2_lc0wj")
 theme_override_colors/font_hover_color = Color(0.724643, 0.724643, 0.724643, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.716296, 0.716296, 0.716296, 1)

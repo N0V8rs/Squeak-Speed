@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_mqxdj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3oqx"]
+content_margin_bottom = 5.0
 texture = ExtResource("1_4ocis")
 expand_margin_left = 1.0
 expand_margin_top = 1.0
@@ -19,6 +20,7 @@ texture_margin_top = 1.0
 texture_margin_right = 1.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qutag"]
+content_margin_bottom = 5.0
 texture = ExtResource("1_4ocis")
 
 [resource]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://jc8058gpts0r"]
+[gd_scene load_steps=14 format=3 uid="uid://jc8058gpts0r"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
@@ -9,6 +9,21 @@
 [ext_resource type="PackedScene" uid="uid://d0gr4vo28oqyn" path="res://Assets/Scenes/enemy.tscn" id="7_vvj5y"]
 [ext_resource type="PackedScene" uid="uid://c3lbky46byi6n" path="res://Assets/Scenes/scene_changing.tscn" id="8_nhn6s"]
 [ext_resource type="PackedScene" uid="uid://kye77hk7m8e7" path="res://swing_knife.tscn" id="9_vy1rg"]
+[ext_resource type="Texture2D" uid="uid://dg8ia62jk6d65" path="res://Assets/Particles/WaterDrop_Sheet.png" id="10_bm3pl"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qi2a8"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_nphss"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.477528, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_bsgbf"]
+offsets = PackedFloat32Array(0, 0.76, 0.893333, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.805556, 1, 1, 1, 0)
 
 [node name="Kitchen Level" type="Node2D"]
 script = ExtResource("1_ljqjj")
@@ -26,6 +41,7 @@ theme_override_constants/margin_top = 15
 
 [node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer"]
 unique_name_in_owner = true
+texture_filter = 1
 clip_contents = false
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.113725, 0.113725, 0.113725, 1)
@@ -57,10 +73,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1040.0
-offset_top = -696.0
-offset_right = 1152.0
-offset_bottom = 552.0
+offset_left = -1062.0
+offset_top = -681.0
+offset_right = 1130.0
+offset_bottom = 567.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_raeba")
@@ -125,3 +141,16 @@ rotation = 0.000793439
 [node name="SwingKnife" parent="." instance=ExtResource("9_vy1rg")]
 texture_filter = 1
 position = Vector2(-123, 9)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="SwingKnife"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_qi2a8")
+position = Vector2(449, 96)
+amount = 1
+lifetime = 0.32
+speed_scale = 0.3
+texture = ExtResource("10_bm3pl")
+radial_accel_max = 2.15
+scale_amount_curve = SubResource("Curve_nphss")
+color_ramp = SubResource("Gradient_bsgbf")
+anim_offset_max = 1.0
