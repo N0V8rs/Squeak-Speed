@@ -1,6 +1,6 @@
-res://Assets/Scenes/win_state.tscn
+res://Assets/UI/ButtonTheme.tres
+res://Assets/Scenes/main_menu.tscn
 res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres
-res://Scripts/win_state.gd
 res://Assets/Scenes/Main Level.tscn
 res://Assets/Scenes/player.tscn
 res://Assets/Scenes/SawTrap.tscn
@@ -9,9 +9,5 @@ res://Assets/Scenes/Kill_collision.tscn
 res://Assets/Scenes/checkpoint.tscn
 res://Assets/Scenes/oven.tscn
 res://Assets/Scenes/scene_changing.tscn
-res://Assets/Scenes/main_menu.tscn
-res://Scripts/main_menu.gd
-res://Scripts/CheckpointBox.gd
-res://global_var.gd
-res://Scripts/Checkpoint.gd
+res://Assets/Scenes/win_state.tscn
 res://Scripts/Player.gd

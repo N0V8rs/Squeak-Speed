@@ -173,7 +173,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 20.0
+"speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfevb"]
@@ -191,7 +191,8 @@ jump_force = 100
 texture_filter = 1
 position = Vector2(-2, 7)
 sprite_frames = SubResource("SpriteFrames_vpd2b")
-animation = &"Hit"
+animation = &"jumping"
+frame_progress = 0.809294
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 6.5)

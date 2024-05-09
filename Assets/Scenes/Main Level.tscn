@@ -87,5 +87,5 @@ position = Vector2(-456, -13)
 position = Vector2(203, -14)
 
 [node name="SceneChanging" parent="." instance=ExtResource("8_nhn6s")]
-position = Vector2(-288, -149)
+position = Vector2(-276, -118)
 rotation = 0.000793439
