@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3lbky46byi6n"]
 
-[ext_resource type="Texture2D" uid="uid://3qx6vgypj7be" path="res://Assets/UI/Cheese.png" id="1_v6nel"]
+[ext_resource type="Texture2D" uid="uid://do8383wsqxikm" path="res://Assets/UI/Cheese_Small.png" id="1_7m3i4"]
 [ext_resource type="Script" path="res://Scripts/SceneChanging.gd" id="2_yhgiu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3s0b"]
@@ -10,8 +10,7 @@ radius = 10.7703
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_v6nel")
+texture = ExtResource("1_7m3i4")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("2_yhgiu")
