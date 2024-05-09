@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export var speed = 300
 @export var gravity = 30
@@ -8,12 +9,18 @@ extends CharacterBody2D
 @export var max_health = 1
 var current_health
 
+var is_dying:bool = false
+
 func _physics_process(delta):
 	# Makes the Player jump
 	if !is_on_floor():
 		velocity.y += gravity
 		if velocity.y > 1000:
 			velocity.y = 1000
+	
+	if is_dying:
+		#move_and_slide()
+		return
 	
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force

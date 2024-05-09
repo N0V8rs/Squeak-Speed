@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://jc8058gpts0r"]
+[gd_scene load_steps=10 format=3 uid="uid://jc8058gpts0r"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
@@ -8,9 +8,31 @@
 [ext_resource type="Texture2D" uid="uid://dh8lvgkbc6gpy" path="res://Assets/Background/Background_SingleTile.png" id="6_raeba"]
 [ext_resource type="PackedScene" uid="uid://d0gr4vo28oqyn" path="res://Assets/Scenes/enemy.tscn" id="7_vvj5y"]
 [ext_resource type="PackedScene" uid="uid://c3lbky46byi6n" path="res://Assets/Scenes/scene_changing.tscn" id="8_nhn6s"]
+[ext_resource type="PackedScene" uid="uid://kye77hk7m8e7" path="res://swing_knife.tscn" id="9_vy1rg"]
 
 [node name="Kitchen Level" type="Node2D"]
 script = ExtResource("1_ljqjj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 15
+
+[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer"]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.113725, 0.113725, 0.113725, 1)
+theme_override_constants/outline_size = 15
+text = "Hi this is a text"
+fit_content = true
+scroll_active = false
 
 [node name="Death Timer" type="Timer" parent="."]
 unique_name_in_owner = true
@@ -51,13 +73,21 @@ z_index = 1
 texture_filter = 1
 position = Vector2(196, 127)
 scale = Vector2(1, 1)
-ENEMY_SPEED = 150
+ENEMY_SPEED = 20
+direction = 1
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("7_vvj5y")]
+z_index = 1
+texture_filter = 1
+position = Vector2(19, 52)
+scale = Vector2(1, 1)
+ENEMY_SPEED = 20
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource("7_vvj5y")]
 z_index = 1
 position = Vector2(499, -77)
 scale = Vector2(1, 1)
-ENEMY_SPEED = 150
+ENEMY_SPEED = 20
 
 [node name="Traps" type="Node" parent="."]
 
@@ -82,6 +112,8 @@ position = Vector2(-338, 145)
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource("4_p6emy")]
 texture_filter = 1
 position = Vector2(-456, -13)
+first_check_point = true
+check_point_timer = 10
 
 [node name="Checkpoint2" parent="Checkpoints" instance=ExtResource("4_p6emy")]
 position = Vector2(203, -14)
@@ -89,3 +121,6 @@ position = Vector2(203, -14)
 [node name="SceneChanging" parent="." instance=ExtResource("8_nhn6s")]
 position = Vector2(-276, -118)
 rotation = 0.000793439
+
+[node name="SwingKnife" parent="." instance=ExtResource("9_vy1rg")]
+position = Vector2(-123, 9)

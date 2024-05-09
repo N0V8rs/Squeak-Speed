@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://kye77hk7m8e7"]
+
+[ext_resource type="Texture2D" uid="uid://dx88o5t4srxj4" path="res://Assets/Traps/Knife_Swing.png" id="1_i2ykt"]
+[ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_ta26r"]
+
+[sub_resource type="Animation" id="Animation_e08j6"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("KillCollision:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 1.5, 2.1, 2.5, 3.1, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 0.286234, 0.401426, 0.171042, -0.00174533, -0.287979, -0.518363, -0.287979]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("KillCollision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 1.5, 2.1, 2.5, 3.1, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-1, -10), Vector2(-11, -12), Vector2(-20, -17), Vector2(-9, -12), Vector2(-2, -11), Vector2(7, -10), Vector2(15, -14), Vector2(4, -11)]
+}
+
+[sub_resource type="Animation" id="Animation_fksro"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KillCollision:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("KillCollision:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a6kqv"]
+_data = {
+"RESET": SubResource("Animation_fksro"),
+"new_animation": SubResource("Animation_e08j6")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lcxu"]
+size = Vector2(16.5, 68)
+
+[node name="SwingKnife" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i2ykt")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a6kqv")
+}
+autoplay = "new_animation"
+speed_scale = 3.0
+
+[node name="KillCollision" parent="." instance=ExtResource("2_ta26r")]
+position = Vector2(-1, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillCollision"]
+position = Vector2(3.25, 33)
+shape = SubResource("RectangleShape2D_4lcxu")

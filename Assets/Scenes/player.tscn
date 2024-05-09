@@ -191,8 +191,8 @@ jump_force = 100
 texture_filter = 1
 position = Vector2(-2, 7)
 sprite_frames = SubResource("SpriteFrames_vpd2b")
-animation = &"jumping"
-frame_progress = 0.809294
+animation = &"Idle"
+frame_progress = 0.750842
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 6.5)

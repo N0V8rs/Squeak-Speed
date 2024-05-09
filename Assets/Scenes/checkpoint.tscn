@@ -4,13 +4,10 @@
 [ext_resource type="Script" path="res://Scripts/CheckpointBox.gd" id="2_lb5af"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orcek"]
-size = Vector2(34, 54)
+size = Vector2(34, 38)
 
 [node name="Checkpoint" type="Node2D"]
-
-[node name="Clock Timer" type="Timer" parent="."]
-unique_name_in_owner = true
-wait_time = 60.0
+script = ExtResource("2_lb5af")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -18,12 +15,10 @@ position = Vector2(-1, -28)
 texture = ExtResource("1_d4qwa")
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
-script = ExtResource("2_lb5af")
+position = Vector2(1, -17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -28)
+position = Vector2(-1, -20)
 shape = SubResource("RectangleShape2D_orcek")
 
-[connection signal="timeout" from="Clock Timer" to="Area2D" method="_on_clock_timer_timeout"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

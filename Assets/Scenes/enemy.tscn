@@ -88,6 +88,12 @@ scale = Vector2(1.51535, 3.48906)
 target_position = Vector2(29.6961, 0)
 collide_with_areas = true
 
-[node name="RayCastDown" type="RayCast2D" parent="."]
+[node name="RayCastDownLeft" type="RayCast2D" parent="."]
+position = Vector2(-5.5, 0)
+target_position = Vector2(0, 47.5)
+collide_with_areas = true
+
+[node name="RayCastDownRight" type="RayCast2D" parent="."]
+position = Vector2(6, 0)
 target_position = Vector2(0, 47.5)
 collide_with_areas = true

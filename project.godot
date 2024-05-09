@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Checkpoint="*res://Scripts/Checkpoint.gd"
+CheckpointManager="*res://CheckpointManager.tscn"
 
 [display]
 

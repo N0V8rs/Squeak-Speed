@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://e8gg00crfxov"]
+[gd_scene load_steps=5 format=3 uid="uid://e8gg00crfxov"]
 
 [ext_resource type="Texture2D" uid="uid://5wkox6totd77" path="res://Assets/Traps/Knife_Cleaver.png" id="1_fjull"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_d2t6y"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8khgr"]
-radius = 35.0143
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fgtq"]
+size = Vector2(68, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xshwj"]
+size = Vector2(34, 16)
 
 [node name="Sprite2D" type="Sprite2D"]
 texture_filter = 1
@@ -13,5 +16,11 @@ texture = ExtResource("1_fjull")
 [node name="KillCollision" parent="." instance=ExtResource("2_d2t6y")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillCollision"]
-position = Vector2(-14, 3)
-shape = SubResource("CircleShape2D_8khgr")
+position = Vector2(-15, 5)
+shape = SubResource("RectangleShape2D_7fgtq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(40, -9)
+shape = SubResource("RectangleShape2D_xshwj")
