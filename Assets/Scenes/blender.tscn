@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://db8ug6yols7ml"]
+
+[ext_resource type="Texture2D" uid="uid://cp6j8yhf21cb0" path="res://Assets/Traps/Blender.png" id="1_u0lpl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnd3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u0lpl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwulp"]
+size = Vector2(72, 117)
+
+[node name="Blender" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mnd3q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D"]
+position = Vector2(-2, 3.5)
+shape = SubResource("RectangleShape2D_dwulp")
