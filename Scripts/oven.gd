@@ -7,16 +7,22 @@ extends Node2D
 
 var current_oven_sprite = 1
 
+# IMPORTANT
+# Actually doesn't work with hitboxes
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	oven_off_sprite.visible = true
-	oven_timer.start()
+	oven_off_sprite.is_processing()
+	oven_warn_sprite.hide()
+	oven_hot_sprite.hide() 
+	#oven_timer.start()
 	print("OFF Oven spawned")
 
 func _on_oven_timer_timeout():
 	if current_oven_sprite == 1:
-		oven_off_sprite.visible = false
-		oven_warn_sprite.visible = true
+		oven_off_sprite.is_processing()
+		#oven_warn_sprite.set_process()
 		current_oven_sprite = 2
 	elif current_oven_sprite == 2:
 		oven_warn_sprite.visible = false

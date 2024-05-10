@@ -89,10 +89,7 @@ shape = SubResource("RectangleShape2D_l881f")
 position = Vector2(0, -17)
 shape = SubResource("RectangleShape2D_5bdc5")
 
-[node name="OvenTimer" type="Timer" parent="."]
-wait_time = 3.0
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="OvenHotSprite/StaticBody2D"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_juw3m")
 position = Vector2(21, -35)
@@ -115,5 +112,8 @@ color_ramp = SubResource("Gradient_42rde")
 color_initial_ramp = SubResource("Gradient_5l8ge")
 hue_variation_max = 1.0
 anim_offset_max = 1.0
+
+[node name="OvenTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="timeout" from="OvenTimer" to="." method="_on_oven_timer_timeout"]

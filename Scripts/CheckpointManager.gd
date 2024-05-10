@@ -30,6 +30,5 @@ func _process(delta):
 		print(checkpoint_timer.time_left)
 	pass
 
-
 func _on_second_counter_timer_timeout():
 	second_changed.emit()

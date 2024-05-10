@@ -12,8 +12,9 @@ func _ready():
 		
 func _on_area_2d_body_entered(body):
 	if body.name == "Player":
-		if CheckpointManager.player_last_position != null and (CheckpointManager.player_last_position as Vector2).distance_to(global_position) < 0.5:
-			return
+		# When the Player dies can't restart the timer
+		#if CheckpointManager.player_last_position != null and (CheckpointManager.player_last_position as Vector2).distance_to(global_position) < 0.5:
+			#return
 		CheckpointManager.player_last_position = global_position
 		print("Checkpoint Reached")
 		(CheckpointManager.checkpoint_timer as Timer).start(check_point_timer)

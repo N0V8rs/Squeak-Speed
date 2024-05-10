@@ -14,7 +14,7 @@ var raycasts_array:Array[RayCast2D] = []
 func _ready():
 	animated_sprite.flip_h = direction == 1
 	raycasts_array = [ray_cast_left,ray_cast_right,ray_cast_down_left,ray_cast_down_right]
-#
+
 #func _draw():
 	#for raycast in raycasts_array:
 		#draw_line(raycast.position,raycast.position + raycast.target_position, Color.RED if raycast.is_colliding() else Color.GREEN,5.0)
@@ -29,5 +29,5 @@ func _process(delta):
 		animated_sprite.flip_h = true
 	position.x += direction * ENEMY_SPEED * delta
 
-	if position.x > 1:
+	if ENEMY_SPEED != 0:
 		animated_sprite.play("Walking")

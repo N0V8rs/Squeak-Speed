@@ -25,8 +25,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
 		# Change when the Player has a jumping aminations
-		#if (velocity.y < -1):
-			#sprite_2d.animation = "jumping"
+		if (velocity.y < -1):
+			sprite_2d.animation = "jumping"
 	
 	var horizontal_direction = Input.get_axis("movement_left", "movement_right")
 	velocity.x = speed * horizontal_direction
