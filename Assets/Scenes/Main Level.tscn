@@ -279,6 +279,7 @@ texture_filter = 1
 position = Vector2(-513, 318)
 rotation = 3.14159
 scale = Vector2(0.5, 0.5)
+animation_time_scale = 20
 
 [node name="SwingKnife3" parent="Traps" instance=ExtResource("9_vy1rg")]
 texture_filter = 1
