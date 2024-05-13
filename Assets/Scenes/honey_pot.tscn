@@ -8,6 +8,7 @@ size = Vector2(63, 63)
 [node name="Honey Pot" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_2i5mh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]

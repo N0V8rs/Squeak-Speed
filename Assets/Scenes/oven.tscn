@@ -53,23 +53,18 @@ position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5bdc5")
 
 [node name="OvenWarnSprite" type="Sprite2D" parent="."]
-visible = false
 texture_filter = 1
 texture = ExtResource("3_mhlow")
 
 [node name="KillCollision" parent="OvenWarnSprite" instance=ExtResource("3_u32fw")]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OvenWarnSprite/KillCollision"]
-visible = false
 position = Vector2(22, -29)
 shape = SubResource("RectangleShape2D_l881f")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="OvenWarnSprite"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OvenWarnSprite/StaticBody2D"]
-visible = false
 position = Vector2(0, -17.5)
 shape = SubResource("RectangleShape2D_5bdc5")
 
