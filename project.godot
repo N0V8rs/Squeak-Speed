@@ -13,7 +13,7 @@ config_version=5
 config/name="Squeak & Speed"
 run/main_scene="res://Assets/Scenes/Main Level.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/UI/Speedy_Icon.png"
 
 [autoload]
 
