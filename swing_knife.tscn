@@ -87,9 +87,9 @@ script = ExtResource("1_hnryh")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_i2ykt")
 hframes = 8
-frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+active = false
 libraries = {
 "": SubResource("AnimationLibrary_a6kqv")
 }

@@ -44,7 +44,7 @@ animations = [{
 radius = 33.0038
 
 [node name="Enemy" type="Node2D"]
-scale = Vector2(2, 2)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_po3tg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
