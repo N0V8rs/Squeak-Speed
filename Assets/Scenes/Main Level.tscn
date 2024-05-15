@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://jc8058gpts0r"]
+[gd_scene load_steps=26 format=3 uid="uid://jc8058gpts0r"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://dg8ia62jk6d65" path="res://Assets/Particles/WaterDrop_Sheet.png" id="10_bm3pl"]
 [ext_resource type="PackedScene" uid="uid://qmu1xbe763ch" path="res://Assets/Scenes/oven.tscn" id="10_i2u7v"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="12_r0g3v"]
+[ext_resource type="Texture2D" uid="uid://cqqhoguophqh3" path="res://Assets/Background/Wall_BG.png" id="16_1ewcy"]
+[ext_resource type="Texture2D" uid="uid://yoiwt0mwxfj6" path="res://Assets/Background/Counter_BG.png" id="17_q14xb"]
+[ext_resource type="Texture2D" uid="uid://b0yfpnd8jlr8o" path="res://Assets/Background/Table_BG.png" id="18_gniga"]
 
 [sub_resource type="Theme" id="Theme_c5bdy"]
 
@@ -130,6 +133,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(131069, 0, 0, 65537, 196608, 0, -65551, 131072, 0, -65552, 0, 0, -262157, 0, 0, -262154, 196608, 0, 393199, 0, 1, -17, 0, 1, -65553, 0, 1, -131089, 0, 1, -196625, 0, 1, -262161, 0, 1, -327697, 0, 1, -393233, 0, 1, -458769, 0, 1, -524305, 0, 1, -589841, 0, 1, -655377, 0, 1, 458770, 0, 1, 196626, 0, 1, 131090, 0, 1, 65554, 0, 1, 18, 0, 1, -65518, 0, 1, -131054, 0, 1, -196590, 0, 1, -262126, 0, 1, -327662, 0, 1, -393198, 0, 1, -458734, 0, 1, -524270, 0, 1, -589806, 0, 1, -655342, 0, 1, -720878, 0, 1, -196595, 0, 0, -196591, 196608, 0, -131062, 262144, 2, 786400, 0, 3, 786401, 131072, 3, 786402, 65536, 3, 786403, 131072, 3, 786404, 327680, 3, 786405, 393216, 3, 786406, 131072, 3, 786407, 131072, 3, 786408, 131072, 3, 786409, 131072, 3, 786410, 327680, 2, 786411, 393216, 2, 786413, 196608, 3, 851936, 0, 4, 917472, 0, 4, 983008, 0, 4, 1048544, 0, 5, 1048545, 131072, 5, 1048546, 65536, 5, 1048547, 131072, 5, 1048548, 327680, 5, 1048549, 327680, 5, 1048550, 131072, 5, 1048551, 131072, 5, 1048552, 131072, 5, 1048553, 131072, 5, 1048554, 393216, 5, 1048555, 393216, 5, 1048556, 131072, 5, 1048557, 131072, 5, 851949, 196608, 4, 917485, 196608, 4, 983021, 196608, 4, 851938, 65536, 4, 917474, 65536, 4, 983010, 65536, 4, 851937, 131072, 4, 917473, 131072, 4, 983009, 131072, 4, 851939, 131072, 4, 851940, 327680, 4, 851941, 327680, 4, 851942, 131072, 4, 851943, 131072, 4, 851944, 131072, 4, 851945, 131072, 4, 851946, 327680, 4, 851947, 327680, 4, 851948, 131072, 4, 917484, 131072, 4, 917483, 327680, 4, 917482, 327680, 4, 917481, 131072, 4, 917480, 131072, 4, 917479, 131072, 4, 917478, 131072, 4, 917477, 327680, 4, 917476, 327680, 4, 917475, 131072, 4, 983011, 131072, 4, 983012, 327680, 4, 983013, 327680, 4, 983014, 131072, 4, 983015, 131072, 4, 983016, 131072, 4, 983017, 131072, 4, 983018, 327680, 4, 983019, 327680, 4, 983020, 131072, 4, 720874, 327680, 1, 720875, 393216, 1, 655339, 393216, 0, 655338, 327680, 0, 786412, 131072, 3, 786420, 0, 3, 786421, 65536, 3, 786422, 131072, 3, 720886, 0, 3)
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 show_behind_parent = true
 texture_filter = 1
 anchors_preset = 15
@@ -379,3 +383,37 @@ anim_offset_max = 1.0
 [node name="SceneChanging" parent="." instance=ExtResource("8_nhn6s")]
 position = Vector2(699, 301)
 rotation = 0.000793439
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+
+[node name="Wall" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxBackground/Wall"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("16_1ewcy")
+centered = false
+
+[node name="Counter" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(512, 252)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxBackground/Counter"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("17_q14xb")
+centered = false
+
+[node name="Table" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(512, 252)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxBackground/Table"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("18_gniga")
+centered = false
