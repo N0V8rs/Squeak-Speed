@@ -1,11 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://dio1u8oi461dq"]
+[gd_scene load_steps=10 format=3 uid="uid://dio1u8oi461dq"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
 [ext_resource type="Theme" uid="uid://rd0vuur4stdp" path="res://Assets/UI/ButtonTheme.tres" id="2_m0tqh"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_wai5j"]
+[ext_resource type="Shader" path="res://Assets/Scenes/iconscroll.gdshader" id="3_8t23b"]
+[ext_resource type="Texture2D" uid="uid://b7i65tcxru12m" path="res://Assets/UI/Menu_Pattern.png" id="3_700l1"]
+[ext_resource type="Texture2D" uid="uid://dh8lvgkbc6gpy" path="res://Assets/Background/Background_SingleTile.png" id="4_3unsj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5cb2v"]
+shader = ExtResource("3_8t23b")
+shader_parameter/speed = -0.1
 
 [sub_resource type="Theme" id="Theme_5430n"]
 default_font = ExtResource("2_wai5j")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bouwd"]
+content_margin_top = 14.0
+bg_color = Color(0.494118, 0.317647, 0.160784, 0.443137)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -16,26 +31,38 @@ grow_vertical = 2
 theme_override_constants/margin_top = 200
 script = ExtResource("1_r05lx")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-texture_filter = 1
-custom_minimum_size = Vector2(500, 75)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-size_flags_stretch_ratio = 4.26
-theme = SubResource("Theme_5430n")
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 30
-bbcode_enabled = true
-text = "[center][b][wave][font_size=40]Squeak & Speed"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 10
 alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Tiles" type="TextureRect" parent="VBoxContainer/Control"]
+layout_mode = 2
+offset_left = -587.0
+offset_top = -415.0
+offset_right = 750.0
+offset_bottom = 386.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3unsj")
+stretch_mode = 1
+
+[node name="IconPattern" type="TextureRect" parent="VBoxContainer/Control"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_5cb2v")
+layout_mode = 0
+offset_left = -555.0
+offset_top = -368.0
+offset_right = 698.0
+offset_bottom = 359.0
+scale = Vector2(1.02181, 1.04623)
+texture = ExtResource("3_700l1")
+stretch_mode = 1
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 texture_filter = 1
@@ -62,6 +89,21 @@ theme = ExtResource("2_m0tqh")
 theme_override_font_sizes/font_size = 25
 text = "Quit
 "
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(500, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 4.26
+theme = SubResource("Theme_5430n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bouwd")
+bbcode_enabled = true
+text = "[center][b][wave][font_size=40]Squeak & Speed"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

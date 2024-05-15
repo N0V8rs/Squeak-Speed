@@ -1,24 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://dojfkvtyeff1n"]
+[gd_scene load_steps=9 format=3 uid="uid://dojfkvtyeff1n"]
 
 [ext_resource type="Script" path="res://Scripts/win_state.gd" id="1_cqjt6"]
 [ext_resource type="Theme" uid="uid://rd0vuur4stdp" path="res://Assets/UI/ButtonTheme.tres" id="2_lc0wj"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="3_yumj8"]
+[ext_resource type="Texture2D" uid="uid://dh8lvgkbc6gpy" path="res://Assets/Background/Background_SingleTile.png" id="4_h4xr8"]
+[ext_resource type="Shader" path="res://Assets/Scenes/winiconscroll.gdshader" id="5_n32xo"]
+[ext_resource type="Texture2D" uid="uid://b7i65tcxru12m" path="res://Assets/UI/Menu_Pattern.png" id="6_6i56n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lg5k3"]
+shader = ExtResource("5_n32xo")
+shader_parameter/strength = 0.3
+shader_parameter/speed = 0.05
+shader_parameter/angle = 1.535
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7er7q"]
+content_margin_top = 19.0
+bg_color = Color(0.584855, 0.346124, 0.237096, 0.313726)
+border_width_left = 445
+border_width_top = 10
+border_width_right = 445
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Win State" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -7.0
-offset_bottom = -92.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 200
+theme_override_constants/margin_bottom = -160
 script = ExtResource("1_cqjt6")
+
+[node name="IconTiles" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_lg5k3")
+layout_mode = 2
+texture = ExtResource("6_6i56n")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+visible = false
 custom_minimum_size = Vector2(120, 100)
 layout_mode = 2
 size_flags_vertical = 8
@@ -32,7 +62,6 @@ custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = -2047
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 texture_filter = 1
@@ -45,15 +74,36 @@ theme_override_fonts/font = ExtResource("3_yumj8")
 theme_override_font_sizes/font_size = 25
 text = "Quit"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -15
+theme_override_constants/margin_top = 205
+
+[node name="Winner" type="RichTextLabel" parent="MarginContainer2"]
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
 theme = ExtResource("2_lc0wj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7er7q")
 bbcode_enabled = true
 text = "[center] [font_size=50][rainbow]Winner
 "
 fit_content = true
+
+[node name="Control2" type="Control" parent="."]
+show_behind_parent = true
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.02277, 1.13619)
+texture = ExtResource("4_h4xr8")
+expand_mode = 1
+stretch_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
