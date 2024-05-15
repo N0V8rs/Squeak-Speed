@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://5wkox6totd77" path="res://Assets/Traps/Knife_Cleaver.png" id="1_fjull"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_d2t6y"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xshwj"]
-size = Vector2(40, 17)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjjpj"]
+height = 48.0026
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_58o5f"]
 size = Vector2(66, 19.5)
@@ -19,8 +19,9 @@ texture = ExtResource("1_fjull")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(40, -8.5)
-shape = SubResource("RectangleShape2D_xshwj")
+position = Vector2(37, -9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_sjjpj")
 debug_color = Color(0, 1, 0.239216, 0.419608)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
