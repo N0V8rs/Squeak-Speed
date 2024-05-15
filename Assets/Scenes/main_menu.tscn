@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dio1u8oi461dq"]
+[gd_scene load_steps=9 format=3 uid="uid://dio1u8oi461dq"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
 [ext_resource type="Theme" uid="uid://rd0vuur4stdp" path="res://Assets/UI/ButtonTheme.tres" id="2_m0tqh"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_wai5j"]
 [ext_resource type="Shader" path="res://Assets/Scenes/iconscroll.gdshader" id="3_8t23b"]
-[ext_resource type="Texture2D" uid="uid://b7i65tcxru12m" path="res://Assets/UI/Menu_Pattern.png" id="3_700l1"]
 [ext_resource type="Texture2D" uid="uid://dh8lvgkbc6gpy" path="res://Assets/Background/Background_SingleTile.png" id="4_3unsj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5cb2v"]
@@ -61,7 +60,6 @@ offset_top = -368.0
 offset_right = 698.0
 offset_bottom = 359.0
 scale = Vector2(1.02181, 1.04623)
-texture = ExtResource("3_700l1")
 stretch_mode = 1
 
 [node name="Play" type="Button" parent="VBoxContainer"]

@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2a1kynqhjlw5"]
+
+[ext_resource type="Script" path="res://Scripts/Bounce.gd" id="1_n3ldk"]
+[ext_resource type="Texture2D" uid="uid://clgp45ncje7ul" path="res://Assets/Furniture/Strainer_Spring_V2.png" id="2_ki28k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nvig"]
+atlas = ExtResource("2_ki28k")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mojbo"]
+atlas = ExtResource("2_ki28k")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3y3w"]
+atlas = ExtResource("2_ki28k")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqve2"]
+atlas = ExtResource("2_ki28k")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peuan"]
+atlas = ExtResource("2_ki28k")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bml55"]
+atlas = ExtResource("2_ki28k")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kndiq"]
+atlas = ExtResource("2_ki28k")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4coqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nvig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mojbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3y3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqve2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peuan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bml55")
+}],
+"loop": false,
+"name": &"Active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kndiq")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e016f"]
+radius = 28.0713
+
+[node name="Bounce Pad" type="Node2D"]
+script = ExtResource("1_n3ldk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4coqw")
+animation = &"Idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 39)
+shape = SubResource("CircleShape2D_e016f")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

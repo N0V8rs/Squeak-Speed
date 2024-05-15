@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c3lbky46byi6n" path="res://Assets/Scenes/scene_changing.tscn" id="8_nhn6s"]
 [ext_resource type="PackedScene" uid="uid://bw4dxxxd5nixw" path="res://Assets/Scenes/hot_sauce.tscn" id="8_q6cu6"]
 [ext_resource type="PackedScene" uid="uid://db8ug6yols7ml" path="res://Assets/Scenes/blender.tscn" id="9_qf43j"]
-[ext_resource type="PackedScene" uid="uid://kye77hk7m8e7" path="res://swing_knife.tscn" id="9_vy1rg"]
+[ext_resource type="PackedScene" uid="uid://kye77hk7m8e7" path="res://Assets/Scenes/swing_knife.tscn" id="9_vy1rg"]
 [ext_resource type="Texture2D" uid="uid://dg8ia62jk6d65" path="res://Assets/Particles/WaterDrop_Sheet.png" id="10_bm3pl"]
 [ext_resource type="PackedScene" uid="uid://qmu1xbe763ch" path="res://Assets/Scenes/oven.tscn" id="10_i2u7v"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="12_r0g3v"]
