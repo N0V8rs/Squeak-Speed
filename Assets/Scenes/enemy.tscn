@@ -4,19 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://doiw5hcxefibt" path="res://Assets/Enemy (Rat)/RatEnemy-Walk.png" id="2_a7fjf"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="3_0c1sh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pm1jb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuwai"]
 atlas = ExtResource("2_a7fjf")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tu2vh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlnbp"]
 atlas = ExtResource("2_a7fjf")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vv4p1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q06jl"]
 atlas = ExtResource("2_a7fjf")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1rtty"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwe1t"]
 atlas = ExtResource("2_a7fjf")
 region = Rect2(192, 0, 64, 64)
 
@@ -24,16 +24,16 @@ region = Rect2(192, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pm1jb")
+"texture": SubResource("AtlasTexture_vuwai")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tu2vh")
+"texture": SubResource("AtlasTexture_wlnbp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vv4p1")
+"texture": SubResource("AtlasTexture_q06jl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1rtty")
+"texture": SubResource("AtlasTexture_lwe1t")
 }],
 "loop": true,
 "name": &"Walking",
@@ -51,7 +51,8 @@ script = ExtResource("1_po3tg")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ayft8")
 animation = &"Walking"
-frame_progress = 0.0224267
+frame = 2
+frame_progress = 0.0520022
 
 [node name="KillCollision" parent="." instance=ExtResource("3_0c1sh")]
 
