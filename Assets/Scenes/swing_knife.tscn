@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://kye77hk7m8e7"]
+[gd_scene load_steps=9 format=3 uid="uid://kye77hk7m8e7"]
 
 [ext_resource type="Script" path="res://Scripts/swing_knife.gd" id="1_hnryh"]
 [ext_resource type="Texture2D" uid="uid://dx88o5t4srxj4" path="res://Assets/Traps/Knife_Swing.png" id="1_i2ykt"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_ta26r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cd8op"]
 
 [sub_resource type="Animation" id="Animation_fksro"]
 length = 0.001
@@ -86,6 +88,7 @@ script = ExtResource("1_hnryh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_cd8op")
 texture = ExtResource("1_i2ykt")
 hframes = 8
 

@@ -35,6 +35,23 @@ grow_vertical = 2
 theme_override_constants/margin_bottom = -160
 script = ExtResource("1_cqjt6")
 
+[node name="Control2" type="Control" parent="."]
+show_behind_parent = true
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="Control2"]
+texture_filter = 1
+layout_mode = 2
+offset_left = -293.0
+offset_top = -212.0
+offset_right = 1598.0
+offset_bottom = 920.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_h4xr8")
+expand_mode = 1
+stretch_mode = 1
+
 [node name="IconTiles" type="TextureRect" parent="."]
 texture_filter = 1
 texture_repeat = 2
@@ -61,19 +78,6 @@ theme_override_fonts/font = ExtResource("3_yumj8")
 theme_override_font_sizes/font_size = 25
 text = "Quit"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
-visible = false
-custom_minimum_size = Vector2(120, 100)
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 30
-bbcode_enabled = true
-text = "[center][font_size=30][wave][b]Alright!!!"
-
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
@@ -90,20 +94,17 @@ text = "[center] [font_size=50][rainbow]Winner
 "
 fit_content = true
 
-[node name="Control2" type="Control" parent="."]
-show_behind_parent = true
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2"]
 layout_mode = 2
 
-[node name="Background" type="TextureRect" parent="Control2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.02277, 1.13619)
-texture = ExtResource("4_h4xr8")
-expand_mode = 1
-stretch_mode = 1
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(120, 100)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+bbcode_enabled = true
+text = "[center][font_size=30][wave][b]Alright!!!"
 
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
