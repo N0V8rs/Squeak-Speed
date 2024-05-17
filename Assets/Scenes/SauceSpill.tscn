@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://bt7u07utlqkfx"]
+
+[ext_resource type="Texture2D" uid="uid://csmlshq3ebe8w" path="res://Assets/Traps/Puddle_HotSauce.png" id="1_byrxp"]
+[ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_3uhys"]
+[ext_resource type="Texture2D" uid="uid://cvs83wo4ne4ff" path="res://Assets/Particles/Steam_Sheet.png" id="3_3d2de"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvoo3"]
+size = Vector2(7.25, 104)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_weqab"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_qsell"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0.365169, 27.6923), 0.0, 0.0, 0, 0, Vector2(0.634831, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_b41wt"]
+_data = [Vector2(0.47191, 0.648352), 0.0, 0.0, 0, 0, Vector2(0.662921, 0.494505), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mn2pv"]
+offsets = PackedFloat32Array(0, 0.4, 1)
+colors = PackedColorArray(1, 1, 1, 0.835294, 1, 1, 1, 0.854902, 1, 1, 1, 0.686275)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_pl8lr"]
+offsets = PackedFloat32Array(0, 0.586667, 0.933333)
+colors = PackedColorArray(1, 1, 1, 0.0745098, 1, 1, 1, 0.48374, 1, 1, 1, 0.756863)
+
+[node name="HotSauceSpill" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_byrxp")
+
+[node name="KillCollision" parent="Sprite2D" instance=ExtResource("2_3uhys")]
+position = Vector2(-1, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/KillCollision"]
+position = Vector2(2, 25.625)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_gvoo3")
+
+[node name="Steam" type="CPUParticles2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_weqab")
+position = Vector2(-2, 5)
+skew = 0.235619
+amount = 12
+lifetime = 0.75
+speed_scale = 0.3
+explosiveness = 0.84
+lifetime_randomness = 0.12
+texture = ExtResource("3_3d2de")
+emission_shape = 3
+emission_rect_extents = Vector2(25, 1.855)
+direction = Vector2(0, -10)
+gravity = Vector2(0, -90)
+angular_velocity_curve = SubResource("Curve_qsell")
+damping_max = 3.0
+scale_amount_min = 0.3
+scale_amount_curve = SubResource("Curve_b41wt")
+color_ramp = SubResource("Gradient_mn2pv")
+color_initial_ramp = SubResource("Gradient_pl8lr")
+hue_variation_max = 1.0
+anim_offset_max = 1.0

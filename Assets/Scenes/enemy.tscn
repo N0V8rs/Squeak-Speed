@@ -54,6 +54,8 @@ animation = &"Walking"
 frame_progress = 0.578389
 
 [node name="KillCollision" parent="." instance=ExtResource("3_0c1sh")]
+position = Vector2(-2.375, 0)
+scale = Vector2(0.565, 0.565)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillCollision"]
 position = Vector2(-0.5, -1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c0r32qycjimbd"]
+[gd_scene load_steps=28 format=3 uid="uid://c0r32qycjimbd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_m3t20"]
 [ext_resource type="Texture2D" uid="uid://b1xxenwnxwfsq" path="res://Assets/Player/Speedy_Sprite-Hit.png" id="2_o384d"]
@@ -41,10 +41,6 @@ region = Rect2(128, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykryh"]
 atlas = ExtResource("2_prxfu")
 region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_01sj0"]
-atlas = ExtResource("4_c2gpw")
-region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y75na"]
 atlas = ExtResource("4_c2gpw")
@@ -131,9 +127,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_01sj0")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_y75na")
 }, {
 "duration": 1.0,
@@ -191,8 +184,7 @@ jump_force = 100
 texture_filter = 1
 position = Vector2(-2, 7)
 sprite_frames = SubResource("SpriteFrames_vpd2b")
-animation = &"Idle"
-frame_progress = 0.750842
+animation = &"jumping"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 6.5)
