@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://db8ug6yols7ml"]
+[gd_scene load_steps=8 format=3 uid="uid://db8ug6yols7ml"]
 
+[ext_resource type="Script" path="res://Scripts/blender.gd" id="1_kkmvo"]
 [ext_resource type="Texture2D" uid="uid://b26d7faxnf8qf" path="res://Assets/Traps/Blender-Shake.png" id="1_rrwgv"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_sn7jw"]
 
@@ -93,6 +94,7 @@ _data = {
 }
 
 [node name="Blender" type="Node2D"]
+script = ExtResource("1_kkmvo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

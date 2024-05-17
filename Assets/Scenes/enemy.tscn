@@ -51,8 +51,7 @@ script = ExtResource("1_po3tg")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ayft8")
 animation = &"Walking"
-frame = 2
-frame_progress = 0.0520022
+frame_progress = 0.578389
 
 [node name="KillCollision" parent="." instance=ExtResource("3_0c1sh")]
 
@@ -61,13 +60,10 @@ position = Vector2(-0.5, -1)
 shape = SubResource("CircleShape2D_w2ar5")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-31.5, 0)
-collide_with_areas = true
+target_position = Vector2(-30, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-scale = Vector2(1.51535, 3.48906)
-target_position = Vector2(20.4573, 0)
-collide_with_areas = true
+target_position = Vector2(30, 0)
 
 [node name="RayCastDownLeft" type="RayCast2D" parent="."]
 position = Vector2(-5.5, 0)

@@ -202,6 +202,6 @@ shape = SubResource("RectangleShape2D_jfevb")
 position = Vector2(0, -40)
 zoom = Vector2(2, 2)
 limit_left = -1016
-limit_right = 5000
+limit_right = 7400
 limit_bottom = 480
 position_smoothing_speed = 6.0

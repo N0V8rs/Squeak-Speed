@@ -11,7 +11,7 @@ var can_restart_timer:bool = true
 signal second_changed
 
 func _ready():
-	#get_tree().change_scene_to_packed.call_deferred(MAIN_MENU)
+	get_tree().change_scene_to_packed.call_deferred(MAIN_MENU)
 	pass
 
 func fade_out_in():
