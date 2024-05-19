@@ -98,7 +98,6 @@ fit_content = true
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/MarginContainer"]
-visible = false
 custom_minimum_size = Vector2(120, 100)
 layout_mode = 2
 size_flags_vertical = 8

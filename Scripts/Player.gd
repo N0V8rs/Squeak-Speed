@@ -8,7 +8,7 @@ class_name Player
 
 @export var max_health = 1
 var current_health
-
+var last_position = 1
 var is_dying:bool = false
 
 func _physics_process(delta):
@@ -24,17 +24,23 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
-		# Change when the Player has a jumping aminations
 		if (velocity.y < -1):
 			sprite_2d.animation = "jumping"
+
+	if Input.is_action_pressed("movement_down"):
+		set_collision_mask_value(3, false)
+	else:
+		set_collision_mask_value(3, true)
 	
 	var horizontal_direction = Input.get_axis("movement_left", "movement_right")
+	if horizontal_direction != 0:
+		last_position = horizontal_direction
 	velocity.x = speed * horizontal_direction
 	move_and_slide()
 	
 	# Sprite animations for left and right movement, fliping the Player
-	var isLeft = velocity.x < 0
-	sprite_2d.flip_h = isLeft
+	#var isLeft = velocity.x < 0
+	sprite_2d.flip_h = last_position < 0
 	
 	# Aniamtions for the Player Movement
 	if is_on_floor():
