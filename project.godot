@@ -23,6 +23,7 @@ CheckpointManager="*res://CheckpointManager.tscn"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="res://Assets/UI/Cursor.png"
 
 [input]
 
