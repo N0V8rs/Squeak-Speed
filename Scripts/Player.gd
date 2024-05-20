@@ -4,12 +4,16 @@ class_name Player
 @export var speed = 300
 @export var gravity = 30
 @export var jump_force = 300
+@onready var jumping_particles = $"Jumping Particles"
 @onready var sprite_2d = $Sprite2D
 
 @export var max_health = 1
 var current_health
 var last_position = 1
 var is_dying:bool = false
+
+func _ready():
+	pass
 
 func _physics_process(delta):
 	# Makes the Player jump

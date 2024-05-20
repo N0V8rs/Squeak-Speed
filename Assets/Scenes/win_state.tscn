@@ -95,6 +95,7 @@ text = "[center] [font_size=50][rainbow]Winner
 fit_content = true
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer2"]
+visible = false
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/MarginContainer"]

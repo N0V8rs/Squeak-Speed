@@ -3,7 +3,6 @@ extends Node2D
 @export var animation_time_scale:int = 1
 @onready var blender_animation = $AnimationPlayer
 
-
 func _ready():
 	update_animation_speed()
 
