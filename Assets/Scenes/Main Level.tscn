@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://wx4b42jelkaj"]
+[gd_scene load_steps=37 format=3 uid="uid://wx4b42jelkaj"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://kye77hk7m8e7" path="res://Assets/Scenes/swing_knife.tscn" id="13_c74re"]
 [ext_resource type="Texture2D" uid="uid://cqqhoguophqh3" path="res://Assets/Background/Wall_BG.png" id="16_1ewcy"]
 [ext_resource type="Texture2D" uid="uid://yoiwt0mwxfj6" path="res://Assets/Background/Counter_BG.png" id="17_q14xb"]
+[ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="18_cetol"]
 [ext_resource type="Texture2D" uid="uid://bmww3h5xwvjyt" path="res://Assets/Traps/HotSauce.png" id="22_73kha"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyvsk"]
@@ -69,6 +70,14 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_bsgbf"]
 offsets = PackedFloat32Array(0, 0.76, 0.893333, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.805556, 1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aw63i"]
+shader = ExtResource("18_cetol")
+shader_parameter/strength = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l7w7w"]
+shader = ExtResource("18_cetol")
+shader_parameter/strength = 1
 
 [node name="Kitchen Level" type="Node2D"]
 script = ExtResource("1_ljqjj")
@@ -816,6 +825,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Tiles/Background/BGLayer/ParallaxBackground/Wall"]
 texture_filter = 1
+material = SubResource("ShaderMaterial_aw63i")
 position = Vector2(-4, 32)
 texture = ExtResource("16_1ewcy")
 centered = false
@@ -827,6 +837,9 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Tiles/Background/BGLayer/ParallaxBackground/Counters"]
 texture_filter = 1
+material = SubResource("ShaderMaterial_l7w7w")
+position = Vector2(-16, 48)
+scale = Vector2(2.2793, 2.34524)
 texture = ExtResource("17_q14xb")
 centered = false
 
