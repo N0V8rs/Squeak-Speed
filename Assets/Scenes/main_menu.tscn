@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 [gd_scene load_steps=13 format=3 uid="uid://dio1u8oi461dq"]
+=======
+[gd_scene load_steps=15 format=3 uid="uid://dio1u8oi461dq"]
+>>>>>>> a18cd2e16ebd0cb60cfd583e35d0c3c4a5828f70
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
+[ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="2_fn1gm"]
 [ext_resource type="Theme" uid="uid://rd0vuur4stdp" path="res://Assets/UI/ButtonTheme.tres" id="2_m0tqh"]
 [ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="2_nv8sr"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_wai5j"]
 [ext_resource type="Shader" path="res://Assets/Scenes/iconscroll.gdshader" id="3_8t23b"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Texture2D" uid="uid://bowtnqbicglma" path="res://Assets/UI/TitleCard.png" id="6_ndguc"]
+>>>>>>> a18cd2e16ebd0cb60cfd583e35d0c3c4a5828f70
 [ext_resource type="Shader" path="res://Assets/Scenes/godray.gdshader" id="8_juuao"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pjsvh"]
@@ -37,6 +46,10 @@ shader_parameter/speed = -0.1
 default_font = ExtResource("2_wai5j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1qkj"]
+<<<<<<< HEAD
+=======
+texture = ExtResource("6_ndguc")
+>>>>>>> a18cd2e16ebd0cb60cfd583e35d0c3c4a5828f70
 texture_margin_top = 305.0
 texture_margin_right = 55.0
 axis_stretch_horizontal = 1
@@ -70,6 +83,10 @@ offset_right = 750.0
 offset_bottom = 386.0
 grow_horizontal = 2
 grow_vertical = 2
+<<<<<<< HEAD
+=======
+texture = ExtResource("2_fn1gm")
+>>>>>>> a18cd2e16ebd0cb60cfd583e35d0c3c4a5828f70
 
 [node name="Control" type="Control" parent="VBoxContainer/Control"]
 layout_mode = 2
