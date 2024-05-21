@@ -170,7 +170,6 @@ offsets = PackedFloat32Array(0, 0.586667, 0.933333)
 colors = PackedColorArray(1, 1, 1, 0.0745098, 1, 1, 1, 0.48374, 1, 1, 1, 0.756863)
 
 [node name="Oven" type="Node2D"]
-position = Vector2(312, 176)
 
 [node name="OvenOffSprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -200,10 +199,9 @@ texture_filter = 1
 material = SubResource("CanvasItemMaterial_juw3m")
 position = Vector2(21, -35)
 skew = 0.235619
-amount = 18
-lifetime = 0.5
+amount = 100
+lifetime = 0.6
 speed_scale = 0.3
-explosiveness = 0.84
 lifetime_randomness = 0.12
 texture = ExtResource("6_o40jf")
 emission_shape = 3

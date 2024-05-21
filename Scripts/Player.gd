@@ -1,5 +1,5 @@
-extends CharacterBody2D
 class_name Player
+extends CharacterBody2D
 
 @export var speed = 300
 @export var gravity = 30
@@ -21,7 +21,7 @@ func _physics_process(delta):
 		velocity.y += gravity
 		if velocity.y > 1000:
 			velocity.y = 1000
-	
+
 	if is_dying:
 		#move_and_slide()
 		return
@@ -35,7 +35,9 @@ func _physics_process(delta):
 		set_collision_mask_value(3, false)
 	else:
 		set_collision_mask_value(3, true)
-	
+	if Input.is_action_pressed("Debug"):
+		CheckpointManager.checkpoint_timer.stop()
+
 	var horizontal_direction = Input.get_axis("movement_left", "movement_right")
 	if horizontal_direction != 0:
 		last_position = horizontal_direction

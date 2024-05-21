@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://e8gg00crfxov"]
+[gd_scene load_steps=6 format=3 uid="uid://e8gg00crfxov"]
 
 [ext_resource type="Texture2D" uid="uid://5wkox6totd77" path="res://Assets/Traps/Knife_Cleaver.png" id="1_fjull"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_d2t6y"]
@@ -8,6 +8,9 @@ height = 48.0026
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fgtq"]
 size = Vector2(64, 46.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njx3g"]
+size = Vector2(3, 18)
 
 [node name="Butcher Knife" type="Sprite2D"]
 z_index = 2
@@ -28,3 +31,8 @@ debug_color = Color(0, 1, 0.239216, 0.419608)
 position = Vector2(-15, 5.25)
 shape = SubResource("RectangleShape2D_7fgtq")
 debug_color = Color(1, 0, 0.101961, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(17.5, -9)
+shape = SubResource("RectangleShape2D_njx3g")
+debug_color = Color(0, 1, 0, 0.419608)

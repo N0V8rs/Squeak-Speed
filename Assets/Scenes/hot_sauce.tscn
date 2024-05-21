@@ -18,4 +18,5 @@ polygon = PackedVector2Array(7, 20, 59, 20, 55, 12, 37, 11, 32, 2, 27, 11, 11, 1
 polygon = PackedVector2Array(2, 20, 10, 14, 12, 12, 26, 11, 31, 4, 31, -7, 28, -9, 22, -10, 16, -10, 7, -19, 2, -21, -2, -21, -5, -19, -13, -19, -29, -31, -45, -32, -53, -27, -59, -22, -62, 8, -48, 20, -29, 20, -18, 14, -16, 14, -2, 20)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
 position = Vector2(45, 6)
