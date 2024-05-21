@@ -191,11 +191,11 @@ position = Vector2(-2.5, 6.5)
 shape = SubResource("RectangleShape2D_jfevb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -40)
+position = Vector2(1, -10)
 zoom = Vector2(2, 2)
 limit_left = -1016
-limit_right = 7400
-limit_bottom = 480
+limit_right = 14420
+limit_bottom = 510
 position_smoothing_speed = 6.0
 
 [node name="Jumping Particles" type="CPUParticles2D" parent="."]
