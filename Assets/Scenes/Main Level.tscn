@@ -969,7 +969,7 @@ shape = SubResource("WorldBoundaryShape2D_qtoj4")
 [node name="SceneChanging" parent="." instance=ExtResource("8_nhn6s")]
 z_index = 2
 material = SubResource("ShaderMaterial_5dy25")
-position = Vector2(11526, 411)
+position = Vector2(11584, 294)
 rotation = 0.000793439
 
 [node name="Tiles" type="Node" parent="."]
