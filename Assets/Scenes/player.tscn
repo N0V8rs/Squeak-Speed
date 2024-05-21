@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://c0r32qycjimbd"]
+[gd_scene load_steps=32 format=3 uid="uid://c0r32qycjimbd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_m3t20"]
 [ext_resource type="Texture2D" uid="uid://b1xxenwnxwfsq" path="res://Assets/Player/Speedy_Sprite-Hit.png" id="2_o384d"]
 [ext_resource type="Texture2D" uid="uid://cjnrkubs3ps7v" path="res://Assets/Player/Speedy_Sprite-Idle.png" id="2_prxfu"]
 [ext_resource type="Texture2D" uid="uid://tkktdot4pqt7" path="res://Assets/Player/Speedy_Sprite-Jump.png" id="4_c2gpw"]
 [ext_resource type="Texture2D" uid="uid://doiog8upq7lm8" path="res://Assets/Player/Speedy_Sprite-Walk.png" id="4_c3g5l"]
+[ext_resource type="Texture2D" uid="uid://cvs83wo4ne4ff" path="res://Assets/Particles/Steam_Sheet.png" id="6_moj3s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r214d"]
 atlas = ExtResource("2_o384d")
@@ -172,6 +173,19 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfevb"]
 size = Vector2(37, 41)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_by8fb"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_nmms1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 0.527472), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_p4p4w"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
@@ -199,4 +213,23 @@ limit_bottom = 510
 position_smoothing_speed = 6.0
 
 [node name="Jumping Particles" type="CPUParticles2D" parent="."]
-visible = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_by8fb")
+position = Vector2(0, 25)
+emitting = false
+lifetime = 0.75
+one_shot = true
+preprocess = 0.25
+speed_scale = 2.88
+explosiveness = 1.0
+texture = ExtResource("6_moj3s")
+emission_shape = 3
+emission_rect_extents = Vector2(16, 1)
+gravity = Vector2(0, -10)
+linear_accel_max = 5.0
+radial_accel_max = 10.0
+angle_max = 160.0
+scale_amount_curve = SubResource("Curve_nmms1")
+color = Color(1, 0.940781, 0.887435, 0.556863)
+color_ramp = SubResource("Gradient_p4p4w")
+anim_offset_max = 1.0
