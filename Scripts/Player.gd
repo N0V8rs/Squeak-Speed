@@ -11,6 +11,7 @@ extends CharacterBody2D
 var current_health
 var last_position = 1
 var is_dying:bool = false
+var was_in_air = false
 
 func _ready():
 	pass
@@ -23,12 +24,11 @@ func _physics_process(delta):
 			velocity.y = 1000
 
 	if is_dying:
-		#move_and_slide()
 		return
 	
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
-		if (velocity.y < -1):
+		if velocity.y < -1:
 			sprite_2d.animation = "jumping"
 
 	if Input.is_action_pressed("movement_down"):
@@ -46,12 +46,20 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	# Sprite animations for left and right movement, fliping the Player
-	#var isLeft = velocity.x < 0
 	sprite_2d.flip_h = last_position < 0
 	
-	# Aniamtions for the Player Movement
+	# Animations for the Player Movement
 	if is_on_floor():
+		if was_in_air:
+			play_landing_particles()
+			was_in_air = false
 		if horizontal_direction == 0:
 			sprite_2d.play("Idle") # Idle string for the Idle animations
-		else :
+		else:
 			sprite_2d.play("running") # Running string for the running animations
+	else:
+		was_in_air = true
+
+func play_landing_particles():
+	if jumping_particles:
+		jumping_particles.restart()
