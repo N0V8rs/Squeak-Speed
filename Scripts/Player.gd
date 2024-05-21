@@ -35,6 +35,7 @@ func _physics_process(delta):
 		set_collision_mask_value(3, false)
 	else:
 		set_collision_mask_value(3, true)
+
 	if Input.is_action_pressed("Debug"):
 		CheckpointManager.checkpoint_timer.stop()
 

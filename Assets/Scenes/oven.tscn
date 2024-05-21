@@ -10,9 +10,34 @@ size = Vector2(30, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bdc5"]
 size = Vector2(96, 13)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_juw3m"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_jnhjk"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0.365169, 27.6923), 0.0, 0.0, 0, 0, Vector2(0.634831, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_x6ndp"]
+_data = [Vector2(0.47191, 0.648352), 0.0, 0.0, 0, 0, Vector2(0.662921, 0.494505), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_42rde"]
+offsets = PackedFloat32Array(0, 0.4, 1)
+colors = PackedColorArray(1, 1, 1, 0.835294, 1, 1, 1, 0.854902, 1, 1, 1, 0.686275)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_5l8ge"]
+offsets = PackedFloat32Array(0, 0.586667, 0.933333)
+colors = PackedColorArray(1, 1, 1, 0.0745098, 1, 1, 1, 0.48374, 1, 1, 1, 0.756863)
+
 [sub_resource type="Animation" id="Animation_u3g16"]
 resource_name = "Oven_Function"
-length = 10.0
+length = 7.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -21,7 +46,7 @@ tracks/0/path = NodePath("OvenOffSprite:texture:load_path")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 5, 7.5),
+"times": PackedFloat32Array(0, 2.5, 5, 6.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": ["res://.godot/imported/OvenV2_Off.png-b2b5886c0059370f657bd193508b9138.ctex", "res://.godot/imported/OvenV2_Warm.png-bfd691eb13d6a09309c294b7f4061e95.ctex", "res://.godot/imported/OvenV2_Hot.png-2c8ce54ee615c732440bd1eae897a959.ctex", "res://.godot/imported/OvenV2_Warm.png-bfd691eb13d6a09309c294b7f4061e95.ctex"]
@@ -29,14 +54,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Steam:emitting")
+tracks/1/path = NodePath("HighSteam:emitting")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.5, 5, 7.5),
+"times": PackedFloat32Array(0, 2.5, 5, 6.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [false, true, true, true]
+"values": [false, false, true, false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -57,10 +82,10 @@ tracks/3/path = NodePath("OvenOffSprite/KillCollision/CollisionShape2D:position"
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.5, 5, 7.5),
+"times": PackedFloat32Array(0, 2.5, 5, 6.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(22, -28), Vector2(22, -27), Vector2(22, -34), Vector2(22, -27)]
+"values": [Vector2(22, -28), Vector2(22, -27), Vector2(21, -37), Vector2(22, -27)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -69,10 +94,34 @@ tracks/4/path = NodePath("OvenOffSprite/KillCollision/CollisionShape2D:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 5, 7.5),
+"times": PackedFloat32Array(0, 5, 6.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(1, 1), Vector2(1, 3), Vector2(1, 1)]
+"values": [Vector2(1, 1), Vector2(0.8, 4), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LowSteam:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.5, 5, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LowSteam:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_bf8g5"]
@@ -92,7 +141,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Steam:emitting")
+tracks/1/path = NodePath("HighSteam:emitting")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -137,37 +186,36 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LowSteam:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LowSteam:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t4303"]
 _data = {
 "Oven_Function": SubResource("Animation_u3g16"),
 "RESET": SubResource("Animation_bf8g5")
 }
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_juw3m"]
-particles_animation = true
-particles_anim_h_frames = 4
-particles_anim_v_frames = 1
-particles_anim_loop = true
-
-[sub_resource type="Curve" id="Curve_jnhjk"]
-min_value = -360.0
-max_value = 360.0
-_data = [Vector2(0.365169, 27.6923), 0.0, 0.0, 0, 0, Vector2(0.634831, 360), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_x6ndp"]
-_data = [Vector2(0.47191, 0.648352), 0.0, 0.0, 0, 0, Vector2(0.662921, 0.494505), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Gradient" id="Gradient_42rde"]
-offsets = PackedFloat32Array(0, 0.4, 1)
-colors = PackedColorArray(1, 1, 1, 0.835294, 1, 1, 1, 0.854902, 1, 1, 1, 0.686275)
-metadata/_snap_enabled = true
-
-[sub_resource type="Gradient" id="Gradient_5l8ge"]
-offsets = PackedFloat32Array(0, 0.586667, 0.933333)
-colors = PackedColorArray(1, 1, 1, 0.0745098, 1, 1, 1, 0.48374, 1, 1, 1, 0.756863)
 
 [node name="Oven" type="Node2D"]
 
@@ -188,13 +236,7 @@ shape = SubResource("RectangleShape2D_r8tm4")
 position = Vector2(0, -17)
 shape = SubResource("RectangleShape2D_5bdc5")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_t4303")
-}
-autoplay = "Oven_Function"
-
-[node name="Steam" type="CPUParticles2D" parent="."]
+[node name="HighSteam" type="CPUParticles2D" parent="."]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_juw3m")
 position = Vector2(21, -35)
@@ -216,3 +258,32 @@ color_ramp = SubResource("Gradient_42rde")
 color_initial_ramp = SubResource("Gradient_5l8ge")
 hue_variation_max = 1.0
 anim_offset_max = 1.0
+
+[node name="LowSteam" type="CPUParticles2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_juw3m")
+position = Vector2(21, -35)
+skew = 0.235619
+amount = 40
+lifetime = 0.3
+speed_scale = 0.3
+lifetime_randomness = 0.12
+texture = ExtResource("6_o40jf")
+emission_shape = 3
+emission_rect_extents = Vector2(5.965, 1.855)
+direction = Vector2(0, -10)
+gravity = Vector2(0, -90)
+angular_velocity_curve = SubResource("Curve_jnhjk")
+damping_max = 3.0
+scale_amount_min = 0.3
+scale_amount_curve = SubResource("Curve_x6ndp")
+color_ramp = SubResource("Gradient_42rde")
+color_initial_ramp = SubResource("Gradient_5l8ge")
+hue_variation_max = 1.0
+anim_offset_max = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t4303")
+}
+autoplay = "Oven_Function"
