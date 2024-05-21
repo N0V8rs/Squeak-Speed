@@ -24,6 +24,7 @@ uniform vec4 color : source_color = vec4(1.0, 0.9, 0.65, 0.8);
 
 uniform bool hdr = false;
 uniform float seed = 5.0;
+uniform bool use_rainbow = false;
 
 // Random and noise functions from Book of Shader's chapter on Noise.
 float random(vec2 _uv) {
@@ -48,7 +49,7 @@ float noise (in vec2 uv) {
     // Cubic Hermine Curve. Same as SmoothStep()
     vec2 u = f * f * (3.0-2.0 * f);
 
-    // Mix 4 coorners percentages
+    // Mix 4 corners percentages
     return mix(a, b, u.x) +
             (c - a)* u.y * (1.0 - u.x) +
             (d - b) * u.x * u.y;
@@ -63,41 +64,53 @@ vec4 screen(vec4 base, vec4 blend){
 	return 1.0 - (1.0 - base) * (1.0 - blend);
 }
 
+vec3 rainbow(float t) {
+    float r = abs(sin(t * 3.14159));
+    float g = abs(sin((t + 0.333) * 3.14159));
+    float b = abs(sin((t + 0.666) * 3.14159));
+    return vec3(r, g, b);
+}
+
 void fragment()
 {
-	
-	// Rotate, skew and move the UVs
-	vec2 transformed_uv = ( rotate(angle) * (UV - position) )  / ( (UV.y + spread) - (UV.y * spread) );
-	
-	// Animate the ray according the the new transformed UVs
-	vec2 ray1 = vec2(transformed_uv.x * ray1_density + sin(TIME * 0.1 * speed) * (ray1_density * 0.2) + seed, 1.0);
-	vec2 ray2 = vec2(transformed_uv.x * ray2_density + sin(TIME * 0.2 * speed) * (ray1_density * 0.2) + seed, 1.0);
-	
-	// Cut off the ray's edges
-	float cut = step(cutoff, transformed_uv.x) * step(cutoff, 1.0 - transformed_uv.x);
-	ray1 *= cut;
-	ray2 *= cut;
-	
-	// Apply the noise pattern (i.e. create the rays)
-	float rays;
-	
-	if (hdr){
-		// This is not really HDR, but check this to not clamp the two merged rays making 
-		// their values go over 1.0. Can make for some nice effect
-		rays = noise(ray1) + (noise(ray2) * ray2_intensity);
-	}
-	else{
-		 rays = clamp(noise(ray1) + (noise(ray2) * ray2_intensity), 0., 1.);
-	}
-	
-	// Fade out edges
-	rays *= smoothstep(0.0, falloff, (1.0 - UV.y)); // Bottom
-	rays *= smoothstep(0.0 + cutoff, edge_fade + cutoff, transformed_uv.x); // Left
-	rays *= smoothstep(0.0 + cutoff, edge_fade + cutoff, 1.0 - transformed_uv.x); // Right
-	
-	// Color to the rays
-	vec3 shine = vec3(rays) * color.rgb;
+    // Rotate, skew and move the UVs
+    vec2 transformed_uv = ( rotate(angle) * (UV - position) )  / ( (UV.y + spread) - (UV.y * spread) );
+    
+    // Animate the ray according the the new transformed UVs
+    vec2 ray1 = vec2(transformed_uv.x * ray1_density + sin(TIME * 0.1 * speed) * (ray1_density * 0.2) + seed, 1.0);
+    vec2 ray2 = vec2(transformed_uv.x * ray2_density + sin(TIME * 0.2 * speed) * (ray1_density * 0.2) + seed, 1.0);
+    
+    // Cut off the ray's edges
+    float cut = step(cutoff, transformed_uv.x) * step(cutoff, 1.0 - transformed_uv.x);
+    ray1 *= cut;
+    ray2 *= cut;
+    
+    // Apply the noise pattern (i.e. create the rays)
+    float rays;
+    
+    if (hdr){
+        // This is not really HDR, but check this to not clamp the two merged rays making 
+        // their values go over 1.0. Can make for some nice effect
+        rays = noise(ray1) + (noise(ray2) * ray2_intensity);
+    }
+    else{
+         rays = clamp(noise(ray1) + (noise(ray2) * ray2_intensity), 0., 1.);
+    }
+    
+    // Fade out edges
+    rays *= smoothstep(0.0, falloff, (1.0 - UV.y)); // Bottom
+    rays *= smoothstep(0.0 + cutoff, edge_fade + cutoff, transformed_uv.x); // Left
+    rays *= smoothstep(0.0 + cutoff, edge_fade + cutoff, 1.0 - transformed_uv.x); // Right
+    
+    // Color to the rays
+    vec3 shine = vec3(rays) * color.rgb;
 
-	
-	COLOR = vec4(shine, rays * color.a);
+    if (use_rainbow) {
+        float rainbow_time = fract(TIME * speed * 0.1);
+        vec3 rainbow_color = rainbow(rainbow_time + UV.x);
+        shine = vec3(rays) * rainbow_color;
+    }
+
+    COLOR = vec4(shine, rays * color.a);
 }
+
