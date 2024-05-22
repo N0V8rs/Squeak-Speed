@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_d2t6y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjjpj"]
-height = 48.0026
+height = 44.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fgtq"]
 size = Vector2(64, 46.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njx3g"]
-size = Vector2(3, 18)
+size = Vector2(3, 16)
 
 [node name="Butcher Knife" type="Sprite2D"]
 z_index = 2
@@ -20,7 +20,7 @@ texture = ExtResource("1_fjull")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(38, -9)
+position = Vector2(40, -9)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_sjjpj")
 debug_color = Color(0, 1, 0.239216, 0.419608)
@@ -33,6 +33,6 @@ shape = SubResource("RectangleShape2D_7fgtq")
 debug_color = Color(1, 0, 0.101961, 0.419608)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(17.5, -9)
+position = Vector2(17.5, -8)
 shape = SubResource("RectangleShape2D_njx3g")
 debug_color = Color(0, 1, 0, 0.419608)

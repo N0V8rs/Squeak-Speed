@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c0r32qycjimbd"]
+[gd_scene load_steps=30 format=3 uid="uid://c0r32qycjimbd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_m3t20"]
 [ext_resource type="Texture2D" uid="uid://b1xxenwnxwfsq" path="res://Assets/Player/Speedy_Sprite-Hit.png" id="2_o384d"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://tkktdot4pqt7" path="res://Assets/Player/Speedy_Sprite-Jump.png" id="4_c2gpw"]
 [ext_resource type="Texture2D" uid="uid://doiog8upq7lm8" path="res://Assets/Player/Speedy_Sprite-Walk.png" id="4_c3g5l"]
 [ext_resource type="Texture2D" uid="uid://cvs83wo4ne4ff" path="res://Assets/Particles/Steam_Sheet.png" id="6_moj3s"]
-[ext_resource type="AudioStream" uid="uid://bq0v243wkak63" path="res://Assets/SFX/jumping_sfxr.wav" id="7_guy86"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r214d"]
 atlas = ExtResource("2_o384d")
@@ -171,8 +170,9 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfevb"]
-size = Vector2(37, 41)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ibx81"]
+radius = 13.0
+height = 38.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_by8fb"]
 particles_animation = true
@@ -195,8 +195,8 @@ sprite_frames = SubResource("SpriteFrames_vpd2b")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 6.5)
-shape = SubResource("RectangleShape2D_jfevb")
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_ibx81")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, -10)
@@ -229,5 +229,6 @@ scale_amount_max = 0.8
 color = Color(1, 0.941176, 0.886275, 1)
 anim_offset_max = 1.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_guy86")
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
