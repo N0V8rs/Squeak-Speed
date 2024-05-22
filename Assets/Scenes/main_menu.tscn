@@ -28,6 +28,7 @@ shader_parameter/ray2_intensity = 0.652
 shader_parameter/color = Color(0.979571, 0.869017, 0.712124, 0.647059)
 shader_parameter/hdr = true
 shader_parameter/seed = 8.24
+shader_parameter/use_rainbow = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5cb2v"]
 shader = ExtResource("3_8t23b")

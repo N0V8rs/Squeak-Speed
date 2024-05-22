@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @export var speed = 300
-@export var gravity = 30
+@export var gravity = 30 
 @export var jump_force = 300
 @onready var jumping_particles = $"Jumping Particles"
 @onready var sprite_2d = $Sprite2D
@@ -25,7 +25,7 @@ func _physics_process(delta):
 
 	if is_dying:
 		return
-	
+
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
 		if velocity.y < -1:
@@ -59,6 +59,7 @@ func _physics_process(delta):
 			sprite_2d.play("running") # Running string for the running animations
 	else:
 		was_in_air = true
+
 
 func play_landing_particles():
 	if jumping_particles:
