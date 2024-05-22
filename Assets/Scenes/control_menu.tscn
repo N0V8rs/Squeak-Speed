@@ -1,0 +1,321 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpy3h5jv2w4np"]
+
+[ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="2_k80c0"]
+[ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="3_h5v64"]
+[ext_resource type="Shader" path="res://Assets/Scenes/godray.gdshader" id="4_hvwjn"]
+[ext_resource type="Texture2D" uid="uid://8i538puvc55r" path="res://Assets/UI/controllerLayouts.png" id="5_77xsc"]
+[ext_resource type="Theme" uid="uid://rd0vuur4stdp" path="res://Assets/UI/ButtonTheme.tres" id="6_mymgu"]
+[ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="7_urk2j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s52cw"]
+shader = ExtResource("2_k80c0")
+shader_parameter/strength = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3bbry"]
+shader = ExtResource("4_hvwjn")
+shader_parameter/angle = -0.205
+shader_parameter/position = 0.09
+shader_parameter/spread = 0.563
+shader_parameter/cutoff = -0.372
+shader_parameter/falloff = 0.661
+shader_parameter/edge_fade = 0.33
+shader_parameter/speed = 0.915
+shader_parameter/ray1_density = 7.705
+shader_parameter/ray2_density = 10.76
+shader_parameter/ray2_intensity = 0.652
+shader_parameter/color = Color(0.979571, 0.869017, 0.712124, 0.647059)
+shader_parameter/hdr = true
+shader_parameter/seed = 8.24
+shader_parameter/use_rainbow = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k4bf"]
+bg_color = Color(0.455497, 0.306262, 0.191315, 0.290196)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qwop"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_bottom = 29.0
+bg_color = Color(0.64743, 0.51628, 0.413895, 0.419608)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="MarginContainer/VBoxContainer/Control"]
+material = SubResource("ShaderMaterial_s52cw")
+layout_mode = 2
+offset_left = -11.0
+offset_top = -332.0
+offset_right = 1178.0
+offset_bottom = 343.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_h5v64")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = -501.0
+offset_top = -129.0
+offset_right = 651.0
+offset_bottom = 319.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Control/Control"]
+material = SubResource("ShaderMaterial_3bbry")
+layout_mode = 2
+offset_left = -519.0
+offset_top = -449.0
+offset_right = 2667.0
+offset_bottom = 733.0
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="BacktoMenu" type="Panel" parent="MarginContainer/VBoxContainer/Control2"]
+layout_mode = 0
+offset_left = -440.0
+offset_top = 193.0
+offset_right = -118.0
+offset_bottom = 282.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4bf")
+
+[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer/Control2"]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -449.0
+offset_top = 198.0
+offset_right = -112.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_mymgu")
+theme_override_font_sizes/font_size = 25
+text = "Back To Menu"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1111.0
+offset_bottom = 546.0
+
+[node name="WASD2" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 81.0
+offset_right = 371.0
+offset_bottom = 221.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4bf")
+
+[node name="Joystick" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 325.0
+offset_right = 282.0
+offset_bottom = 489.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4bf")
+
+[node name="X" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 858.0
+offset_top = 421.0
+offset_right = 966.0
+offset_bottom = 531.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4bf")
+
+[node name="B" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 228.0
+offset_right = 966.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4bf")
+
+[node name="A" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 51.0
+offset_right = 966.0
+offset_bottom = 154.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4bf")
+
+[node name="ControllerBackground" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 21.0
+offset_right = 849.0
+offset_bottom = 632.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4bf")
+
+[node name="controllers" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 4.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 644.0
+texture = ExtResource("5_77xsc")
+
+[node name="Jump" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 199.0
+offset_top = 22.0
+offset_right = 324.0
+offset_bottom = 70.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "JUMP"
+
+[node name="Left" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 31.0
+offset_top = 152.0
+offset_right = 145.0
+offset_bottom = 202.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "Left"
+
+[node name="Right" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 376.0
+offset_top = 149.0
+offset_right = 510.0
+offset_bottom = 199.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "Right"
+
+[node name="Down" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 199.0
+offset_top = 226.0
+offset_right = 325.0
+offset_bottom = 276.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "Down"
+
+[node name="AJump" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 983.0
+offset_top = 78.0
+offset_right = 1108.0
+offset_bottom = 126.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "JUMP"
+
+[node name="BJump" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 983.0
+offset_top = 260.0
+offset_right = 1108.0
+offset_bottom = 308.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "JUMP"
+
+[node name="CJump" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 985.0
+offset_top = 454.0
+offset_right = 1110.0
+offset_bottom = 502.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "JUMP"
+
+[node name="Movement" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 288.0
+offset_top = 382.0
+offset_right = 489.0
+offset_bottom = 430.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = ExtResource("7_urk2j")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qwop")
+text = "Movement"
