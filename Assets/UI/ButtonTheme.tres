@@ -24,7 +24,6 @@ content_margin_bottom = 5.0
 texture = ExtResource("1_4ocis")
 
 [resource]
-default_base_scale = 0.57
 default_font = ExtResource("2_mqxdj")
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/colors/font_hover_color = Color(0.762404, 0.762404, 0.762404, 1)

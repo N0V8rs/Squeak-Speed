@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt7u07utlqkfx"]
+[gd_scene load_steps=10 format=3 uid="uid://bt7u07utlqkfx"]
 
 [ext_resource type="Texture2D" uid="uid://csmlshq3ebe8w" path="res://Assets/Traps/Puddle_HotSauce.png" id="1_byrxp"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_3uhys"]
@@ -24,8 +24,13 @@ _data = [Vector2(0.47191, 0.648352), 0.0, 0.0, 0, 0, Vector2(0.662921, 0.494505)
 point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_mn2pv"]
-offsets = PackedFloat32Array(0.00666667, 0.506667, 1)
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.921569, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0, 0.4, 1)
+colors = PackedColorArray(1, 1, 1, 0.835294, 1, 1, 1, 0.854902, 1, 1, 1, 0.686275)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_pl8lr"]
+offsets = PackedFloat32Array(0, 0.586667, 0.933333)
+colors = PackedColorArray(1, 1, 1, 0.0745098, 1, 1, 1, 0.48374, 1, 1, 1, 0.756863)
 
 [node name="HotSauceSpill" type="Node2D"]
 
@@ -46,13 +51,13 @@ texture_filter = 1
 material = SubResource("CanvasItemMaterial_weqab")
 position = Vector2(-2, 5)
 skew = 0.235619
-amount = 30
+amount = 50
 lifetime = 0.75
 speed_scale = 0.3
 lifetime_randomness = 0.12
 texture = ExtResource("3_3d2de")
 emission_shape = 3
-emission_rect_extents = Vector2(10, 0)
+emission_rect_extents = Vector2(25, 1.855)
 direction = Vector2(0, -10)
 gravity = Vector2(0, -90)
 angular_velocity_curve = SubResource("Curve_qsell")
@@ -60,5 +65,6 @@ damping_max = 3.0
 scale_amount_min = 0.3
 scale_amount_curve = SubResource("Curve_b41wt")
 color_ramp = SubResource("Gradient_mn2pv")
+color_initial_ramp = SubResource("Gradient_pl8lr")
 hue_variation_max = 1.0
 anim_offset_max = 1.0
