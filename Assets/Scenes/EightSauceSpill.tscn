@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt7u07utlqkfx"]
+[gd_scene load_steps=9 format=3 uid="uid://xai8ik5p6tj7"]
 
-[ext_resource type="Texture2D" uid="uid://csmlshq3ebe8w" path="res://Assets/Traps/Puddle_HotSauce.png" id="1_byrxp"]
-[ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_3uhys"]
-[ext_resource type="Texture2D" uid="uid://cvs83wo4ne4ff" path="res://Assets/Particles/Steam_Sheet.png" id="3_3d2de"]
+[ext_resource type="Texture2D" uid="uid://cdlwkah250saf" path="res://Assets/Traps/SlightlySmallPuddle.png" id="1_0ax1k"]
+[ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_yyr5u"]
+[ext_resource type="Texture2D" uid="uid://cvs83wo4ne4ff" path="res://Assets/Particles/Steam_Sheet.png" id="3_moaaf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvoo3"]
-size = Vector2(7.25, 104)
+size = Vector2(3, 75)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_weqab"]
 particles_animation = true
@@ -24,35 +24,37 @@ _data = [Vector2(0.47191, 0.648352), 0.0, 0.0, 0, 0, Vector2(0.662921, 0.494505)
 point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_mn2pv"]
-offsets = PackedFloat32Array(0.00666667, 0.506667, 1)
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.921569, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0, 0.54, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.933333, 1, 1, 1, 0)
 
-[node name="HotSauceSpill" type="Node2D"]
+[node name="SlightlySmallPuddle" type="Node2D"]
+position = Vector2(0, -1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_byrxp")
+texture = ExtResource("1_0ax1k")
 
-[node name="KillCollision" parent="Sprite2D" instance=ExtResource("2_3uhys")]
+[node name="KillCollision" parent="Sprite2D" instance=ExtResource("2_yyr5u")]
 position = Vector2(-1, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/KillCollision"]
-position = Vector2(2, 25.625)
+position = Vector2(2.5, 22.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_gvoo3")
 
 [node name="Steam" type="CPUParticles2D" parent="."]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_weqab")
-position = Vector2(-2, 5)
+position = Vector2(-1, 2)
+rotation = -1.0974
 skew = 0.235619
 amount = 30
 lifetime = 0.75
 speed_scale = 0.3
 lifetime_randomness = 0.12
-texture = ExtResource("3_3d2de")
+texture = ExtResource("3_moaaf")
 emission_shape = 3
-emission_rect_extents = Vector2(10, 0)
+emission_rect_extents = Vector2(4, 0)
 direction = Vector2(0, -10)
 gravity = Vector2(0, -90)
 angular_velocity_curve = SubResource("Curve_qsell")
