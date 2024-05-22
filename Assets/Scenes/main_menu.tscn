@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dio1u8oi461dq"]
+[gd_scene load_steps=17 format=3 uid="uid://dio1u8oi461dq"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
 [ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="2_fn1gm"]
@@ -6,12 +6,17 @@
 [ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="2_nv8sr"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_wai5j"]
 [ext_resource type="Shader" path="res://Assets/Scenes/iconscroll.gdshader" id="3_8t23b"]
+[ext_resource type="Texture2D" uid="uid://65g6tcytn1ex" path="res://Assets/UI/LightParticle.png" id="4_gv1wa"]
 [ext_resource type="Texture2D" uid="uid://bowtnqbicglma" path="res://Assets/UI/TitleCard.png" id="6_ndguc"]
 [ext_resource type="Shader" path="res://Assets/Scenes/godray.gdshader" id="8_juuao"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pjsvh"]
 shader = ExtResource("2_nv8sr")
 shader_parameter/strength = 2
+
+[sub_resource type="Gradient" id="Gradient_1h3up"]
+offsets = PackedFloat32Array(0.0133333, 0.5, 1)
+colors = PackedColorArray(1, 0.847059, 0.705882, 0, 1, 0.968627, 0.764706, 0.658824, 1, 0.913725, 0.807843, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hwgd0"]
 shader = ExtResource("8_juuao")
@@ -83,6 +88,50 @@ offset_left = -501.0
 offset_top = -129.0
 offset_right = 651.0
 offset_bottom = 319.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="VBoxContainer/Control/Control"]
+texture_filter = 1
+position = Vector2(199, -68)
+amount = 40
+lifetime = 10.0
+preprocess = 40.0
+speed_scale = 0.3
+randomness = 1.0
+lifetime_randomness = 1.0
+texture = ExtResource("4_gv1wa")
+emission_shape = 3
+emission_rect_extents = Vector2(576, 324)
+gravity = Vector2(0, 25)
+initial_velocity_max = 500.0
+angular_velocity_max = 300.0
+damping_max = 50.0
+angle_max = 30.0
+scale_amount_min = 0.0
+scale_amount_max = 0.8
+color = Color(1, 0.878431, 0.717647, 0.329412)
+color_ramp = SubResource("Gradient_1h3up")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="VBoxContainer/Control/Control"]
+texture_filter = 1
+position = Vector2(199, -68)
+amount = 40
+lifetime = 10.0
+preprocess = 40.0
+speed_scale = 0.3
+randomness = 1.0
+lifetime_randomness = 1.0
+texture = ExtResource("4_gv1wa")
+emission_shape = 3
+emission_rect_extents = Vector2(576, 324)
+gravity = Vector2(0, 25)
+initial_velocity_max = 500.0
+angular_velocity_max = 300.0
+damping_max = 50.0
+angle_max = 30.0
+scale_amount_min = 0.0
+scale_amount_max = 0.8
+color = Color(0.996078, 1, 0.74902, 0.337255)
+color_ramp = SubResource("Gradient_1h3up")
 
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer/Control/Control"]
 material = SubResource("ShaderMaterial_hwgd0")
