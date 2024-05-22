@@ -28,6 +28,7 @@ shader_parameter/ray2_intensity = 0.652
 shader_parameter/color = Color(0.979571, 0.869017, 0.712124, 0.647059)
 shader_parameter/hdr = true
 shader_parameter/seed = 8.24
+shader_parameter/use_rainbow = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5cb2v"]
 shader = ExtResource("3_8t23b")
@@ -110,13 +111,13 @@ theme = ExtResource("2_m0tqh")
 theme_override_font_sizes/font_size = 25
 text = "Play"
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="Controls" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme = ExtResource("2_m0tqh")
-theme_override_font_sizes/font_size = 20
-text = "Options
+theme_override_font_sizes/font_size = 18
+text = "Controls
 "
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
@@ -146,4 +147,5 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a1qkj")
 bbcode_enabled = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
