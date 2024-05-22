@@ -1,8 +1,9 @@
-[gd_scene load_steps=38 format=3 uid="uid://wx4b42jelkaj"]
+[gd_scene load_steps=39 format=3 uid="uid://wx4b42jelkaj"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
 [ext_resource type="PackedScene" uid="uid://e8gg00crfxov" path="res://Assets/Scenes/SawTrap.tscn" id="2_0wuhm"]
+[ext_resource type="AudioStream" uid="uid://cmx2egbsmlg6k" path="res://Assets/SFX/Gameplay-Adventure in the Kitchen.mp3" id="2_fxun5"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_l1yy8"]
 [ext_resource type="Texture2D" uid="uid://qb713cma67gw" path="res://Assets/UI/Timer.png" id="3_s21dr"]
 [ext_resource type="PackedScene" uid="uid://baqjdrrxgmsq" path="res://Assets/Scenes/checkpoint.tscn" id="4_p6emy"]
@@ -55,6 +56,14 @@ size = Vector2(64.5, 150)
 [sub_resource type="CircleShape2D" id="CircleShape2D_gan5a"]
 radius = 14.3178
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aw63i"]
+shader = ExtResource("18_cetol")
+shader_parameter/strength = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l7w7w"]
+shader = ExtResource("18_cetol")
+shader_parameter/strength = 1
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qtoj4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5dy25"]
@@ -73,16 +82,14 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.76, 0.893333, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.805556, 1, 1, 1, 0)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_aw63i"]
-shader = ExtResource("18_cetol")
-shader_parameter/strength = 1
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l7w7w"]
-shader = ExtResource("18_cetol")
-shader_parameter/strength = 1
-
 [node name="Kitchen Level" type="Node2D"]
 script = ExtResource("1_ljqjj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_fxun5")
+autoplay = true
+max_distance = 20000.0
+attenuation = 1e-05
 
 [node name="Player Stuff" type="Node" parent="."]
 
@@ -833,6 +840,53 @@ position = Vector2(8387, 413)
 rotation = 3.14159
 animation_time_scale = 3
 
+[node name="Background" type="Node" parent="Level 5/Traps"]
+
+[node name="BGLayer" type="CanvasLayer" parent="Level 5/Traps/Background"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Level 5/Traps/Background/BGLayer"]
+
+[node name="Wall" type="ParallaxLayer" parent="Level 5/Traps/Background/BGLayer/ParallaxBackground"]
+position = Vector2(0, -200)
+motion_scale = Vector2(0.032, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level 5/Traps/Background/BGLayer/ParallaxBackground/Wall"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_aw63i")
+position = Vector2(-4, 32)
+texture = ExtResource("16_1ewcy")
+centered = false
+
+[node name="Counters" type="ParallaxLayer" parent="Level 5/Traps/Background/BGLayer/ParallaxBackground"]
+position = Vector2(0, -200)
+motion_scale = Vector2(0.2, 0.177)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level 5/Traps/Background/BGLayer/ParallaxBackground/Counters"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_l7w7w")
+position = Vector2(-16, 48)
+scale = Vector2(2.2793, 2.34524)
+texture = ExtResource("17_q14xb")
+centered = false
+
+[node name="TextureRect" type="TextureRect" parent="Level 5/Traps/Background"]
+visible = false
+show_behind_parent = true
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1063.0
+offset_top = -681.0
+offset_right = 1129.0
+offset_bottom = 567.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_raeba")
+stretch_mode = 1
+
 [node name="Butcher Knife" parent="Level 5/Traps" instance=ExtResource("2_0wuhm")]
 position = Vector2(8047, -176)
 
@@ -957,7 +1011,7 @@ animation_time_scale = 0
 [node name="Enemy" parent="Level 7/Traps" instance=ExtResource("7_lyguo")]
 z_index = 3
 position = Vector2(11784, 302)
-ENEMY_SPEED = 75
+ENEMY_SPEED = 90
 
 [node name="Oven5" parent="Level 7/Traps" instance=ExtResource("10_i2u7v")]
 z_index = 1
@@ -1009,53 +1063,6 @@ radial_accel_max = 2.15
 scale_amount_curve = SubResource("Curve_nphss")
 color_ramp = SubResource("Gradient_bsgbf")
 anim_offset_max = 1.0
-
-[node name="Background" type="Node" parent="Tiles"]
-
-[node name="BGLayer" type="CanvasLayer" parent="Tiles/Background"]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="Tiles/Background/BGLayer"]
-
-[node name="Wall" type="ParallaxLayer" parent="Tiles/Background/BGLayer/ParallaxBackground"]
-position = Vector2(0, -200)
-motion_scale = Vector2(0.032, 0.1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Tiles/Background/BGLayer/ParallaxBackground/Wall"]
-texture_filter = 1
-material = SubResource("ShaderMaterial_aw63i")
-position = Vector2(-4, 32)
-texture = ExtResource("16_1ewcy")
-centered = false
-
-[node name="Counters" type="ParallaxLayer" parent="Tiles/Background/BGLayer/ParallaxBackground"]
-position = Vector2(0, -200)
-motion_scale = Vector2(0.2, 0.177)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Tiles/Background/BGLayer/ParallaxBackground/Counters"]
-texture_filter = 1
-material = SubResource("ShaderMaterial_l7w7w")
-position = Vector2(-16, 48)
-scale = Vector2(2.2793, 2.34524)
-texture = ExtResource("17_q14xb")
-centered = false
-
-[node name="TextureRect" type="TextureRect" parent="Tiles/Background"]
-visible = false
-show_behind_parent = true
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1063.0
-offset_top = -681.0
-offset_right = 1129.0
-offset_bottom = 567.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_raeba")
-stretch_mode = 1
 
 [node name="Kitchen _ Main Game" type="Node" parent="Tiles"]
 

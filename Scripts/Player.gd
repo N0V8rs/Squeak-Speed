@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var jump_force = 300
 @onready var jumping_particles = $"Jumping Particles"
 @onready var sprite_2d = $Sprite2D
+@onready var jump_audio = $AudioStreamPlayer
 
 @export var max_health = 1
 var current_health
@@ -28,6 +29,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
+		jump_audio.play()
 		if velocity.y < -1:
 			sprite_2d.animation = "jumping"
 

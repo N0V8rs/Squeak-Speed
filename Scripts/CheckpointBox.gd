@@ -5,6 +5,7 @@ extends Node2D
 
 @export var first_check_point:bool = false
 @export var check_point_timer:int = 15
+@onready var checkpoint_audio = $AudioStreamPlayer2D
 
 func _ready():
 	if first_check_point and CheckpointManager.can_restart_timer:
@@ -18,6 +19,7 @@ func _on_area_2d_body_entered(body):
 		CheckpointManager.player_last_position = global_position
 		print("Checkpoint Reached")
 		(CheckpointManager.checkpoint_timer as Timer).start(check_point_timer)
+		checkpoint_audio.play()
 		var twn:= create_tween()
 		twn.tween_property(self,"scale",Vector2.ONE * 1.2,0.22).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_BACK)
 		twn.tween_interval(0.3)
