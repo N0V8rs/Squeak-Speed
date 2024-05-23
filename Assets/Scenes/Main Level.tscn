@@ -158,18 +158,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_eyvsk")
 fit_content = true
 scroll_active = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Player Stuff/Player/CanvasLayer/MarginContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 20
-theme_override_fonts/bold_font = ExtResource("2_l1yy8")
-theme_override_font_sizes/bold_italics_font_size = 0
-bbcode_enabled = true
-text = "[b][font_size=30] Movement : WASD"
-fit_content = true
-
 [node name="Death Timer" type="Timer" parent="Player Stuff"]
 unique_name_in_owner = true
 
@@ -187,8 +175,7 @@ offset_bottom = 263.0
 theme = SubResource("Theme_c5bdy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 5
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 1
 theme_override_fonts/bold_font = ExtResource("2_l1yy8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfr8k")
 bbcode_enabled = true
@@ -204,8 +191,7 @@ offset_bottom = 304.0
 theme = SubResource("Theme_c5bdy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 5
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 1
 theme_override_fonts/bold_font = ExtResource("2_l1yy8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfr8k")
 bbcode_enabled = true
@@ -221,8 +207,7 @@ offset_bottom = 276.0
 theme = SubResource("Theme_c5bdy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 5
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 1
 theme_override_fonts/bold_font = ExtResource("2_l1yy8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfr8k")
 bbcode_enabled = true
@@ -274,8 +259,7 @@ offset_bottom = 21.0
 theme = SubResource("Theme_c5bdy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 5
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 1
 theme_override_fonts/bold_font = ExtResource("2_l1yy8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfr8k")
 bbcode_enabled = true
@@ -312,8 +296,7 @@ offset_bottom = 291.0
 theme = SubResource("Theme_c5bdy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 5
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 1
 theme_override_fonts/bold_font = ExtResource("2_l1yy8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfr8k")
 bbcode_enabled = true
@@ -343,7 +326,6 @@ position = Vector2(901, 320)
 [node name="Teleport" type="Node2D" parent="Tutorial/Checkpoints"]
 z_index = 2
 position = Vector2(371, 34)
-script = ExtResource("9_sxhgg")
 
 [node name="Position2D" type="Node2D" parent="Tutorial/Checkpoints/Teleport"]
 position = Vector2(1872, 278)
@@ -355,6 +337,7 @@ texture = ExtResource("10_7gcii")
 
 [node name="Area2D" type="Area2D" parent="Tutorial/Checkpoints/Teleport"]
 position = Vector2(-9, -6)
+script = ExtResource("9_sxhgg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Checkpoints/Teleport/Area2D"]
 position = Vector2(9, 9)
@@ -445,8 +428,7 @@ offset_bottom = 65.0
 theme = SubResource("Theme_c5bdy")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 5
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 1
 theme_override_fonts/bold_font = ExtResource("2_l1yy8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfr8k")
 bbcode_enabled = true
@@ -698,7 +680,7 @@ check_point_timer = 25
 position = Vector2(6606, 685)
 
 [node name="SlightlySmallPuddle" parent="Level 4/Traps" instance=ExtResource("16_ptgvo")]
-position = Vector2(6573, 323)
+position = Vector2(6589, 324)
 
 [node name="HotSauceSpill6" parent="Level 4/Traps" instance=ExtResource("15_yug1a")]
 position = Vector2(7052, -64)
@@ -719,7 +701,7 @@ position = Vector2(7176, 205)
 position = Vector2(7030, 205)
 
 [node name="SmallSauceSpill8" parent="Level 4/Traps" instance=ExtResource("18_wqp5h")]
-position = Vector2(6644, -19)
+position = Vector2(6644, -15)
 
 [node name="SmallSauceSpill9" parent="Level 4/Traps" instance=ExtResource("18_wqp5h")]
 position = Vector2(6614, 109)
@@ -754,7 +736,6 @@ check_point_timer = 25
 z_index = 2
 texture_filter = 1
 position = Vector2(7375, 438)
-script = ExtResource("9_sxhgg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level 5/Traps/Teleport"]
 material = SubResource("ShaderMaterial_j0vgx")
@@ -765,6 +746,7 @@ texture = ExtResource("10_7gcii")
 position = Vector2(591, -23)
 
 [node name="Area2D" type="Area2D" parent="Level 5/Traps/Teleport"]
+script = ExtResource("9_sxhgg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level 5/Traps/Teleport/Area2D"]
 position = Vector2(3, 1)
@@ -963,7 +945,7 @@ animation_time_scale = 0
 
 [node name="Enemy" parent="Level 7/Traps" instance=ExtResource("7_lyguo")]
 z_index = 3
-position = Vector2(11784, 302)
+position = Vector2(11781, 296)
 scale = Vector2(1, 1)
 ENEMY_SPEED = 90
 
@@ -1414,7 +1396,6 @@ scale = Vector2(0.5, 0.5)
 z_index = 2
 texture_filter = 1
 position = Vector2(15319, -399)
-script = ExtResource("9_sxhgg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level 9/Traps/Teleport2"]
 material = SubResource("ShaderMaterial_plvmx")
@@ -1425,6 +1406,7 @@ texture = ExtResource("10_7gcii")
 position = Vector2(1515, -470)
 
 [node name="Area2D" type="Area2D" parent="Level 9/Traps/Teleport2"]
+script = ExtResource("9_sxhgg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level 9/Traps/Teleport2/Area2D"]
 position = Vector2(3, 1)
