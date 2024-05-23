@@ -1,9 +1,8 @@
-[gd_scene load_steps=45 format=3 uid="uid://wx4b42jelkaj"]
+[gd_scene load_steps=44 format=3 uid="uid://wx4b42jelkaj"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
 [ext_resource type="PackedScene" uid="uid://e8gg00crfxov" path="res://Assets/Scenes/SawTrap.tscn" id="2_0wuhm"]
-[ext_resource type="AudioStream" uid="uid://cmx2egbsmlg6k" path="res://Assets/SFX/Gameplay-Adventure in the Kitchen.mp3" id="2_fxun5"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_l1yy8"]
 [ext_resource type="Texture2D" uid="uid://qb713cma67gw" path="res://Assets/UI/Timer.png" id="3_s21dr"]
 [ext_resource type="PackedScene" uid="uid://baqjdrrxgmsq" path="res://Assets/Scenes/checkpoint.tscn" id="4_p6emy"]
@@ -95,12 +94,6 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.805556, 1, 1, 1, 0)
 [node name="Kitchen Level" type="Node2D"]
 position = Vector2(3, 28)
 script = ExtResource("1_ljqjj")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_fxun5")
-autoplay = true
-max_distance = 20000.0
-attenuation = 1e-05
 
 [node name="Teleport" type="Node" parent="."]
 
