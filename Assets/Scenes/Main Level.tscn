@@ -2255,7 +2255,6 @@ layer_0/tile_data = PackedInt32Array(131069, 0, 0, 65537, 196608, 0, -65552, 0, 
 
 [connection signal="body_entered" from="Teleport/Teleport/Area2D" to="Teleport/Teleport" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Teleport/Teleport/Area2D" to="Teleport/Teleport/Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="Teleport/Teleport2/Area2D" to="Teleport/Teleport2" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Teleport/Teleport2/Area2D" to="Teleport/Teleport2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Teleport/Teleport3/Area2D" to="Teleport/Teleport3" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Teleport/Teleport3/Area2D" to="Teleport/Teleport3/Area2D" method="_on_body_entered"]
