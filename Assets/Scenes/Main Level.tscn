@@ -735,8 +735,7 @@ position = Vector2(7176, 77)
 
 [node name="Blender" parent="Level 4/Traps" instance=ExtResource("16_y5ynp")]
 z_index = 15
-position = Vector2(6798, 102)
-scale = Vector2(2, 2)
+position = Vector2(6800, 96)
 animation_time_scale = 0
 
 [node name="Level 5" type="Node" parent="."]
@@ -1416,7 +1415,7 @@ scale = Vector2(0.5, 0.5)
 [node name="Teleport2" type="Node2D" parent="Level 9/Traps"]
 z_index = 2
 texture_filter = 1
-position = Vector2(15319, -393)
+position = Vector2(15319, -399)
 script = ExtResource("9_sxhgg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level 9/Traps/Teleport2"]

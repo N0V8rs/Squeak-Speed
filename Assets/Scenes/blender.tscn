@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://db8ug6yols7ml"]
 
 [ext_resource type="Script" path="res://Scripts/blender.gd" id="1_kkmvo"]
-[ext_resource type="Texture2D" uid="uid://b26d7faxnf8qf" path="res://Assets/Traps/Blender-Shake.png" id="1_rrwgv"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_sn7jw"]
+[ext_resource type="Texture2D" uid="uid://m37j4n7tb88n" path="res://Assets/Traps/Blender_DoubleSize.png" id="2_vqt2i"]
 [ext_resource type="AudioStream" uid="uid://3lx2nfm6w7q5" path="res://Assets/SFX/blender_shake.mp3" id="4_vre7k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blvjf"]
-size = Vector2(45, 20)
+size = Vector2(100, 29)
 
 [sub_resource type="Animation" id="Animation_edpby"]
 resource_name = "Blender Shake"
@@ -99,7 +99,7 @@ script = ExtResource("1_kkmvo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_rrwgv")
+texture = ExtResource("2_vqt2i")
 hframes = 3
 frame = 1
 
@@ -108,6 +108,8 @@ frame = 1
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
 modulate = Color(0, 1, 0, 1)
 self_modulate = Color(0, 1, 0, 1)
+position = Vector2(0.999993, 0.621824)
+scale = Vector2(1.96646, 1.97564)
 build_mode = 1
 polygon = PackedVector2Array(-31, -54, -35, -54, -35, -7, -34, -7, -34, 9, -33, 9, -33, 17, -26, 26, -24, 27, -25, 29, -35, 34, -41, 39, -41, 58, -34, 64, 34, 64, 41, 58, 41, 39, 35, 34, 25, 29, 24, 27, 33, 17, 33, 10, 34, 10, 34, -7, 35, -7, 35, -52, 35, -54, 30, -54, 31, 9, 23, 27, 0, 28, -24, 28, -30, 9)
 
@@ -115,7 +117,7 @@ polygon = PackedVector2Array(-31, -54, -35, -54, -35, -7, -34, -7, -34, 9, -33, 
 z_index = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/KillCollision"]
-position = Vector2(0, 18)
+position = Vector2(-1, 39.5)
 shape = SubResource("RectangleShape2D_blvjf")
 debug_color = Color(1, 0, 0, 0.419608)
 
