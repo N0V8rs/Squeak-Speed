@@ -1,8 +1,8 @@
-extends Node
+extends Area2D
 
 @onready var player = %Player
-@onready var position_2d = $"../../../Level 5/Traps/Teleport/Position2D"
+@onready var position_2d = $Position2D
 
-func _on_area_2d_body_entered(body):
+func _on_body_entered(body):
 	if body is Player:
-		player.position = position_2d.get_global_transform().origin
+		player.position = position_2d.global_position
