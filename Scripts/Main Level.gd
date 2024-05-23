@@ -8,6 +8,7 @@ func _enter_tree():
 
 func _ready():
 	CheckpointManager.second_changed.connect(on_second_changed)
+	CheckpointManager.gameplay_music.play()
 
 func on_second_changed():
 	timer_label.text = "%d" % CheckpointManager.checkpoint_timer.time_left

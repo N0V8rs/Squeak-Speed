@@ -3,7 +3,7 @@ extends Node
 var player_last_position = null
 @onready var checkpoint_timer :Timer = %CheckpointTimer
 @onready var fader = %Fader
-@onready var audio_stream_player_2d = $AudioStreamPlayer2D
+@onready var gameplay_music = $AudioStreamPlayer2D
 
 const MAIN_MENU = preload("res://Assets/Scenes/main_menu.tscn")
 
@@ -13,7 +13,7 @@ signal second_changed
 
 func _ready():
 	get_tree().change_scene_to_packed.call_deferred(MAIN_MENU)
-	audio_stream_player_2d.play()
+	gameplay_music.play()
 	pass
 
 func fade_out_in():

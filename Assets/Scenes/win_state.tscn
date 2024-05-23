@@ -127,4 +127,6 @@ theme_override_constants/outline_size = 30
 bbcode_enabled = true
 text = "[center][font_size=30][wave][b]Alright!!!"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

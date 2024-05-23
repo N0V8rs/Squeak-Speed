@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://wx4b42jelkaj"]
+[gd_scene load_steps=50 format=3 uid="uid://wx4b42jelkaj"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
@@ -34,7 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://dox8iv2tx0740" path="res://Assets/Scenes/honey_pot.tscn" id="26_alrtg"]
 [ext_resource type="PackedScene" uid="uid://dijcbjhbp8m5g" path="res://Assets/Scenes/bounce_pad_four.tscn" id="29_biefi"]
 [ext_resource type="PackedScene" uid="uid://di2gnxoo8jmuc" path="res://Assets/Scenes/LargeBlade.tscn" id="29_y7xup"]
-[ext_resource type="Texture2D" uid="uid://dfrkuxbporr0i" path="res://Assets/Traps/HotSauce_BG.png" id="35_onbdg"]
 [ext_resource type="Texture2D" uid="uid://dsigfjaky4y3n" path="res://Assets/Traps/HotSauce_Spill.png" id="36_1nvdw"]
 [ext_resource type="Texture2D" uid="uid://bmww3h5xwvjyt" path="res://Assets/Traps/HotSauce.png" id="37_rms4a"]
 
@@ -168,7 +167,7 @@ shape = SubResource("RectangleShape2D_pbbvi")
 unique_name_in_owner = true
 z_index = 10
 texture_filter = 1
-position = Vector2(6503, 451)
+position = Vector2(17214, 395)
 collision_mask = 7
 speed = 300
 gravity = 40
@@ -2228,7 +2227,6 @@ layer_0/tile_data = PackedInt32Array(131069, 0, 0, 65537, 196608, 0, -65552, 0, 
 [node name="HotSauceBg3" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(6688, 399)
-texture = ExtResource("35_onbdg")
 
 [node name="HotSauceSpill" type="Sprite2D" parent="."]
 texture_filter = 1

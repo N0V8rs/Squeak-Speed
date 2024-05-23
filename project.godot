@@ -21,7 +21,7 @@ general/3d_panning_strength=0.0
 
 [autoload]
 
-CheckpointManager="*res://CheckpointManager.tscn"
+CheckpointManager="*res://Assets/Scenes/CheckpointManager.tscn"
 
 [display]
 

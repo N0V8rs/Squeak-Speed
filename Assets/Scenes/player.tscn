@@ -231,3 +231,4 @@ anim_offset_max = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_g7ldc")
+bus = &"Player"

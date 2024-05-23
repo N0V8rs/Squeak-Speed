@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dio1u8oi461dq"]
+[gd_scene load_steps=15 format=3 uid="uid://dio1u8oi461dq"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
 [ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="2_fn1gm"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_wai5j"]
 [ext_resource type="Texture2D" uid="uid://bowtnqbicglma" path="res://Assets/UI/TitleCard.png" id="6_ndguc"]
 [ext_resource type="Shader" path="res://Assets/Scenes/godray.gdshader" id="8_juuao"]
+[ext_resource type="AudioStream" uid="uid://c6ic540hwa1fs" path="res://Assets/SFX/Mouse Dash.mp3" id="8_odjx2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pjsvh"]
 shader = ExtResource("2_nv8sr")
@@ -157,6 +158,10 @@ theme = SubResource("Theme_5430n")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_a1qkj")
 bbcode_enabled = true
+
+[node name="Main Menu Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_odjx2")
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
