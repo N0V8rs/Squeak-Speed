@@ -23,9 +23,15 @@ func fade_out_in():
 	tween.tween_interval(0.2)
 	tween.tween_property(fader,"modulate",Color(Color.BLACK,0.0),0.3)
 
+func timer_fader():
+	var tween = fader.create_tween()
+	tween.tween_property(fader,"modulate",Color.BLACK,0.5)
+	tween.tween_property(fader,"modulate",Color(Color.BLACK,0.0),0.3)
+	return tween
+
 func _on_checkpoint_timer_timeout():
 	CheckpointManager.can_restart_timer = true
-	fade_out_in()
+	var tween = timer_fader()
 	get_tree().reload_current_scene.call_deferred()
 
 func _process(delta):
