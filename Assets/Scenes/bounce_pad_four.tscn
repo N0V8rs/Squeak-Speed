@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dijcbjhbp8m5g"]
+[gd_scene load_steps=11 format=3 uid="uid://dijcbjhbp8m5g"]
 
 [ext_resource type="Script" path="res://Scripts/Bounce.gd" id="1_eeva5"]
 [ext_resource type="Texture2D" uid="uid://cybwtksdbiwda" path="res://Assets/Furniture/Spring_Four.png" id="2_tif8w"]
-[ext_resource type="Texture2D" uid="uid://clgp45ncje7ul" path="res://Assets/Furniture/Strainer_Spring_V2.png" id="3_ka40o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sxy7i"]
 atlas = ExtResource("2_tif8w")
@@ -28,9 +27,9 @@ region = Rect2(306, 0, 51, 51)
 atlas = ExtResource("2_tif8w")
 region = Rect2(357, 0, 51, 51)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kndiq"]
-atlas = ExtResource("3_ka40o")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7byvg"]
+atlas = ExtResource("2_tif8w")
+region = Rect2(0, 0, 51, 51)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4coqw"]
 animations = [{
@@ -59,9 +58,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kndiq")
+"texture": SubResource("AtlasTexture_7byvg")
 }],
-"loop": false,
+"loop": true,
 "name": &"Idle",
 "speed": 5.0
 }]

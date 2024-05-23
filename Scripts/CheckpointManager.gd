@@ -19,8 +19,8 @@ func _ready():
 func fade_out_in():
 	var tween = fader.create_tween()
 	tween.tween_interval(0.15)
-	tween.tween_property(fader,"modulate",Color.BLACK,0.6)
-	tween.tween_interval(0.4)
+	tween.tween_property(fader,"modulate",Color.BLACK,0.5)
+	tween.tween_interval(0.2)
 	tween.tween_property(fader,"modulate",Color(Color.BLACK,0.0),0.3)
 
 func _on_checkpoint_timer_timeout():

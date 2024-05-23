@@ -8,7 +8,7 @@
 size = Vector2(30, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bdc5"]
-size = Vector2(96, 13)
+size = Vector2(96, 86.5)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_juw3m"]
 particles_animation = true
@@ -233,7 +233,7 @@ shape = SubResource("RectangleShape2D_r8tm4")
 [node name="StaticBody2D" type="StaticBody2D" parent="OvenOffSprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OvenOffSprite/StaticBody2D"]
-position = Vector2(0, -17)
+position = Vector2(0, 19.75)
 shape = SubResource("RectangleShape2D_5bdc5")
 
 [node name="HighSteam" type="CPUParticles2D" parent="."]
