@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://c2tslmqw0ents"]
+
+[ext_resource type="Script" path="res://Scripts/Bounce.gd" id="1_88fx1"]
+[ext_resource type="Texture2D" uid="uid://clgp45ncje7ul" path="res://Assets/Furniture/Strainer_Spring_V2.png" id="2_d0clf"]
+[ext_resource type="Texture2D" uid="uid://cbt8odeu8kuir" path="res://Assets/Furniture/Spring_Eight.png" id="2_j87x0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j20yh"]
+atlas = ExtResource("2_j87x0")
+region = Rect2(0, 0, 102, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlglc"]
+atlas = ExtResource("2_j87x0")
+region = Rect2(102, 0, 102, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj8gu"]
+atlas = ExtResource("2_j87x0")
+region = Rect2(204, 0, 102, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d02l4"]
+atlas = ExtResource("2_j87x0")
+region = Rect2(306, 0, 102, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kl1j"]
+atlas = ExtResource("2_j87x0")
+region = Rect2(612, 0, 102, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvm5a"]
+atlas = ExtResource("2_j87x0")
+region = Rect2(714, 0, 102, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kndiq"]
+atlas = ExtResource("2_d0clf")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4coqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j20yh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlglc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jj8gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d02l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kl1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvm5a")
+}],
+"loop": false,
+"name": &"Active",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kndiq")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Bounce Pad_Eight" type="Node2D"]
+script = ExtResource("1_88fx1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4coqw")
+animation = &"Active"
+frame = 5
+frame_progress = 1.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-1, 1)
+scale = Vector2(0.772436, 0.729167)
+polygon = PackedVector2Array(-36, 49, 36, 50, 39, 48, 39, 46, 34, 44, 34, 40, 33, 38, 29, 31, 23, 25, 13, 21, 9, 20, -9, 20, -19, 23, -26, 28, -30, 32, -34, 40, -36, 44, -38, 45, -39, 46, -39, 48, -38, 49)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
