@@ -7,8 +7,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0qs8j"]
 shader = ExtResource("1_jmifg")
 shader_parameter/highlight_color = Color(1, 1, 1, 1)
-shader_parameter/frequency = 0.35
-shader_parameter/highlight_speed = 2.842
+shader_parameter/frequency = 0.8
+shader_parameter/highlight_speed = 3.0
 shader_parameter/highlight_width = 5.982
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3s0b"]

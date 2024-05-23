@@ -1,10 +1,11 @@
-[gd_scene load_steps=45 format=3 uid="uid://wx4b42jelkaj"]
+[gd_scene load_steps=47 format=3 uid="uid://wx4b42jelkaj"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
 [ext_resource type="PackedScene" uid="uid://e8gg00crfxov" path="res://Assets/Scenes/SawTrap.tscn" id="2_0wuhm"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_l1yy8"]
 [ext_resource type="Texture2D" uid="uid://qb713cma67gw" path="res://Assets/UI/Timer.png" id="3_s21dr"]
+[ext_resource type="Shader" path="res://Assets/Scenes/cheeseoutline.gdshader" id="4_i6f4c"]
 [ext_resource type="PackedScene" uid="uid://baqjdrrxgmsq" path="res://Assets/Scenes/checkpoint.tscn" id="4_p6emy"]
 [ext_resource type="TileSet" uid="uid://1e2ijovefdlk" path="res://Assets/TerrainTileSet/TerrainTileSet/tileset_TerrainTileSet.tres" id="5_elccx"]
 [ext_resource type="Script" path="res://Scripts/Tutorial.gd" id="5_ippel"]
@@ -35,6 +36,13 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbbvi"]
 size = Vector2(38, 38)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ae38s"]
+shader = ExtResource("4_i6f4c")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 0.8
+shader_parameter/highlight_speed = 3.0
+shader_parameter/highlight_width = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyvsk"]
 content_margin_left = 20.0
@@ -136,6 +144,7 @@ position = Vector2(15321, -398)
 
 [node name="Sprite2D" type="Sprite2D" parent="Teleport/Teleport3"]
 texture_filter = 1
+material = SubResource("ShaderMaterial_ae38s")
 texture = ExtResource("10_7gcii")
 
 [node name="Area2D" type="Area2D" parent="Teleport/Teleport3"]

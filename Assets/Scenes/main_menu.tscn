@@ -117,6 +117,7 @@ texture_filter = 1
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme = ExtResource("2_m0tqh")
+theme_override_fonts/font = ExtResource("2_wai5j")
 theme_override_font_sizes/font_size = 25
 text = "Play"
 
@@ -125,6 +126,7 @@ texture_filter = 1
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme = ExtResource("2_m0tqh")
+theme_override_fonts/font = ExtResource("2_wai5j")
 theme_override_font_sizes/font_size = 18
 text = "Controls
 "
@@ -134,6 +136,7 @@ texture_filter = 1
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 theme = ExtResource("2_m0tqh")
+theme_override_fonts/font = ExtResource("2_wai5j")
 theme_override_font_sizes/font_size = 25
 text = "Quit
 "
