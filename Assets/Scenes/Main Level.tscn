@@ -953,14 +953,12 @@ check_point_timer = 30
 
 [node name="Blender" parent="Level 7/Traps" instance=ExtResource("16_y5ynp")]
 z_index = 15
-position = Vector2(11665, 406)
-scale = Vector2(1.5, 1.5)
+position = Vector2(11666, 438)
 animation_time_scale = 0
 
 [node name="Blender2" parent="Level 7/Traps" instance=ExtResource("16_y5ynp")]
 z_index = 15
-position = Vector2(11857, 406)
-scale = Vector2(1.5, 1.5)
+position = Vector2(11857, 439)
 animation_time_scale = 0
 
 [node name="Enemy" parent="Level 7/Traps" instance=ExtResource("7_lyguo")]
@@ -1149,7 +1147,7 @@ check_point_timer = 30
 
 [node name="Enemy" parent="Level 9/Traps" instance=ExtResource("7_lyguo")]
 z_index = 3
-position = Vector2(15146, -729)
+position = Vector2(15146, -733)
 scale = Vector2(1, 1)
 ENEMY_SPEED = 300
 
