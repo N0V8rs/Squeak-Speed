@@ -563,12 +563,12 @@ position = Vector2(485, -129)
 
 [node name="Bounce Pad6" parent="Level 3/Traps" instance=ExtResource("13_qgyl5")]
 z_index = 2
-position = Vector2(6299, 247)
+position = Vector2(6317, 239)
 launch_force = 750
 
 [node name="Bounce Pad7" parent="Level 3/Traps" instance=ExtResource("13_qgyl5")]
 z_index = 2
-position = Vector2(6182, 247)
+position = Vector2(6184, 239)
 launch_force = 750
 
 [node name="Butcher Knife14" parent="Level 3/Traps" instance=ExtResource("2_0wuhm")]
