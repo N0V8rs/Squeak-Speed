@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://tkktdot4pqt7" path="res://Assets/Player/Speedy_Sprite-Jump.png" id="4_c2gpw"]
 [ext_resource type="Texture2D" uid="uid://doiog8upq7lm8" path="res://Assets/Player/Speedy_Sprite-Walk.png" id="4_c3g5l"]
 [ext_resource type="Texture2D" uid="uid://cvs83wo4ne4ff" path="res://Assets/Particles/Steam_Sheet.png" id="6_moj3s"]
-[ext_resource type="AudioStream" uid="uid://bq0v243wkak63" path="res://Assets/SFX/jumping_sfxr.wav" id="7_guy86"]
+[ext_resource type="AudioStream" uid="uid://j7olu7uhdgfj" path="res://Assets/SFX/Player_jumping_audio.mp3" id="7_g7ldc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r214d"]
 atlas = ExtResource("2_o384d")
@@ -230,4 +230,4 @@ color = Color(1, 0.941176, 0.886275, 1)
 anim_offset_max = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_guy86")
+stream = ExtResource("7_g7ldc")

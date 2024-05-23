@@ -4,8 +4,8 @@ var player_last_position = null
 @onready var checkpoint_timer :Timer = %CheckpointTimer
 @onready var fader = %Fader
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
+
 const MAIN_MENU = preload("res://Assets/Scenes/main_menu.tscn")
-const GAMEPLAY_ADVENTURE_IN_THE_KITCHEN = preload("res://Assets/SFX/Gameplay-Adventure in the Kitchen.mp3")
 
 var can_restart_timer:bool = true
 
@@ -13,6 +13,7 @@ signal second_changed
 
 func _ready():
 	get_tree().change_scene_to_packed.call_deferred(MAIN_MENU)
+	audio_stream_player_2d.play()
 	pass
 
 func fade_out_in():
