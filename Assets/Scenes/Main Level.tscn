@@ -436,7 +436,7 @@ wait_time = 2.0
 z_index = 2
 texture_filter = 1
 position = Vector2(2243, 321)
-check_point_timer = 25
+check_point_timer = 20
 
 [node name="Traps" type="Node" parent="Level 1"]
 
@@ -483,7 +483,7 @@ fit_content = true
 z_index = 2
 texture_filter = 1
 position = Vector2(3624, 320)
-check_point_timer = 25
+check_point_timer = 35
 
 [node name="Traps" type="Node" parent="Level 2"]
 
@@ -573,7 +573,7 @@ rotation = 4.71239
 z_index = 2
 texture_filter = 1
 position = Vector2(5438, 193)
-check_point_timer = 25
+check_point_timer = 30
 
 [node name="Traps" type="Node" parent="Level 3"]
 
@@ -811,7 +811,7 @@ animation_time_scale = 0
 z_index = 2
 texture_filter = 1
 position = Vector2(7967, 416)
-check_point_timer = 25
+check_point_timer = 30
 
 [node name="Traps" type="Node" parent="Level 5"]
 
@@ -919,7 +919,7 @@ rotation = 3.14159
 z_index = 2
 texture_filter = 1
 position = Vector2(8516, -448)
-check_point_timer = 30
+check_point_timer = 35
 
 [node name="Traps" type="Node" parent="Level 6"]
 
@@ -993,7 +993,7 @@ scale = Vector2(0.8, 0.8)
 z_index = 2
 texture_filter = 1
 position = Vector2(11465, 289)
-check_point_timer = 30
+check_point_timer = 40
 
 [node name="Traps" type="Node" parent="Level 7"]
 
@@ -1087,7 +1087,7 @@ animation_time_scale = 0
 z_index = 2
 texture_filter = 1
 position = Vector2(13303, -833)
-check_point_timer = 30
+check_point_timer = 25
 
 [node name="Traps" type="Node" parent="Level 8"]
 
@@ -1449,7 +1449,6 @@ position = Vector2(15414, -471)
 z_index = 2
 texture_filter = 1
 position = Vector2(16835, -863)
-check_point_timer = 30
 
 [node name="Traps" type="Node" parent="Level 10"]
 
