@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dio1u8oi461dq"]
+[gd_scene load_steps=14 format=3 uid="uid://dio1u8oi461dq"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
 [ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="2_fn1gm"]
@@ -32,13 +32,6 @@ shader_parameter/color = Color(0.979571, 0.869017, 0.712124, 0.647059)
 shader_parameter/hdr = true
 shader_parameter/seed = 8.24
 shader_parameter/use_rainbow = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryjna"]
-bg_color = Color(0.486275, 0.345098, 0.219608, 0.27451)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_syqxu"]
 
@@ -118,17 +111,6 @@ offset_left = -624.0
 offset_top = -461.0
 offset_right = 2654.0
 offset_bottom = 750.0
-
-[node name="Control2" type="Control" parent="VBoxContainer/Control"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel" type="Panel" parent="VBoxContainer/Control/Control2"]
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 202.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ryjna")
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 texture_filter = 1

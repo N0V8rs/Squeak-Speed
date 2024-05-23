@@ -1,7 +1,11 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://rd0vuur4stdp"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://rd0vuur4stdp"]
+
+[ext_resource type="Texture2D" uid="uid://bbn0twlaudlgg" path="res://Assets/UI/UI_Button.png" id="1_l0i2n"]
+[ext_resource type="Texture2D" uid="uid://dt16ib32q8cf6" path="res://Assets/UI/UI_Pressed_Button.png" id="2_cwhwt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3oqx"]
 content_margin_bottom = 5.0
+texture = ExtResource("1_l0i2n")
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
@@ -9,12 +13,14 @@ expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qcqoi"]
 content_margin_bottom = 10.0
+texture = ExtResource("1_l0i2n")
 texture_margin_left = 1.0
 texture_margin_top = 1.0
 texture_margin_right = 1.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qutag"]
 content_margin_bottom = 5.0
+texture = ExtResource("2_cwhwt")
 
 [resource]
 default_base_scale = 0.57

@@ -2227,6 +2227,12 @@ material = SubResource("ShaderMaterial_5dy25")
 position = Vector2(17375, 367)
 rotation = 0.000793439
 
+[node name="SceneChanging2" parent="." instance=ExtResource("8_nhn6s")]
+z_index = 2
+material = SubResource("ShaderMaterial_5dy25")
+position = Vector2(6949, -388)
+rotation = 0.000793439
+
 [node name="Tiles" type="Node" parent="."]
 
 [node name="Particles" type="Node" parent="Tiles"]
