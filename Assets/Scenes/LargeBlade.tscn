@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://di2gnxoo8jmuc"]
+
+[ext_resource type="Texture2D" uid="uid://so13hm66si4s" path="res://Assets/Traps/Knife_Blade_Massive.png" id="1_hd263"]
+[ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="2_ps116"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjjpj"]
+height = 44.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fgtq"]
+size = Vector2(1208, 845)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njx3g"]
+size = Vector2(575, 347)
+
+[node name="LargeBlade" type="Sprite2D"]
+z_index = 2
+texture_filter = 1
+texture = ExtResource("1_hd263")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(40, -9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_sjjpj")
+debug_color = Color(0, 1, 0.239216, 0.419608)
+
+[node name="KillCollision" parent="StaticBody2D" instance=ExtResource("2_ps116")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/KillCollision"]
+position = Vector2(-262, -80.5)
+shape = SubResource("RectangleShape2D_7fgtq")
+debug_color = Color(1, 0, 0.101961, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(632.5, 157.5)
+shape = SubResource("RectangleShape2D_njx3g")
+debug_color = Color(0, 1, 0, 0.419608)
