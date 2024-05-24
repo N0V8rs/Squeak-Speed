@@ -12,6 +12,7 @@ func _ready():
 func _on_play_pressed():
 	CheckpointManager.player_last_position = null
 	get_tree().change_scene_to_packed(MAIN_LEVEL)
+	CheckpointManager.gameplay.play()
 
 func _on_quit_pressed():
 	get_tree().quit()
