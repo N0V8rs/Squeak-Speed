@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c0r32qycjimbd"]
+[gd_scene load_steps=35 format=3 uid="uid://c0r32qycjimbd"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_m3t20"]
 [ext_resource type="Texture2D" uid="uid://diru8fpt8wwr0" path="res://Assets/Player/Speedy_Falling.png" id="2_ng4xt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cjnrkubs3ps7v" path="res://Assets/Player/Speedy_Sprite-Idle.png" id="2_prxfu"]
 [ext_resource type="Texture2D" uid="uid://tkktdot4pqt7" path="res://Assets/Player/Speedy_Sprite-Jump.png" id="4_c2gpw"]
 [ext_resource type="Texture2D" uid="uid://doiog8upq7lm8" path="res://Assets/Player/Speedy_Sprite-Walk.png" id="4_c3g5l"]
+[ext_resource type="Texture2D" uid="uid://bb0goin6yt6kw" path="res://Assets/Player/Speedy_Rising.png" id="5_fpwys"]
 [ext_resource type="Texture2D" uid="uid://cvs83wo4ne4ff" path="res://Assets/Particles/Steam_Sheet.png" id="6_moj3s"]
 [ext_resource type="AudioStream" uid="uid://j7olu7uhdgfj" path="res://Assets/SFX/Player_jumping_audio.mp3" id="7_g7ldc"]
 
@@ -48,6 +49,10 @@ region = Rect2(128, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykryh"]
 atlas = ExtResource("2_prxfu")
 region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h3q1"]
+atlas = ExtResource("5_fpwys")
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y75na"]
 atlas = ExtResource("4_c2gpw")
@@ -142,6 +147,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4h3q1")
+}],
+"loop": true,
+"name": &"Rising",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_y75na")
 }, {
 "duration": 1.0,
@@ -205,7 +218,7 @@ jump_force = 100
 texture_filter = 1
 position = Vector2(-2, 7)
 sprite_frames = SubResource("SpriteFrames_vpd2b")
-animation = &"Falling"
+animation = &"Rising"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 6.5)

@@ -18,7 +18,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	# Makes the Player jump
+	# Apply gravity when the player is not on the floor
 	if !is_on_floor():
 		velocity.y += gravity
 		if velocity.y > 1000:
@@ -27,11 +27,13 @@ func _physics_process(delta):
 	if is_dying:
 		return
 
+	# Jump logic
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
 		jump_audio.play()
 		sprite_2d.play("jumping")
 
+	# Check for movement down action
 	if Input.is_action_pressed("movement_down"):
 		set_collision_mask_value(3, false)
 	else:
@@ -40,13 +42,14 @@ func _physics_process(delta):
 	if Input.is_action_pressed("Debug"):
 		CheckpointManager.checkpoint_timer.stop()
 
+	# Handle horizontal movement
 	var horizontal_direction = Input.get_axis("movement_left", "movement_right")
 	if horizontal_direction != 0:
 		last_position = horizontal_direction
 	velocity.x = speed * horizontal_direction
 	move_and_slide()
 	
-	# Sprite animations for left and right movement, flipping the Player
+	# Flip sprite based on movement direction
 	sprite_2d.flip_h = last_position < 0
 	
 	# Animations for the Player Movement
@@ -60,7 +63,9 @@ func _physics_process(delta):
 			sprite_2d.play("running") # Running string for the running animations
 	else:
 		was_in_air = true
-		if velocity.y > 0:
+		if velocity.y < 0:
+			sprite_2d.play("Rising") # Rising string for the rising animations
+		elif velocity.y > 0:
 			sprite_2d.play("Falling") # Falling string for the falling animations
 
 func play_landing_particles():
