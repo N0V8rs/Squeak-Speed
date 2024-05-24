@@ -1,5 +1,6 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://rd0vuur4stdp"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://rd0vuur4stdp"]
 
+[ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="1_5ustv"]
 [ext_resource type="Texture2D" uid="uid://bbn0twlaudlgg" path="res://Assets/UI/UI_Button.png" id="1_l0i2n"]
 [ext_resource type="Texture2D" uid="uid://dt16ib32q8cf6" path="res://Assets/UI/UI_Pressed_Button.png" id="2_cwhwt"]
 
@@ -24,10 +25,12 @@ texture = ExtResource("2_cwhwt")
 
 [resource]
 default_base_scale = 0.57
+default_font = ExtResource("1_5ustv")
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
-Button/colors/font_hover_color = Color(0.762404, 0.762404, 0.762404, 1)
-Button/colors/font_pressed_color = Color(0.758192, 0.758192, 0.758192, 1)
-Button/fonts/font = null
+Button/colors/font_focus_color = Color(0.0434088, 0.0290708, 0.0777231, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_5ustv")
 Button/styles/hover = SubResource("StyleBoxTexture_q3oqx")
 Button/styles/normal = SubResource("StyleBoxTexture_qcqoi")
 Button/styles/pressed = SubResource("StyleBoxTexture_qutag")

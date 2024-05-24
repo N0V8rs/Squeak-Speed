@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpy3h5jv2w4np"]
+[gd_scene load_steps=14 format=3 uid="uid://cpy3h5jv2w4np"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/control_menu.gd" id="1_i8e6d"]
 [ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="2_k80c0"]
@@ -46,6 +46,8 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jkxh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -321,6 +323,7 @@ grow_vertical = 2
 theme = ExtResource("6_mymgu")
 theme_override_fonts/font = ExtResource("7_urk2j")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5jkxh")
 text = "Back To Menu"
 script = ExtResource("8_hhc7y")
 

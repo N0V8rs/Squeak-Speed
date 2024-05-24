@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dio1u8oi461dq"]
+[gd_scene load_steps=19 format=3 uid="uid://dio1u8oi461dq"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
 [ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="2_fn1gm"]
@@ -34,6 +34,12 @@ shader_parameter/color = Color(0.979571, 0.869017, 0.712124, 0.647059)
 shader_parameter/hdr = true
 shader_parameter/seed = 8.24
 shader_parameter/use_rainbow = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwcsr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_353jr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_itbh2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_syqxu"]
 
@@ -121,6 +127,7 @@ layout_mode = 2
 theme = ExtResource("2_m0tqh")
 theme_override_fonts/font = ExtResource("2_wai5j")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wwcsr")
 text = "Play"
 script = ExtResource("7_x5um8")
 
@@ -131,6 +138,7 @@ layout_mode = 2
 theme = ExtResource("2_m0tqh")
 theme_override_fonts/font = ExtResource("2_wai5j")
 theme_override_font_sizes/font_size = 18
+theme_override_styles/focus = SubResource("StyleBoxEmpty_353jr")
 text = "Controls
 "
 
@@ -141,6 +149,7 @@ layout_mode = 2
 theme = ExtResource("2_m0tqh")
 theme_override_fonts/font = ExtResource("2_wai5j")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_itbh2")
 text = "Quit
 "
 
