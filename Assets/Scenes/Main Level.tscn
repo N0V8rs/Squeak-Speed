@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://wx4b42jelkaj"]
+[gd_scene load_steps=46 format=3 uid="uid://wx4b42jelkaj"]
 
 [ext_resource type="PackedScene" uid="uid://c0r32qycjimbd" path="res://Assets/Scenes/player.tscn" id="1_03wik"]
 [ext_resource type="Script" path="res://Scripts/Main Level.gd" id="1_ljqjj"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://c3lbky46byi6n" path="res://Assets/Scenes/scene_changing.tscn" id="8_nhn6s"]
 [ext_resource type="Script" path="res://Scripts/Teleport.gd" id="9_sxhgg"]
 [ext_resource type="Texture2D" uid="uid://3qx6vgypj7be" path="res://Assets/UI/Cheese.png" id="10_7gcii"]
-[ext_resource type="Texture2D" uid="uid://dg8ia62jk6d65" path="res://Assets/Particles/WaterDrop_Sheet.png" id="10_bm3pl"]
 [ext_resource type="PackedScene" uid="uid://qmu1xbe763ch" path="res://Assets/Scenes/oven.tscn" id="10_i2u7v"]
 [ext_resource type="PackedScene" uid="uid://dftdcncdrdvl2" path="res://Assets/Scenes/small_swing_knife.tscn" id="11_dvyp7"]
 [ext_resource type="PackedScene" uid="uid://r6roukmgyihm" path="res://Assets/Scenes/Kill_collision.tscn" id="12_r0g3v"]
@@ -82,20 +81,6 @@ shader_parameter/strength = 1
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qtoj4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5dy25"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qi2a8"]
-particles_animation = true
-particles_anim_h_frames = 4
-particles_anim_v_frames = 1
-particles_anim_loop = true
-
-[sub_resource type="Curve" id="Curve_nphss"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.477528, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Gradient" id="Gradient_bsgbf"]
-offsets = PackedFloat32Array(0, 0.76, 0.893333, 1)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.805556, 1, 1, 1, 0)
 
 [node name="Kitchen Level" type="Node2D"]
 position = Vector2(3, 28)
@@ -167,7 +152,7 @@ shape = SubResource("RectangleShape2D_pbbvi")
 unique_name_in_owner = true
 z_index = 10
 texture_filter = 1
-position = Vector2(17214, 395)
+position = Vector2(13538, -814)
 collision_mask = 7
 speed = 300
 gravity = 40
@@ -2198,22 +2183,6 @@ rotation = 0.000793439
 [node name="Tiles" type="Node" parent="."]
 
 [node name="Particles" type="Node" parent="Tiles"]
-
-[node name="Sink Dripping" type="CPUParticles2D" parent="Tiles/Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_qi2a8")
-position = Vector2(-1096, 292)
-rotation = 3.14159
-scale = Vector2(0.5, 0.5)
-emitting = false
-amount = 1
-lifetime = 0.35
-speed_scale = 0.3
-texture = ExtResource("10_bm3pl")
-radial_accel_max = 2.15
-scale_amount_curve = SubResource("Curve_nphss")
-color_ramp = SubResource("Gradient_bsgbf")
-anim_offset_max = 1.0
 
 [node name="Kitchen _ Main Game" type="Node" parent="Tiles"]
 
