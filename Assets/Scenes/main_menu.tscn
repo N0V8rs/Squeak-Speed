@@ -162,6 +162,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a1qkj")
 bbcode_enabled = true
 
 [node name="Main Menu Music" type="AudioStreamPlayer2D" parent="."]
+process_mode = 4
 stream = ExtResource("8_odjx2")
 bus = &"Music"
 

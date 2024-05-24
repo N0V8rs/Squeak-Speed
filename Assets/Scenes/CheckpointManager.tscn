@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://p24vsbjfwwgu"]
+[gd_scene load_steps=6 format=3 uid="uid://p24vsbjfwwgu"]
 
 [ext_resource type="Script" path="res://Scripts/CheckpointManager.gd" id="1_2d1wr"]
 [ext_resource type="AudioStream" uid="uid://cmx2egbsmlg6k" path="res://Assets/SFX/Gameplay-Adventure in the Kitchen.mp3" id="2_q6wsh"]
+[ext_resource type="AudioStream" uid="uid://c6ic540hwa1fs" path="res://Assets/SFX/Mouse Dash.mp3" id="3_0lqbl"]
 
 [sub_resource type="Gradient" id="Gradient_g83ej"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -33,9 +34,15 @@ texture = SubResource("GradientTexture1D_dqc3c")
 unique_name_in_owner = true
 autostart = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Gameplay" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_q6wsh")
-max_distance = 20000.0
+volume_db = -3.0
+max_distance = 50000.0
+attenuation = 0.00448709
+bus = &"Music"
+
+[node name="Main Menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0lqbl")
 bus = &"Music"
 
 [connection signal="timeout" from="CheckpointTimer" to="." method="_on_checkpoint_timer_timeout"]
