@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dio1u8oi461dq"]
+[gd_scene load_steps=16 format=3 uid="uid://dio1u8oi461dq"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_r05lx"]
 [ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="2_fn1gm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="2_nv8sr"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="2_wai5j"]
 [ext_resource type="Texture2D" uid="uid://bowtnqbicglma" path="res://Assets/UI/TitleCard.png" id="6_ndguc"]
+[ext_resource type="Script" path="res://Assets/Scenes/Controller_Buttons.gd" id="7_x5um8"]
 [ext_resource type="Shader" path="res://Assets/Scenes/godray.gdshader" id="8_juuao"]
 [ext_resource type="AudioStream" uid="uid://c6ic540hwa1fs" path="res://Assets/SFX/Mouse Dash.mp3" id="8_odjx2"]
 
@@ -121,6 +122,7 @@ theme = ExtResource("2_m0tqh")
 theme_override_fonts/font = ExtResource("2_wai5j")
 theme_override_font_sizes/font_size = 25
 text = "Play"
+script = ExtResource("7_x5um8")
 
 [node name="Controls" type="Button" parent="VBoxContainer"]
 texture_filter = 1

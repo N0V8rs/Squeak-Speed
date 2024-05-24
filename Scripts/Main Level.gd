@@ -3,7 +3,7 @@ extends Node2D
 func _enter_tree():
 	if CheckpointManager.player_last_position:
 		$"Player Stuff/Player".global_position = CheckpointManager.player_last_position
-		
+
 @onready var timer_label = %TimerLabel
 
 func _ready():

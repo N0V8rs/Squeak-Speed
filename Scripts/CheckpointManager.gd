@@ -4,9 +4,10 @@ var player_last_position = null
 @onready var checkpoint_timer :Timer = %CheckpointTimer
 @onready var fader = %Fader
 @onready var gameplay_music = $AudioStreamPlayer2D
+var current_scene = "."
 
 const MAIN_MENU = preload("res://Assets/Scenes/main_menu.tscn")
-
+const CONTROL_MENU = preload("res://Assets/Scenes/control_menu.tscn")
 var can_restart_timer:bool = true
 
 signal second_changed

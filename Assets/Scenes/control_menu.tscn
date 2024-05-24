@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpy3h5jv2w4np"]
+[gd_scene load_steps=13 format=3 uid="uid://cpy3h5jv2w4np"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/control_menu.gd" id="1_i8e6d"]
 [ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="2_k80c0"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bhn3uw8kf86yf" path="res://Assets/UI/controllerLayouts3.png" id="5_glcua"]
 [ext_resource type="Theme" uid="uid://rd0vuur4stdp" path="res://Assets/UI/ButtonTheme.tres" id="6_mymgu"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="7_urk2j"]
+[ext_resource type="Script" path="res://Assets/Scenes/Controller_Buttons.gd" id="8_hhc7y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s52cw"]
 shader = ExtResource("2_k80c0")
@@ -321,5 +322,6 @@ theme = ExtResource("6_mymgu")
 theme_override_fonts/font = ExtResource("7_urk2j")
 theme_override_font_sizes/font_size = 25
 text = "Back To Menu"
+script = ExtResource("8_hhc7y")
 
 [connection signal="pressed" from="Control2/Menu" to="." method="_on_menu_pressed"]

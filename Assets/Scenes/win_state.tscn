@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dojfkvtyeff1n"]
+[gd_scene load_steps=11 format=3 uid="uid://dojfkvtyeff1n"]
 
 [ext_resource type="Script" path="res://Scripts/win_state.gd" id="1_cqjt6"]
 [ext_resource type="Shader" path="res://Assets/Scenes/blur.gdshader" id="2_am8c6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bituvhh70gd07" path="res://Assets/Background/FullBG.png" id="3_myaty"]
 [ext_resource type="FontFile" uid="uid://dkvvbfmtldiib" path="res://Assets/UI/Pixel Emulator.otf" id="3_yumj8"]
 [ext_resource type="Shader" path="res://Assets/Scenes/godray.gdshader" id="4_dhhyn"]
+[ext_resource type="Script" path="res://Assets/Scenes/Controller_Buttons.gd" id="7_10sxu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_70vvi"]
 shader = ExtResource("2_am8c6")
@@ -91,6 +92,7 @@ theme_override_colors/font_hover_pressed_color = Color(0.716296, 0.716296, 0.716
 theme_override_fonts/font = ExtResource("3_yumj8")
 theme_override_font_sizes/font_size = 25
 text = "Quit"
+script = ExtResource("7_10sxu")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -127,6 +129,7 @@ theme_override_constants/outline_size = 30
 bbcode_enabled = true
 text = "[center][font_size=30][wave][b]Alright!!!"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Win Scene" type="AudioStreamPlayer2D" parent="."]
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
